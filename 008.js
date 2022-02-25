@@ -1,7 +1,9 @@
 // task 5
 
-let min = 60;
-alert((min * 24) * 365)
+let mins_in_hour = 60;
+let hours_in_day = 24
+let days_in_year = 365
+alert(mins_in_hour * hours_in_day * days_in_year)
 
 // task 9
 let byte = 2 ** 40;

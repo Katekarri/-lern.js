@@ -3,7 +3,7 @@
 let str1 = 'hello';
 let str2 = 'world';
 alert(str1 + ' ' + str2)
-
+alert(`${str1} ${str2}`)
 // task 4
 
 let str = 'jnkmloniugyg';
@@ -15,5 +15,8 @@ let str = `a
 b
 c`;
 alert(str)
+
+let str2 = 'a\nb\nc'
+alert(str2)
 
 

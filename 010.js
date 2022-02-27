@@ -4,9 +4,6 @@ let a = '10';
 let b = '20';
 alert(Number(a) + Number(b));
 
-let a = '10';
-let b = '20';
-alert(Number(a + b));// будет ли так работать?
 
 // task 2
 5

@@ -65,7 +65,7 @@ alert(no[0] + no[1] + no[2] + no[3] + no[4]);
 // Дано число 12345. Найдите сумму цифр этого числа.
 
 let no = String(12345);
-alert(Number(no[0]) + Number(no[1]) + Number(no[2]) + Number(no[3]) + 
+alert(Number(no[0]) + Number(no[1]) + Number(no[2]) + Number(no[3]) + Number(no[3]));
   
 //task 9
 // Задача 9js.Pm.Bs.SCh
@@ -78,16 +78,18 @@ alert(no[0] * no[1] * no[2] * no[3] * no[4]);
 // Задача 10js.Pm.Bs.SCh
 // Дано число 12345. Переставьте цифры этого числа в обратном порядке.
 
-	 console.log(String(12345).split("").reverse().join(""));
+	 console.log(Number(String(12345).split("").reverse().join("")));
 //split("")преобразует строку в массив символов
 //reverse()сли числа расположены по порядку, то эта функция переворачивает элементы в массиве в обратном порядке.
 //join("") это объединяет перевернутые символы в единый строковый тип данных.
 
-let namber = String(12345); 
+let abc = String(12345); 
 let newNamber = '';
-for (let i = namber.length - 1; i >= 0; i--) { 
-  newNamber += Number(namber[i]);
+for (let i = abc.length - 1; i >= 0; i--) { 
+  newNamber += abc[i];
 }
+
+newNamber = Number(newNamber)
 
 
 
@@ -101,3 +103,8 @@ function getReversedNum(num) {
   return result;
 }
 console.log(getReversedNum(num));//нашла решение из интернета
+// 1) result = 5 num = 1234
+// 1) result = 54 num = 123
+// 1) result = 543 num = 12
+// 1) result = 5432 num = 1
+// 1) result = 54321 num = 0

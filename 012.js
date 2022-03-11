@@ -53,7 +53,7 @@ false
 true
 
 // task 19
-true//?
+false
 
 // task 20
 true

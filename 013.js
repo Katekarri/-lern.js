@@ -59,14 +59,14 @@ alert(str[str.length - 3]);
 
 alert(no[0] + no[1] + no[2] + no[3] + no[4]);
 
-NumStr = '123456';
-SumNum = 0;
-for (let i = 0; i <= NumStr.length - 1; i++) {
+numStr = '123456';
+sumNum = 0;
+for (let i = 0; i <= numStr.length - 1; i++) {
 
-  SumNum += Number(NumStr[i])
+  sumNum += Number(numStr[i])
   
 }
-alert(SumNum)
+alert(sumNum)
 
 //task 8
 // Задача 8js.Pm.Bs.SCh
@@ -75,14 +75,14 @@ alert(SumNum)
  no = String(12345);
 alert(Number(no[0]) + Number(no[1]) + Number(no[2]) + Number(no[3]) + Number(no[3]));
   
-NumStr = String(12345);
-SumNum = 0;
-for (let i = 0; i <= NumStr.length - 1; i++) {
+numStr = String(12345);
+sumNum = 0;
+for (let i = 0; i <= numStr.length - 1; i++) {
 
-  SumNum += Number(NumStr[i])
+  sumNum += Number(numStr[i])
   
 }
-alert(SumNum)
+alert(sumNum)
 
 //task 9
 // Задача 9js.Pm.Bs.SCh
@@ -92,14 +92,22 @@ let no = String(12345);
 alert(no[0] * no[1] * no[2] * no[3] * no[4]);
 
 
-NumStr = String(12345);
-SumNum = 1;
-for (let i = 0; i <= NumStr.length - 1; i++) {
+numStr = String(12345);
+sumNum = 1;
+for (let i = 0; i <= numStr.length - 1; i++) {
 
-  SumNum *= Number(NumStr[i])
+  sumNum *= Number(numStr[i])
   
 }
-alert(SumNum)
+alert(sumNum)
+
+
+let stringNumber = String(12345);
+let box = 1;
+for (let digit of stringNumber) {
+  box *= digit; 
+}
+console.log(Number(box))
 
 //task 10
 // Задача 10js.Pm.Bs.SCh
@@ -135,3 +143,14 @@ console.log(getReversedNum(num));//нашла решение из интерне
 // 3) result = 543 num = 12
 // 4) result = 5432 num = 1
 // 5) result = 54321 num = 0
+
+
+str = 'ab38ck1142z';
+zero = 0;
+for (let symbol of str) {
+  let result = Number(symbol);
+  if (result) {
+    zero += result;  
+  }
+}
+console.log(zero)

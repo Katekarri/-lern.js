@@ -75,12 +75,31 @@ alert(SumNum)
  no = String(12345);
 alert(Number(no[0]) + Number(no[1]) + Number(no[2]) + Number(no[3]) + Number(no[3]));
   
+NumStr = String(12345);
+SumNum = 0;
+for (let i = 0; i <= NumStr.length - 1; i++) {
+
+  SumNum += Number(NumStr[i])
+  
+}
+alert(SumNum)
+
 //task 9
 // Задача 9js.Pm.Bs.SCh
 // Дано число 12345. Найдите произведение цифр этого числа.
 
 let no = String(12345);
 alert(no[0] * no[1] * no[2] * no[3] * no[4]);
+
+
+NumStr = String(12345);
+SumNum = 1;
+for (let i = 0; i <= NumStr.length - 1; i++) {
+
+  SumNum *= Number(NumStr[i])
+  
+}
+alert(SumNum)
 
 //task 10
 // Задача 10js.Pm.Bs.SCh

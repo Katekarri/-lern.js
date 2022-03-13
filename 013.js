@@ -17,6 +17,7 @@ let newStr = '';
 for (let i = str.length - 1; i >= 0; i--) { 
   newStr += str[i];
 }
+
 let str2 = 'abcde' 
 let newStr2 = '';
 for (let character of str2) {

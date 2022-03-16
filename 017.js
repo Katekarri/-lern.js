@@ -108,6 +108,22 @@ example9[3] += 3;
 example9[4] += 3;
 console.log(example9);
 
+
+let numbers = [8, 3, 9, 4, 35];
+let example9stronge = numbers.map((num) => num + 3);
+alert(example9stronge);
+
+
+// let example9strong = [8, 3, 9, 4, 35];
+// for (let num of example9strong) {
+//   console.log(num + 3);
+// }
+
+
+// let example9stronge = [8, 3, 9, 4, 35];
+// for (i = 0; i < example9stronge.length;  i++) {
+//   alert(example9stronge[i] + 3)
+// }
 // Задача 11
 // С помощью описанного приема создайте массив с элементами 1, 2 и 3.
 

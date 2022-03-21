@@ -29,15 +29,27 @@ for (let result of example3) {
 // Пусть у вас есть массив с названиями месяцев. Пусть в переменной month хранится номер текущего месяца, например, 10. С помощью цикла выведите все месяцы, а текущий месяц выведите заглавными буквами. Определите, каким циклом удобнее будет решить эту задачу: циклом for-of или обычным for со счетчиком.
 
 
-
 let months = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'
 ];
 let month = 10;
-if (months) {
-  alert(months)
+if (i = 0; i < months.length; i++) {
+  
  } else {
   month = months[10];
   alert(month.toUpperCase());
 }
+
+
+// let months = [
+//   'January', 'February', 'March', 'April', 'May', 'June',
+//   'July', 'August', 'September', 'October', 'November', 'December'
+// ];
+// let month = 10;
+// for (i = 0; i < 12; i++) {
+//   alert(months)
+//  if (i === (month -1 ))
+//   alert(month.toUpperCase());
+// }
+

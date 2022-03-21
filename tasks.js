@@ -52,3 +52,10 @@ console.log(sum6);
 
 
 // 7.Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество)
+
+var example7 = [1, 2, 3, 7, 6, 9];
+var sum7 = 0;
+for ( i = 0; i < example6.length; i++) {
+	sum7 += example7[i];
+}
+console.log(sum7 / example7[i]);//????????

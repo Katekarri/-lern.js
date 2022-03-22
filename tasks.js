@@ -1,17 +1,39 @@
 
 // 1. Заполните массив 10-ю иксами с помощью цикла
 
-let example1 = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'];
-for (i = 0; i < example1.length;  i++) {
-  console.log(example1[i]);
+let example1 = [];
+for (i = 1; i <= 10 ;  i++) {
+  example1[i] = 'x';
 }
+// console.log(example1);
+//почему i=0 не работает ??
+
+
+let example1a = [];
+example1a.push('x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x');
+// console.log(example1a);
+
+
+let example1b = [];
+for (var i=0; i<10; i++) {
+    example1b.push('x');
+}
+// console.log(example1b);
+
 
 // 2. Заполните массив числами от 1 до 10 с помощью цикла
 
-let example2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (let i = 1; i <= 10; i++) {
+let example2 = [];
+for (let i = 1; i >= 10; i++) {
   console.log(i);
 }
+
+let example2a = [];
+for(i = 1; i <= 10; i++) {
+  example2a.push(i);
+}
+console.log(example2a)
+
 
 // 3. Дан массив с числами. С помощью цикла выведите только те элементы массива, которые больше нуля и меньше 10-ти.
 

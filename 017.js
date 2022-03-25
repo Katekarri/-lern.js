@@ -92,8 +92,8 @@ console.log(example7[example7.length - 1])
 
 let example8 = ['a', 'b', 'c'];
 example8[0] = 1;
-example8[1] = -2;
-example8[2] = -3;
+example8[1] = 2;
+example8[2] = 3;
 console.log(example8);
 
 
@@ -116,13 +116,13 @@ for (i = 0; i < example9stronge.length; i++) {
  alert(example9stronge)
 
 
-let example = [8, 3, 9, 4, 35];
+// let example = [8, 3, 9, 4, 35];
 
-for (let element of example ){
-    i = example.indexOf(element)
-    example[i] += 3;
-}
-console.log(example);
+// for (let element of example ){
+//     i = example.indexOf(element)// не всегда сработает 
+//     example[i] += 3;
+// }
+// console.log(example);
 
 
 // let numbers = [8, 3, 9, 4, 35];

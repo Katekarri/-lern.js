@@ -11,7 +11,7 @@ arr[3] = "Hola";
 
 const arr2 = ["Hi", "Hello", "Bonjour"];
 arr2.push("Hola");
-console.log(arr2);
+// console.log(arr2);
 
 // 3. Есть 2 массива
 // сonst a = ['a', 'b', 'c'];
@@ -19,7 +19,23 @@ console.log(arr2);
 // Объедините их с помощью цикла, чтобы получилось
 // ['a', 'b', 'c', 1, 2, 3]
 
+let a = ['a', 'b', 'c'];
+let b = [1, 2, 3];
+let c = a.concat(b);
+alert(c);
+
+
 // 4. Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1]
+
+let example4 = [1, 2, 3];
+let example4Reverse = example4.reverse();
+console.log(example4Reverse);
+
+
+let exampleSecond = [1, 2, 3];
+for (i = 3; i >= 1; i--){
+  alert([i]);
+}
 
 // 5. У нас есть некий массив с данными:
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -32,5 +48,10 @@ for (i = 0; i < fruits.length; i++){
 }
 // console.log("Banana")
 
+
 // 6. Удалите из этого массива элемент 5.
 // const array = [2, 5, 9];
+
+// let example6 = [2, 5, 9];
+// let example6A = example6.splice(1);
+// alert(example6A);

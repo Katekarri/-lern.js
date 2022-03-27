@@ -1,4 +1,14 @@
 // 1. У вас есть 5 чисел. Найдите наибольшее и наименьшее из них
+  let example3 = [73, 1, 8, -15, 0];
+for (let i = 0; i < example3.length; i++) {
+  if (example3[i] = 73) {
+  console.log(example3[i]);
+  }
+  if (example3[i] = -15) {
+    console.log(example3[i])
+  }
+    
+}
 
 // 2. У вас есть массив
 // const arr = [ "Hi", "Hello", "Bonjour"];
@@ -55,3 +65,10 @@ for (i = 0; i < fruits.length; i++){
 // let example6 = [2, 5, 9];
 // let example6A = example6.splice(1);
 // alert(example6A);
+
+let example6 = [2, 5, 9];
+let example6A = example6.indexOf(5);
+if (example6A !== -1) {
+    example6.splice(example6A, 1);
+}
+// console.log(example6)

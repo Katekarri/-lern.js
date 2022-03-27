@@ -1,14 +1,18 @@
 // 1. У вас есть 5 чисел. Найдите наибольшее и наименьшее из них
-  let example3 = [73, 1, 8, -15, 0];
-for (let i = 0; i < example3.length; i++) {
-  if (example3[i] = 73) {
-  console.log(example3[i]);
+ let example3 = [73, 5, 8, -15, 0, 1, 548, -569];
+let minNumber = example3[0];
+let maxNumber = example3[0];
+for (let i = 1; i < example3.length; i++) {// 1 чтобы иключить лишнюю итерацию сравнения первого числа с самим собой
+  if (example3[i] < minNumber) {
+     minNumber = example3[i];
   }
-  if (example3[i] = -15) {
-    console.log(example3[i])
+  if (example3[i] > maxNumber) {
+    maxNumber = example3[i];
   }
     
 }
+// console.log(minNumber)
+// console.log(maxNumber)
 
 // 2. У вас есть массив
 // const arr = [ "Hi", "Hello", "Bonjour"];
@@ -16,8 +20,8 @@ for (let i = 0; i < example3.length; i++) {
 // [ "Hi", "Hello", "Bonjour", "Hola"]
 
 const arr = ["Hi", "Hello", "Bonjour"];
-arr[3] = "Hola";
-// console.log(arr);
+arr[arr.length] = "Hola";
+// console.log(arr)
 
 const arr2 = ["Hi", "Hello", "Bonjour"];
 arr2.push("Hola");
@@ -34,18 +38,36 @@ let b = [1, 2, 3];
 let c = a.concat(b);
 alert(c);
 
+// let a = ['a', 'b', 'c'];//тоже интеесно сработало
+// let b = [1, 2, 3];
+// let c = [...a, ...b]
+// alert(c);
 
-// 4. Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1]
+
+// let a = ['a', 'b', 'c'];
+// let b = [1, 2, 3];
+// for (i = 0; i < b.length; i++){
+//   a.push(b[i])
+// }
+// alert(a);
+
+
+
+
+// 4. Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1] / ['c', 'k', 'z', 't', 's'];
 
 let example4 = [1, 2, 3];
-let example4Reverse = example4.reverse();
-console.log(example4Reverse);
+let example4Reversed = example4.reverse();
+// console.log(example4Reversed);
 
 
-let exampleSecond = [1, 2, 3];
-for (i = 3; i >= 1; i--){
-  alert([i]);
+let exampleSecond = ['c', 'k', 'z', 't', 's'];
+let exampleSecondReversed = [];
+for (i = exampleSecond.length - 1; i >= 0; i--){
+ exampleSecondReversed.push(exampleSecond[i]);
 }
+// console.log(exampleSecondReversed);
+
 
 // 5. У нас есть некий массив с данными:
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -53,11 +75,10 @@ for (i = 3; i >= 1; i--){
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 for (i = 0; i < fruits.length; i++){
-  if (fruits[0]) { 
-  }    
+  if (fruits[i] == "Banana") { 
+    console.log(fruits[i])
+  }    break;
 }
-// console.log("Banana")
-
 
 // 6. Удалите из этого массива элемент 5.
 // const array = [2, 5, 9];

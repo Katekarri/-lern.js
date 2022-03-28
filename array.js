@@ -14,6 +14,8 @@ for (let i = 1; i < example3.length; i++) {// 1 чтобы иключить ли
 // console.log(minNumber)
 // console.log(maxNumber)
 
+
+
 // 2. У вас есть массив
 // const arr = [ "Hi", "Hello", "Bonjour"];
 // Добавьте к нему еще один элемент в конец, чтобы получился следующий массив
@@ -27,16 +29,27 @@ const arr2 = ["Hi", "Hello", "Bonjour"];
 arr2.push("Hola");
 // console.log(arr2);
 
+
+
 // 3. Есть 2 массива
 // сonst a = ['a', 'b', 'c'];
 // const b = [1, 2, 3];
 // Объедините их с помощью цикла, чтобы получилось
 // ['a', 'b', 'c', 1, 2, 3]
 
+// let a = ['a', 'b', 'c'];
+// let b = [1, 2, 3];
+// let c = a.concat(b);
+// alert(c);
+
 let a = ['a', 'b', 'c'];
 let b = [1, 2, 3];
-let c = a.concat(b);
-alert(c);
+for ( i = 0; i < b.length; i++){
+  a.push(b[i]);
+}
+ alert(a);
+
+
 
 // let a = ['a', 'b', 'c'];//тоже интеесно сработало
 // let b = [1, 2, 3];

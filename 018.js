@@ -33,11 +33,15 @@ alert(c);
 // Задача 6
 // Поделите число 10 на 0. Выведите результат на экран.
 
-let example6 = 10 / 0;
-alert(example6);
+// let example6 = 10 / 0;
+// alert(10 / 0);
+
+alert(10 / 0);
 
 // Задача 7
 // Поделите число -10 на 0. Выведите результат на экран.
 
-let example7 = -10 / 0;
-alert(example7);
+// let example7 = -10 / 0;
+// alert(example7);
+
+alert(-10 / 0);

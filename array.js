@@ -86,13 +86,14 @@ for (i = exampleSecond.length - 1; i >= 0; i--){
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // Проверьте, есть ли в этом массиве значение Banana
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-for (i = 0; i < fruits.length; i++){
-  if (fruits[i] == "Banana") { 
-    console.log(fruits[i])
-  }    break;
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+for (let i = 0; i <= fruits.length; i++) {
+  if (fruits[i] == "Banana") {
+    alert("Banana");
+    break;
+  }
+  
 }
-
 // 6. Удалите из этого массива элемент 5.
 // const array = [2, 5, 9];
 

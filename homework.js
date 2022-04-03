@@ -20,11 +20,13 @@ let arrayOfCommonElement = [];
 for (i = 0; i < a.length; i++){
   for (y = 0; y < b.length; y++){
     if (a[i] == b[y]) {
-     arrayOfCommonElement = a[i], b[y];
-      console.log(arrayOfCommonElement)
+    if (arrayOfCommonElement.indexOf(a[i]) == -1) {
+        arrayOfCommonElement.push(a[i]);
+      } 
    }
   }
 }
+console.log(arrayOfCommonElement)
 
 
 // Задача 3
@@ -44,6 +46,13 @@ for (i = 0; i <= example2.length; i++){
 
 // Задача 5
 // Вы принимаете от пользователя последовательность чисел, разделённых запятой, т.е строка состоящая из чисел и запятых. Составьте массив с этими числами.
+
+let example5 = '19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56';
+let x = example5.split("''");
+let complitedArray = Array.from(x);
+console.log(complitedArray)
+
+
 
 // Задача 6 (это не через for)
 // При заданном целом числе n посчитайте n + nn + nnn
@@ -70,6 +79,18 @@ for (let i = 0; i <= example4.length; i++) {
 // Задача 8
 // Дано 2 массива, выводите все элементы первого, которых нет во втором.
 
+let first = [1, 17, 2, 7, 5, 8, 13, 21];
+let second = [1, 2, 3, 4, 5, 6, 17, 8, 9, 10, 13];
+let elementsFirst = [];
+for (i = 0; i < first.length; i++){
+  for (y = 0; y < second.length; y++){
+    if (second[y] !== first[i]) {
+      elementsFirst = first[i];  
+    }  
+  } 
+}
+ console.log(elementsFirst)
+  
 // Задача 9
 // Сложите цифры целого числа.
 
@@ -104,8 +125,7 @@ let example11 = [19, 8, 93, 4, 1, 16, 8, 77, 780, 43, 237, 56];
 
 
 
-// a = [ 8, 13, 21, 34, 55, 89];
-// b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].
+
 
 
 // Задача 12
@@ -126,9 +146,21 @@ console.log(example12.indexOf(maxNumber))
 // Задача 13
 // В массиве все элементы различны. Поменяйте местами минимальный и максимальный элемент этого списка.
 let example13 = [19, 8, 93, 4, 1, 16, 77, 780, 43, 237, 56];
-minNumber = 1;
-maxNumber = 780;
-minNumberIndex = example13.indexOf(minNumber);//4
-maxNumberIndex = example13.indexOf(maxNumber);//7
-example13[maxNumberIndex] = minNumber;
-exampel13[minNumberIndex ] = maxNumber;
+let minNumberFromExample13 = example13[0];
+let maxNumberFromExample13 = example13[0];
+let arrayOfCommonElementExample13 = [];
+for (i = 0; i < example13.length; i++){
+  if (minNumberFromExample13 > example13[i] > maxNumberFromExample13) {
+    minNumberIndex = example13.indexOf(minNumberFromExample13);
+    maxNumberIndex = example13.indexOf(maxNumberFromExample13);
+    arrayOfCommonElementExample13 = (example13[maxNumberIndex] = minNumberFromExample13, exampel13[minNumberIndex] = maxNumberFromExample13)
+    console.log(arrayOfCommonElementExample13)
+  }
+}
+
+// minNumberFromExample13 = 1;
+// maxNumberFromExample13 = 780;
+// minNumberIndex = example13.indexOf(minNumberFromExample13);//4
+// maxNumberIndex = example13.indexOf(maxNumberFromExample13);//7
+// example13[maxNumberIndex] = minNumberFromExample13;
+// exampel13[minNumberIndex ] = maxNumberFromExample13;

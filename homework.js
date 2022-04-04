@@ -14,14 +14,14 @@ for (i = 0; i < example1.length; i++){
 // b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].
 // Нужно вернуть массив, который состоит из элементов, общих для этих двух массивов.
 
-let a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+let a = [99, 99, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+let b = [99, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 let arrayOfCommonElement = [];
 for (i = 0; i < a.length; i++){
   for (y = 0; y < b.length; y++){
     if (a[i] == b[y]) {
-    if (arrayOfCommonElement.indexOf(a[i]) == -1) {
-        arrayOfCommonElement.push(a[i]);
+      if (arrayOfCommonElement.indexOf(a[i]) == -1) {
+        arrayOfCommonElement.push(a[i]); 
       } 
    }
   }
@@ -32,11 +32,32 @@ console.log(arrayOfCommonElement)
 // Задача 3
 // Отсортируйте массив по значению в порядке возрастания и убывания.
 
-let example2 = [19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56];
-let arr3 = [];
-for (i = 0; i <= example2.length; i++){
+// Пузырьковая сортировка
+// Сортировка выбором
+// Сортировка вставками
+// Сортировка Шелла
+// Сортировка подсчётом
+// Сортировка расчёской
+// Сортировка слиянием
+// Пирамидальная сортировка
 
+// let example2 = [19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56];
+// let arr2 = example2.sort((a, b) => a-b);
+// console.log(arr2);
+// console.log(arr2.reverse());
+
+
+let example2 = [19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56];
+for (i = 0; i < example2.length; i++) {
+  for (let j = i; j < example2.length; j++) {
+    for (let j = i; j < item.length; j++) {
+      if (example2[j] > example2[i]) {
+        [example2[i], example2[j]] = [example2[j], example2[i]];
+      }
+    }
+  }
 }
+
 
 
 // Задача 4
@@ -48,10 +69,8 @@ for (i = 0; i <= example2.length; i++){
 // Вы принимаете от пользователя последовательность чисел, разделённых запятой, т.е строка состоящая из чисел и запятых. Составьте массив с этими числами.
 
 let example5 = '19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56';
-let x = example5.split("''");
-let complitedArray = Array.from(x);
-console.log(complitedArray)
-
+let x = JSON.parse("[" + example5 + "]");//Можем использовать JSON.parse() для преобразования строки чисел, разделенных запятыми, в массив. Мы можем объединить скобки со строкой, чтобы преобразовать ее в массив чисел.
+console.log(example5)
 
 
 // Задача 6 (это не через for)
@@ -115,19 +134,29 @@ for (i = 0; i <= exampel10.length; i++){
   }
 }
 // numberOfTimes = numberOfTimes.length
-
  console.log(numberOfTimes)
 
 
 // Задача 11
 // Нужно проверить, все ли числа в массиве уникальны.
-let example11 = [19, 8, 93, 4, 1, 16, 8, 77, 780, 43, 237, 56];
 
+let example11 = [19, 8, 93, 4, 1, 16, 1, 77, 780, 43, 237, 56];
+let uniqueElement = 0;
+for (let i = 0; i < example11.length; i++){
+    let item = example11.indexOf(example11[i], i+1);  
+    if (item >= 0) {
+        console.log('Есть повторки');
+        break;
+    } else {
+        uniqueElement++;
+    }    
+}
+if(uniqueElement === example11.length) {
+    console.log('Все значения уникальны!');
+}
+  
 
-
-
-
-
+// console.log(result);
 // Задача 12
 // Дан массив чисел. Выведите значение наибольшего элемента в списке, а затем индекс этого элемента в списке. Если наибольших элементов несколько, выведите индекс первого из них.
 
@@ -145,22 +174,23 @@ console.log(example12.indexOf(maxNumber))
 
 // Задача 13
 // В массиве все элементы различны. Поменяйте местами минимальный и максимальный элемент этого списка.
+  
 let example13 = [19, 8, 93, 4, 1, 16, 77, 780, 43, 237, 56];
 let minNumberFromExample13 = example13[0];
 let maxNumberFromExample13 = example13[0];
-let arrayOfCommonElementExample13 = [];
-for (i = 0; i < example13.length; i++){
-  if (minNumberFromExample13 > example13[i] > maxNumberFromExample13) {
-    minNumberIndex = example13.indexOf(minNumberFromExample13);
-    maxNumberIndex = example13.indexOf(maxNumberFromExample13);
-    arrayOfCommonElementExample13 = (example13[maxNumberIndex] = minNumberFromExample13, exampel13[minNumberIndex] = maxNumberFromExample13)
-    console.log(arrayOfCommonElementExample13)
-  }
+let minNumberIndex;
+let maxNumberIndex;
+for (let i = 0; i < example13.length; i++) {
+    if (example13[i] < minNumberFromExample13) {
+        minNumberFromExample13 = example13[i];
+    }
+    if (example13[i] > maxNumberFromExample13) {
+        maxNumberFromExample13 = example13[i];
+    }
 }
+        minNumberIndex = example13.indexOf(minNumberFromExample13);
+        maxNumberIndex = example13.indexOf(maxNumberFromExample13);
+        example13[maxNumberIndex] = minNumberFromExample13;
+        example13[minNumberIndex] = maxNumberFromExample13;
+console.log(example13);
 
-// minNumberFromExample13 = 1;
-// maxNumberFromExample13 = 780;
-// minNumberIndex = example13.indexOf(minNumberFromExample13);//4
-// maxNumberIndex = example13.indexOf(maxNumberFromExample13);//7
-// example13[maxNumberIndex] = minNumberFromExample13;
-// exampel13[minNumberIndex ] = maxNumberFromExample13;

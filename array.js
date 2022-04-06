@@ -44,7 +44,7 @@ arr2.push("Hola");
 
 let a = ['a', 'b', 'c'];
 let b = [1, 2, 3];
-for ( i = 0; i < b.length; i++){
+for (let i = 0; i < b.length; i++){
   a.push(b[i]);
 }
  alert(a);
@@ -76,7 +76,7 @@ let example4Reversed = example4.reverse();
 
 let exampleSecond = ['c', 'k', 'z', 't', 's'];
 let exampleSecondReversed = [];
-for (i = exampleSecond.length - 1; i >= 0; i--){
+for (let i = exampleSecond.length - 1; i >= 0; i--){
  exampleSecondReversed.push(exampleSecond[i]);
 }
 // console.log(exampleSecondReversed);

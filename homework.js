@@ -3,9 +3,11 @@
 // Выведите все элементы, которые меньше 5.
 
 let example1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-for (i = 0; i < example1.length; i++){
-  if (example1[i] < 5)
-  console.log(example1[i]);
+for (let i = 0; i < example1.length; i++){
+  if (example1[i] < 5) {
+    console.log(example1[i]);
+  }
+  
 }
 
 // Задача 2
@@ -17,8 +19,8 @@ for (i = 0; i < example1.length; i++){
 let a = [99, 99, 2, 3, 5, 8, 13, 21, 34, 55, 89];
 let b = [99, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 let arrayOfCommonElement = [];
-for (i = 0; i < a.length; i++){
-  for (y = 0; y < b.length; y++){
+for (let i = 0; i < a.length; i++){
+  for (let y = 0; y < b.length; y++){
     if (a[i] == b[y]) {
       if (arrayOfCommonElement.indexOf(a[i]) == -1) {
         arrayOfCommonElement.push(a[i]); 
@@ -54,7 +56,7 @@ console.log(arrayOfCommonElement);
 let example = 'шалаш';
 let w = 1;
 let count = 0;
-for (i = 0; i < (example.length - 1) / 2; i++){// length - 1 / 2(полоаина итеаций)  убираем букву по середине (не повторяюуюся в данном случае это 'л')
+for (let i = 0; i < (example.length - 1) / 2; i++){// length - 1 / 2(полоаина итеаций)  убираем букву по середине (не повторяюуюся в данном случае это 'л')
   if ( example[i] == example[example.length - w]) {
     count++;  // счетчик увеличиваем на 1
     w++;
@@ -76,8 +78,11 @@ for (i = 0; i < (example.length - 1) / 2; i++){// length - 1 / 2(полоаин�
 
 let example5 = '19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56';
 let x = JSON.parse("[" + example5 + "]");//Можем использовать JSON.parse() для преобразования строки чисел, разделенных запятыми, в массив. Мы можем объединить скобки со строкой, чтобы преобразовать ее в массив чисел.
-console.log(example5)
+console.log(example5);
 
+let example5Second = '19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56';
+let arr = Array.from(example5Second);
+console.log(arr);
 
 // Задача 6 (это не через for)
 // При заданном целом числе n посчитайте n + nn + nnn
@@ -107,14 +112,15 @@ for (let i = 0; i <= example4.length; i++) {
 let first = [1, 17, 2, 7, 5, 8, 13, 21];
 let second = [1, 2, 3, 4, 5, 6, 17, 8, 9, 10, 13];
 let elementsFirst = [];
-for (i = 0; i < first.length; i++){
-  for (y = 0; y < second.length; y++){
+for (let i = 0; i < first.length; i++){
+  for (let y = 0; y < second.length; y++){
     if (second[y] !== first[i]) {
       elementsFirst = first[i];  
     }  
   } 
 }
 console.log(elementsFirst);
+
   
 // Задача 9
 // Сложите цифры целого числа.
@@ -133,7 +139,7 @@ for (let i = 0; i < exampel9.length; i++) {
 const exampel10 = 'Sunny day jfngoidj usnnd';
 const symbolToCheck = 'n';
 let numberOfTimes = 0;
-for (i = 0; i <= exampel10.length; i++){
+for (let i = 0; i <= exampel10.length; i++){
   if (exampel10[i] == symbolToCheck) {
     numberOfTimes += 1;
    
@@ -168,7 +174,7 @@ if(uniqueElement === example11.length) {// если счетчик уникал�
 
 let example12 = [19, 8, 93, 4, 1, 16, 77, 780, 43, 237, 56];
 let maxNumber = example12[0];
-for (i = 0; i < example12.length; i++){
+for (let i = 0; i < example12.length; i++){
   if (example12[i] > maxNumber) {
     maxNumber = example12[i];  
   }  

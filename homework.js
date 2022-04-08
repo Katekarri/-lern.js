@@ -43,33 +43,58 @@ console.log(arrayOfCommonElement);
 // Сортировка слиянием
 // Пирамидальная сортировка
 
- let example2First = [19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56]; 
- let arr2 = example2First.sort((a, b) => a-b);
- console.log(arr2);
- console.log(arr2.reverse());
+//  let example2First = [19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56]; 
+//  let arr2 = example2First.sort((a, b) => a-b);
+//  console.log(arr2);
+// console.log(arr2.reverse());
+ 
+
+let example2First = [19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56];
+for (let i = 0; i < example2First.length - 1; i++){
+  for (let y = i + 1; y < example2First; y++) { 
+    if () {
+       
+    }  
+  }
+}
+
+
+
 
 
 // Задача 4
 // Выведите "Да"" если стрка полиндром и "Нет", если строка не является полиндромом. Палиндром — это слово или фраза, которые одинаково читаются слева направо и справа налево.
 
-
 let example = 'шалаш';
-let w = 1;
-let count = 0;
-for (let i = 0; i < (example.length - 1) / 2; i++){// length - 1 / 2(полоаина итеаций)  убираем букву по середине (не повторяюуюся в данном случае это 'л')
-  if ( example[i] == example[example.length - w]) {
-    count++;  // счетчик увеличиваем на 1
-    w++;
-   // увеличивает пеменную что бы передвинутся  на следуюую букву с конца
-  } else {
-    console.log('Не полиндромом');
+let polindrom = true;
+for (let i = 0; i < (example.length - 1) / 2; i++){
+  if (example[i] != example[example.length - 1 - i]) {
+    polindrom = false;
     break;
   }
- 
-  }
- if (count == (example.length - 1) / 2) {
-  console.log('Полиндром');
 }
+if (polindrom) {
+    console.log('полиндромом')
+  }
+
+
+// let example = 'шалаш';
+// let w = 1;
+// let count = 0;
+// for (let i = 0; i < (example.length - 1) / 2; i++){// length - 1 / 2(половина итеаций)  убираем букву по середине (не повторяюуюся в данном случае это 'л')
+//   if ( example[i] == example[example.length - w]) {
+//     count++;  // счетчик увеличиваем на 1
+//     w++;
+//    // увеличивает пеменную что бы передвинутся  на следуюую букву с конца
+//   } else {
+//     console.log('Не полиндромом');
+//     break;
+//   }
+ 
+//   }
+//  if (count == (example.length - 1) / 2) {
+//   console.log('Полиндром');
+// }
 
 
 
@@ -78,11 +103,16 @@ for (let i = 0; i < (example.length - 1) / 2; i++){// length - 1 / 2(полоа�
 
 let example5 = '19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56';
 let x = JSON.parse("[" + example5 + "]");//Можем использовать JSON.parse() для преобразования строки чисел, разделенных запятыми, в массив. Мы можем объединить скобки со строкой, чтобы преобразовать ее в массив чисел.
-console.log(example5);
+console.log(x);
+
+// let example5Second = '19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56';
+// let arr = Array.from(example5Second);
+// console.log(arr);
 
 let example5Second = '19, 8, -93, 4, 1, 16, 77, 780, 43, 237, 56';
-let arr = Array.from(example5Second);
+let arr = example5Second.split(', ');
 console.log(arr);
+
 
 // Задача 6 (это не через for)
 // При заданном целом числе n посчитайте n + nn + nnn
@@ -113,15 +143,12 @@ let first = [1, 17, 2, 7, 5, 8, 13, 21];
 let second = [1, 2, 3, 4, 5, 6, 17, 8, 9, 10, 13];
 let elementsFirst = [];
 for (let i = 0; i < first.length; i++){
-  for (let y = 0; y < second.length; y++){
-    if (second[y] !== first[i]) {
-      elementsFirst = first[i];  
-    }  
-  } 
+    if (second.indexOf(first[i]) == -1) {
+      elementsFirst.push(first[i]);     
+  }  
 }
-console.log(elementsFirst);
+ console.log(elementsFirst);
 
-  
 // Задача 9
 // Сложите цифры целого числа.
 

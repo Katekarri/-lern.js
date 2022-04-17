@@ -5,30 +5,38 @@ function cubeNumber(num) {
 	alert(num * num *num);
 }
 
-// cubeNumber(4);
+// cubeNumber(4)
 
+function cubeNumber(num) {
+	alert(num ** 3);
+}
+
+// cubeNumber(4)
+
+Math.pow(3, 3);//ваиант возведения в степень(Math.pow(x, y)
+// x oснование степени.
+//y показатель степени, в которую возводится основание x)
 
 // Задача 2
 // Сделайте функцию, которая параметром принимает число и проверяет, положительное это число или отрицательное.В первом случае пусть функция выводит на экран текст '+++', а во втором '---'.
 
-function positiveNumber(num) {
-    if (num > 0) {
+function whatNumber(num) {
+    if (num >= 0) {
       alert('+++');
     } else {
       alert('---');
     }
-  return num;
 }
-// positiveNumber(-7);
+//whatNumber(0);
 
 
 // Задача 3
 // Сделайте функцию, которая параметрами принимает 3 числа и выводит на экран сумму этих чисел.
 
-function sumNumber(a, b, c) {
+function calculateSumNumber(a, b, c) {
   alert(a + b + c);
 }
-// sumNumber(2, 6, 8);
+// calculateSumNumber(2, 6, 8);
 
 // Задача 4
 // Сделайте функцию func, которая параметром будет принимать 3 числа и выводить на экран их сумму. Пусть даны 3 переменные с числами:

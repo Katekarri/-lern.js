@@ -12,7 +12,7 @@ let result = cubeNumber(3);
 // Сделайте функцию, которая параметром принимает число, а возвращает квадратный корень из этого числа.С помощью этой функции найдите корень числа 3, затем найдите корень числа 4. Просуммируйте полученные результаты и выведите их на экран.
 
 function calculateSquareRoot(num) {
-  return num / 2;
+	return Math.sqrt();
 }
 let result1 = calculateSquareRoot(3);
 let result2 = calculateSquareRoot(4);
@@ -170,5 +170,9 @@ function func(num1, num2) {
 	}	
 	return num1;
 }
-
 alert(func(3, 4));
+
+
+let func6 = (num1, num2) => (num1 > 0 && num2 > 0) ? num1 *= num2 : num1 -= num2;
+alert(func6(3, 4));
+	

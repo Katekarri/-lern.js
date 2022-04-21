@@ -12,12 +12,13 @@ let result = cubeNumber(3);
 // Сделайте функцию, которая параметром принимает число, а возвращает квадратный корень из этого числа.С помощью этой функции найдите корень числа 3, затем найдите корень числа 4. Просуммируйте полученные результаты и выведите их на экран.
 
 function calculateSquareRoot(num) {
-	return Math.sqrt();
+	return num ** (1 / 2);// 	return Math.sqrt(num);
 }
 let result1 = calculateSquareRoot(3);
 let result2 = calculateSquareRoot(4);
 let result3 = result1 + result2;
 alert(result3);
+
 
 // Задача 3
 // Пусть у вас есть функция, возвращающая квадратный корень из числа, и функция, округляющая дробь до трех знаков в дробной части:
@@ -164,15 +165,14 @@ function calculateIterations(num) {
 
 function func(num1, num2) {
 	if (num1 > 0 && num2 > 0) {
-	 num1 *= num2;
+	return num1 * num2;
 	} else {
-	 num1 -= num2;
-	}	
-	return num1;
+	return num1 - num2;
+	}
 }
 alert(func(3, 4));
 
 
-let func6 = (num1, num2) => (num1 > 0 && num2 > 0) ? num1 *= num2 : num1 -= num2;
+let func6 = (num1, num2) => (num1 > 0 && num2 > 0) ? num1 * num2 : num1 - num2;
 alert(func6(3, 4));
 	

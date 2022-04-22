@@ -6,8 +6,7 @@ let example1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
 for (let i = 0; i < example1.length; i++){
   if (example1[i] < 5) {
     console.log(example1[i]);
-  }
-  
+  }  
 }
 
 // Задача 2

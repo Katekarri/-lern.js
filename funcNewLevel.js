@@ -2,16 +2,16 @@
 
 function season(num) {
   if (num === 12 || num === 1 || num === 2) {
-    return console.log('Зима');
+    return 'Зима';
   } else if (num === 3 || num === 4 || num === 5) {
-    return console.log('Весна');
+    return 'Весна';
   } else if (num === 6 || num === 7 || num === 8) {
-    return console.log('Лето');
+    return 'Лето';
   } else if (num === 9 || num === 10 || num === 11) {
-    return console.log('Осень');
+    return 'Осень';
   }
   else {
-    return console.log('Невеный номер');
+    return 'Невеный номер';
   }
 }
 // season(8);
@@ -71,6 +71,6 @@ function sum_range(start, end) {
 // 5. Создайте функцию rgb(), которая будет принимать три числовых аргумента и возвращать строку вида «rgb(23,100,134)». Если аргументы не заданы, считать их равными нулю.
 
 function rgb(a = 0, b = 0, c = 0) {
-  return `(${a}, ${b}, ${c})`;
+  return `rgb(${a}, ${b}, ${c})`;
 }
 // rgb(4, 67);

@@ -47,6 +47,45 @@ function is_year_leap(year) {
 // is_year_leap (1941);
 // is_year_leap (1940);
 
+function is_year_leap(year) {
+  if (year % 4 === 0) {
+    return true;
+  } else if (year % 100 === 0) {
+    return true;
+  } else if (year % 400 === 0) {
+    return true;
+    } else if (year === 365) {
+    return true;
+  } else if (year === 366) {
+    return false;
+  }
+  else {
+    return false;
+  }
+}
+//  console.log(is_year_leap (366));
+//  console.log(is_year_leap (365));
+
+// function is_year_leap(year) {
+//   switch (year) {
+//     case year % 4 === 0:
+//       return true;
+//       break;
+//     case year % 100 === 0:
+//       return true;
+//       break;
+//     case year % 400 === 0:
+//       return true;
+//       break;
+//     case year === 365:
+//       return true;
+//       break;
+//     default:
+//       return false;
+//     break;
+//   } 
+// }
+
 
 // 4. Напишите функцию sum_range(start, end), которая суммирует все целые числа от значения «start» до величины «end» включительно.
 // Если пользователь задаст первое число большее чем второе, просто поменяйте их местами.

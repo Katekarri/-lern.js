@@ -17,12 +17,27 @@
 // season(8);
 function season(num) {
   let season = ['Зима', 'Весна', 'Лето', 'Осень'];
-  let numberMonht = Math.floor(num / 12) / 3;
+  let numberMonht = Math.floor(num % 12) / 3;
   return season[numberMonht];
 }
 
 // 2. Пользователь делает вклад в размере a рублей сроком на years лет под 10% годовых (каждый год размер его вклада увеличивается на 10%. Эти деньги прибавляются к сумме вклада, и на них в следующем году тоже будут проценты).
 // Написать функцию bank, принимающая аргументы a и years, и возвращающую сумму, которая будет на счету пользователя.
+
+function bank(a, years) {    
+    let sum = a;
+    let percentOfSum;
+    for(let i = 0; i < years; i++) {          
+        percentOfSum = sum * 10 / 100;
+        sum += percentOfSum;
+    }
+    return sum;
+}
+
+// console.log(bank(2000, 5));
+
+
+
 
 // let n = 10;
 // let x = a / 100 * n;
@@ -39,6 +54,8 @@ function season(num) {
 // }
 
 
+
+
 // 3. Написать функцию is_year_leap, принимающую 1 аргумент — год, и возвращающую True, если год високосный, и False иначе.
 
 // function is_year_leap(year) {
@@ -51,19 +68,37 @@ function season(num) {
 // is_year_leap (1941);
 // is_year_leap (1940);
 
+
+
 function is_year_leap(year) {
   if (year % 4 === 0) {
     return true;
-  } else if (year % 100 === 0) {
-    return true;
-  } else if (year % 400 === 0) {
+  } else if (year % 100 === 0 && year % 400 === 0) {
     return true;
   } else {
     return false;
   }
 }
-//  console.log(is_year_leap (366));
-//  console.log(is_year_leap (365));
+
+//  console.log(is_year_leap (2600));
+//  console.log(is_year_leap ( 2400));
+
+function testMe(func, arg, expected) {
+  const result = func(arg)
+  
+  if (result != expected) {
+    console.log(`function ${func.name}(${arg}) returned ${result} but not ${expected}`)
+  }
+}
+testMe(is_year_leap, 20, true)
+testMe(is_year_leap, 21, false)
+testMe(is_year_leap, 30, false)
+testMe(is_year_leap, 96, true)
+testMe(is_year_leap, 97, false)
+testMe(is_year_leap, 100, false)
+testMe(is_year_leap, 200, false)
+testMe(is_year_leap, 400, true)
+testMe(is_year_leap, 500, false)
 
 
 // 4. Напишите функцию sum_range(start, end), которая суммирует все целые числа от значения «start» до величины «end» включительно.

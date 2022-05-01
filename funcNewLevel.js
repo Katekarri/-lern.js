@@ -1,3 +1,5 @@
+import { testMe } from './utils.js'
+
 // 1. Написать функцию season, принимающую 1 аргумент — номер месяца (от 1 до 12), и возвращающую время года, которому этот месяц принадлежит (зима, весна, лето или осень).
 
 // function season(num) {
@@ -15,14 +17,18 @@
 //   }
 // }
 // season(8);
-function season(num) {
+function getSeason(num) {
   let season = ['Зима', 'Весна', 'Лето', 'Осень'];
-  let numberMonht = Math.floor(num % 12) / 3;
+  let numberMonht = Math.floor((num % 12) / 3);
   return season[numberMonht];
 }
+testMe(getSeason, 2, 'Зима')
+testMe(getSeason, 12, 'Зима')
+testMe(getSeason, 8, 'Лето')
+testMe(getSeason, 9, 'Осень')
 
 // 2. Пользователь делает вклад в размере a рублей сроком на years лет под 10% годовых (каждый год размер его вклада увеличивается на 10%. Эти деньги прибавляются к сумме вклада, и на них в следующем году тоже будут проценты).
-// Написать функцию bank, принимающая аргументы a и years, и возвращающую сумму, которая будет на счету пользователя.
+// Написать функцию bank, принимающая аргументы money_ и years, и возвращающую сумму, которая будет на счету пользователя.
 
 function bank(a, years) {    
     let sum = a;
@@ -33,6 +39,15 @@ function bank(a, years) {
     }
     return sum;
 }
+testMe(bank, 127, 3, 169.04)
+
+function calculateDeposit(a, years, percent=10) {  
+  let percentPart = 1 + percent / 100;
+  return a * percentPart ** years
+}
+testMe(calculateDeposit, 127, 3, 169.04)
+testMe(calculateDeposit, 127, 3, 50, 169.04)
+
 
 // console.log(bank(2000, 5));
 
@@ -58,7 +73,7 @@ function bank(a, years) {
 
 // 3. Написать функцию is_year_leap, принимающую 1 аргумент — год, и возвращающую True, если год високосный, и False иначе.
 
-// function is_year_leap(year) {
+// function isYearLeap(year) {
 //   if (year % 4 === 0){
 //     return true;
 //   } else{
@@ -71,7 +86,7 @@ function bank(a, years) {
 
 
 function is_year_leap(year) {
-  if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+  if ((year % 4 == 0) && (year % 100 != 0 ) || (year % 400 == 0)) {
     return true;
   } else {
     return false;
@@ -81,13 +96,6 @@ function is_year_leap(year) {
 //  console.log(is_year_leap (2600));
 //  console.log(is_year_leap ( 2400));
 
-function testMe(func, arg, expected) {
-  const result = func(arg)
-  
-  if (result != expected) {
-    console.log(`function ${func.name}(${arg}) returned ${result} but not ${expected}`)
-  }
-}
 testMe(is_year_leap, 20, true)
 testMe(is_year_leap, 21, false)
 testMe(is_year_leap, 30, false)
@@ -98,6 +106,31 @@ testMe(is_year_leap, 200, false)
 testMe(is_year_leap, 400, true)
 testMe(is_year_leap, 500, false)
 
+function isYearLeap(number) {
+  if (number % 4 == 0) {
+    if (number % 100 == 0) {
+      if (number % 400 == 0) {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return true
+    }
+  } else {
+    return false
+  }
+}
+testMe(isYearLeap, 20, true)
+testMe(isYearLeap, 21, false)
+testMe(isYearLeap, 30, false)
+testMe(isYearLeap, 96, true)
+testMe(isYearLeap, 97, false)
+testMe(isYearLeap, 100, false)
+testMe(isYearLeap, 200, false)
+testMe(isYearLeap, 400, true)
+testMe(isYearLeap, 500, false)
+
 
 // 4. Напишите функцию sum_range(start, end), которая суммирует все целые числа от значения «start» до величины «end» включительно.
 // Если пользователь задаст первое число большее чем второе, просто поменяйте их местами.
@@ -106,16 +139,21 @@ testMe(is_year_leap, 500, false)
 function sum_range(start, end) {
   let sum = 0;
 
-    if(start > end){ 
-      let spareVariable = start;//меняем местами посредствам создания доп. переменной
-      start = end;
-      end = spareVariable;
-    }
-    for(let i = start; i <= end; i++){
-        sum += i;
-    }
-    return sum;
+  if(start > end){ 
+    let spareVariable = start;
+    start = end;
+    end = spareVariable;
+  }
+
+  for(let i = start; i <= end; i++){
+    sum += i;
+  }
+
+  return sum;
 }
+testMe(sum_range, 3, 5, 12)
+testMe(sum_range, 5, 3, 12)
+
 // const x = sum_range(3, 1)
 // const y = sum_range(1, 5)
 

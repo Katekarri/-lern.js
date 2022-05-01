@@ -5,8 +5,8 @@ function testMe(...args) {
     
     const result = func(...functionArgs)
 
-    const success_message = `function ${func.name}(${functionArgs}) OK`
-    const error_message = `function ${func.name}(${functionArgs}) returned ${result} but not ${expected}`
+    const success_message = `${func.name}(${functionArgs}) OK`
+    const error_message = `${func.name}(${functionArgs}) returned ${result} but not ${expected}`
     
     if (result instanceof Array) {
         if (result.length === expected.length && result.every((value, index) => value === expected[index])){

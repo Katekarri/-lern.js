@@ -136,7 +136,7 @@ testMe(isYearLeap, 500, false)
 // Если пользователь задаст первое число большее чем второе, просто поменяйте их местами.
 
  
-function sum_range(start, end) {
+function sumRange(start, end) {
   let sum = 0;
 
   if(start > end){ 
@@ -151,8 +151,8 @@ function sum_range(start, end) {
 
   return sum;
 }
-testMe(sum_range, 3, 5, 12)
-testMe(sum_range, 5, 3, 12)
+testMe(sumRange, 3, 5, 12)
+testMe(sumRange, 5, 3, 12)
 
 // const x = sum_range(3, 1)
 // const y = sum_range(1, 5)

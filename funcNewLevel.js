@@ -71,9 +71,7 @@ function bank(a, years) {
 
 
 function is_year_leap(year) {
-  if (year % 4 === 0) {
-    return true;
-  } else if (year % 100 === 0 && year % 400 === 0) {
+  if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
     return true;
   } else {
     return false;

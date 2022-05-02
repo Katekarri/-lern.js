@@ -39,6 +39,21 @@ testMe(getDigitsSum, 23, 5);
 // Реализуйте функцию getDivisors, которая параметром будет принимать число и возвращать массив его делителей, то есть чисел, на которое делится наше число. К примеру, если мы передадим число 24 - мы должны получить следующий массив:
 // [1, 2, 3, 4, 6, 8, 12, 24]
 
+function getDivisors(num) {
+  let arrayDdivider = [];
+
+  for (let i = 1; i <= num; i++){
+   if(num % i == 0) {
+			arrayDdivider.push(i);
+		}
+  }
+  return arrayDdivider;
+}
+
+testMe(getDivisors, 24, [1, 2, 3, 4, 6, 8, 12, 24]);
+testMe(getDivisors, 11, [1,11]);
+
+
 // Задача 4
 // Сделайте функцию reverseStr, которая параметром будет принимать строку и переворачивать ее символы в обратном порядке. Решите задачу без цикла, используя комбинацию стандартных функций JavaScript.
 
@@ -51,16 +66,30 @@ testMe(reverseStr, '', '')
 // Задача 5
 // Сделайте функцию delElem, которая параметрами будет принимать значение и массив и удалять из массива все элементы с таким значением.
 
+function delElem(value,myArray){
+  let my = myArray.indexOf(value);
+if (value > -1) {
+  myArray.splice(value, 1); 
+}return myArray
+}
+
+delElem(2, [1, 2, 3])
+
+testMe(delElem,2, [1, 2, 3])
+testMe(delElem, 24, [1, 2, 3, 4, 6, 8, 12, 24])
+
+
+
 // Задача 6
 // Сделайте функцию, заполняющую массив целыми числами от 1 до заданного. Пример работы такой функции:
 // console.log(func(5)); // выведет [1, 2, 3, 4, 5]
 
 function createArray(end) {
-  let arr = [];
+  let arr3 = [];
   for(let i = 1; i <= end; i++){ 
-    arr.push(i);       
+    arr3.push(i);       
   }  
-  return arr
+  return arr3
 }
 
 testMe(createArray, 7, [1, 2, 3, 4, 5, 6, 7]);
@@ -72,11 +101,11 @@ testMe(createArray, 0, []);
 // console.log(func(3, 7)); // выведет [3, 4, 5, 6, 7]
 
 function createArray2(start, end) {
-  let arr = [];
+  let wholeNumbers = [];
   
   for(let i = start; i <= end; i++){ 
-    arr.push(i);       
+    wholeNumbers.push(i);       
   }  
- return arr
+ return wholeNumbers
 }
-console.log(createArray2(3, 5))
+// console.log(createArray2(3, 5))

@@ -49,43 +49,9 @@ testMe(calculateDeposit, 127, 3, 169.04)
 testMe(calculateDeposit, 127, 3, 50, 169.04)
 
 
-// console.log(bank(2000, 5));
-
-
-
-
-// let n = 10;
-// let x = a / 100 * n;
-// function bank(a, years) {
-//   if ( years = a * n) {
-//     return console.log(years);
-//   }
-// }
-// bank(1000, 3);
-// let sum = 0;
-// function bank(a , years)
-// for (let i = 0; i <= years; i++) {
- 
-// }
-
-
-
-
 // 3. Написать функцию is_year_leap, принимающую 1 аргумент — год, и возвращающую True, если год високосный, и False иначе.
 
-// function isYearLeap(year) {
-//   if (year % 4 === 0){
-//     return true;
-//   } else{
-//     return false;
-//   }
-// }
-// is_year_leap (1941);
-// is_year_leap (1940);
-
-
-
-function is_year_leap(year) {
+function isYearLeap(year) {
   if ((year % 4 == 0) && (year % 100 != 0 ) || (year % 400 == 0)) {
     return true;
   } else {
@@ -93,18 +59,18 @@ function is_year_leap(year) {
   }
 }
 
-//  console.log(is_year_leap (2600));
-//  console.log(is_year_leap ( 2400));
+//  console.log(isYearLeap (2600));
+//  console.log(isYearLeap ( 2400));
 
-testMe(is_year_leap, 20, true)
-testMe(is_year_leap, 21, false)
-testMe(is_year_leap, 30, false)
-testMe(is_year_leap, 96, true)
-testMe(is_year_leap, 97, false)
-testMe(is_year_leap, 100, false)
-testMe(is_year_leap, 200, false)
-testMe(is_year_leap, 400, true)
-testMe(is_year_leap, 500, false)
+testMe(isYearLeap, 20, true)
+testMe(isYearLeap, 21, false)
+testMe(isYearLeap, 30, false)
+testMe(isYearLeap, 96, true)
+testMe(isYearLeap, 97, false)
+testMe(isYearLeap, 100, false)
+testMe(isYearLeap, 200, false)
+testMe(isYearLeap, 400, true)
+testMe(isYearLeap, 500, false)
 
 function isYearLeap(number) {
   if (number % 4 == 0) {
@@ -154,8 +120,6 @@ function sumRange(start, end) {
 testMe(sumRange, 3, 5, 12)
 testMe(sumRange, 5, 3, 12)
 
-// const x = sum_range(3, 1)
-// const y = sum_range(1, 5)
 
 // 5. Создайте функцию rgb(), которая будет принимать три числовых аргумента и возвращать строку вида «rgb(23,100,134)». Если аргументы не заданы, считать их равными нулю.
 

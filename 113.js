@@ -1,18 +1,45 @@
+import { testMe } from './utils.js'
+
 // Задача 1
-// Сделайте функцию, которая параметром будет принимать массив с числами, и проверять, что все элементы в этом массиве являются четными числами.//массив.forEach(function(элемент, индекс, массив) {
-//	код, который выполнится для всех элементов})
+// Сделайте функцию, которая параметром будет принимать массив с числами, и проверять, что все элементы в этом массиве являются четными числами.
 
+function checkNum(arr) {  
+  let finishArray = [];
 
-function checkNum(arr) {
-  finishArray = [];
-	arr.forEach(function(num) {
-  	if(!(num % 2)) {
-    	finishArray.push(num)
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+          finishArray.push(arr[i]);
+          
+        } else { 
+          return false;
+          break;
+        }
+  } 
+   if(finishArray.length === arr.length) {
+    return true;
     }
-  })
-  return finishArray;
 }
-checkNum([2,7,6,8,12,16])
+
+checkNum([8, 6, 10, 4, 2])
+
+testMe(checkNum, [ 8, 6, 5, 4, 7], false)
+testMe(checkNum, [ 8, 6, 10, 4, 2], true)
+testMe(checkNum, [1, 3, 5, 7, 11], false)
+
+
+// function checkNum(arr) {
+//   finishArray = [];
+// 	arr.forEach(function(num) {
+//   	if(!(num % 2)) {
+//     	finishArray.push(num)//массив.forEach(function(элемент, индекс, массив) {
+//	код, который выполнится для всех элементов})
+//     }
+//   })
+//   return finishArray;
+// }
+// checkNum([2,7,6,8,12,16])
+
+
 // Задача 2
 // Сделайте функцию, которая параметром будет принимать число и проверять, что все цифры это числа являются нечетными.
 
@@ -41,7 +68,8 @@ function checkSameNumbers(arr){
 for(let i = 0; i < arr.length; i++){
 
   if (arr[i] == arr[i + 1]) {
-flag = true;
+    flag = true;
+    break;
   }
   
 }return flag;

@@ -1,7 +1,7 @@
 // Задача 1
 // Создайте объект с ключами 1, 2 и 3 и значениями 'a', 'b' и 'c'.Выведите на экран все его элементы.
 
-let obj1 = {
+const obj1 = {
   1: 'a',
   2: 'b',
   3: 'c'
@@ -12,18 +12,18 @@ console.log(obj1)
 // Задача 2
 // Создайте объект с ключами a, b и c и значениями 1, 2 и 3. Найдите сумму его элементов.
 
-let obj2 = {
+const obj2 = {
   a: 1,
   b: 2,
   c: 3,
 };
 
-let sumElement = (obj2['a'] + obj2['b'] + obj2['c']);
+let sumElement = (obj2.a + obj2.b + obj2.c);
 
 // Задача 3
 // Создайте объект с ключами 1a, 2b и с - с и значениями 1, 2 и 3. Найдите сумму его элементов.
 
-let obj3 = {
+const obj3 = {
   '1a': 1,
   '2b': 2,
   c: 3
@@ -45,7 +45,7 @@ let sumElementObj3 = (obj3['1a'] + obj3['2b'] + obj3['c']);
 // let obj = {key1: 1, key2: 2, key3: 3};
 // Найдите сумму его элементов.Обращайтесь к элементам с помощью изученного синтаксиса.
 
-let obj5 = {key1: 1, key2: 2, key3: 3};
+const obj5 = {key1: 1, key2: 2, key3: 3};
 let sumElementObj5 = (obj5.key1 + obj5.key2 + obj5.key3);
 
 
@@ -60,24 +60,26 @@ obj6.b2, obj6.d4, obj6['1a'], obj6['eee-']
 // Задача 7
 // Создайте объект user с ключами name, surname, patronymic и какими - то произвольными значениями.Выведите на экран фамилию, имя и отчество через пробел.
 
-let user = {
-  nameUser: 'Luk ' ,
-  surname: 'Sky ',
+const user = {
+  nameUser: 'Luk' ,
+  surname: 'Sky',
   patronymic: 'Worker',
 }
-console.log(user.nameUser + user.surname + user.patronymic);
+console.log(`${user.nameUser}` + ' ' + `${ user.surname}` + ' ' + `${ user.patronymic}`);
 
 
 // Задача 8
 // Создайте объект date с ключами year, month и day и значениями, соответствующими текущему дню.Выведите созданную дату на экран в формате год - месяц - день.
 
-let date = {
+
+const date = {
   year: '2022',
   month: '05',
   day: '03',
 }
 
-let today = date.year + '-' + date.month + '-' + date.day;
+let today = `${date.year}` + '-' + `${ date.month}` + ' - ' + `${ date.day}`;
+// let today = date.year + '-' + date.month + '-' + date.day;
 console.log(today);
 
 

@@ -59,21 +59,58 @@ thirdTask()
 
 testMe(thirdTask, ['Homework', 20, 'Shopping', 10, 5])
 
+// const lines = 5;
+// let result = '';
 
+// for (let i = 0; i <= lines; i++) {
+//     for (let j = 0; j < lines - i; j++) {
+//         result += " ";
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//         result += "*";
+//     }
+//     result += "\n";
+// }
+
+// console.log(result)
 
 //задача 3***
-const lines = 5;
-let result = '';
+// const lines = 5;
+// let result = '';
 // Проверяется именно переменная result, формируйте строку в ней
 
-function paintStar(lines) {
+// function paintStar(lines) {
+//   let trianglelFromArrays = [];
+//    for(let i=0, i)
+// }
+
+
+function paintStar(points) {
+    result = '';
+    for (let i = 1; i <= points; i++) {
+      let lines = ' '.repeat(points - i);
+      let stars = '*'.repeat(i * 2 - 1);
+      result += `${lines}${stars}${lines}\n`;
+    }
+   return result;
+  }
   
-}
-testMe(paintStar,6,[
-    [' ', ' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', ' ',],
-    [' ', ' ', ' ', ' ', '*', '*', '*', ' ', ' ', ' ', ' ',],
-    [' ', ' ', ' ', '*', '*', '*', '*', '*', ' ', ' ', ' ',],
-    [' ', ' ', '*', '*', '*', '*', '*', '*', '*', ' ', ' ',],
-    [' ', '*', '*', '*', '*', '*', '*', '*', '*', '*', ' ',],
-    ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*',],
-])
+  console.log(paintStar(6));
+
+testMe(paintStar, 6,
+`       ${'*'}         
+       ${'***'}
+      ${'*****'}  
+     ${'*******'}
+    ${'*********'}`);
+
+    
+
+// testMe(paintStar,6,[
+//     [' ', ' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', ' ',],
+//     [' ', ' ', ' ', ' ', '*', '*', '*', ' ', ' ', ' ', ' ',],
+//     [' ', ' ', ' ', '*', '*', '*', '*', '*', ' ', ' ', ' ',],
+//     [' ', ' ', '*', '*', '*', '*', '*', '*', '*', ' ', ' ',],
+//     [' ', '*', '*', '*', '*', '*', '*', '*', '*', '*', ' ',],
+//     ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*',],
+// ])

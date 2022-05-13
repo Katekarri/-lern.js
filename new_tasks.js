@@ -86,10 +86,10 @@ testMe(thirdTask, ['Homework', 20, 'Shopping', 10, 5])
 
 
 function paintStar(points) {
-    result = '';
+      let result = '';
     for (let i = 1; i <= points; i++) {
-      let lines = ' '.repeat(points - i);
-      let stars = '*'.repeat(i * 2 - 1);
+      const lines = ' '.repeat(points - i);
+      const stars = '*'.repeat(i * 2 - 1);
       result += `${lines}${stars}${lines}\n`;
     }
    return result;
@@ -97,20 +97,38 @@ function paintStar(points) {
   
   console.log(paintStar(6));
 
-testMe(paintStar, 6,
-`       ${'*'}         
+testMe(paintStar, 6, `       
+        
+        ${'*'}
        ${'***'}
       ${'*****'}  
      ${'*******'}
     ${'*********'}`);
 
-    
 
-// testMe(paintStar,6,[
-//     [' ', ' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', ' ',],
-//     [' ', ' ', ' ', ' ', '*', '*', '*', ' ', ' ', ' ', ' ',],
-//     [' ', ' ', ' ', '*', '*', '*', '*', '*', ' ', ' ', ' ',],
-//     [' ', ' ', '*', '*', '*', '*', '*', '*', '*', ' ', ' ',],
-//     [' ', '*', '*', '*', '*', '*', '*', '*', '*', '*', ' ',],
-//     ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*',],
-// ])
+
+//задача 4
+////задача 3) Создайте функцию, которая будет принимать в себя 2 аргумента, оба числа. Первое число-это база, второе числа- это сколько раз нужно будет повторить это число в прогрессии. (Смотри пример ниже). Функция должна возеращать строку (или число в особых случаях, о которых ниже), где эти числа идут по порядку, разделенные тремя дефисами --- После последнега числа их не должно быть. Если второй аргумент не является числом, равен или меньше нуля-то возаращать просто первый аргумент. (Проверяем через оператар tvрeof)
+
+function createNewValue(base, num) {
+  let newString = '';
+
+  if (typeof (num) !== 'number' || num <= 0) {
+    return base;
+  }
+
+  for (let i = 0; i <= num; i++) {
+    if (i === num) {
+      newString += `${base * i}---`;
+    }
+
+    return newString;
+  }
+}
+createNewValue(5, 3);
+
+  
+testMe(createNewValue, 5, 3, '5---10---15');
+testMe(createNewValue, 5, '3', '5');
+testMe(createNewValue, 5, -3, '5');
+testMe(createNewValue, 5, 0, '5');

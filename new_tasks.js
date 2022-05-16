@@ -59,6 +59,40 @@ thirdTask()
 
 testMe(thirdTask, ['Homework', 20, 'Shopping', 10, 5])
 
+
+
+//задача 3***
+// const lines = 5;
+// let result = '';
+// Проверяется именно переменная result, формируйте строку в ней
+
+// function paintStar(lines) {
+//   let trianglelFromArrays = [];
+//    for(let i=0, i)
+// }
+
+
+function paintStar(points, emptySign=' ', symbolSign='*') {
+  let result = '';
+  
+  for (let i = 1; i <= points; i++) {
+    const lines = emptySign.repeat(points - i);
+    const stars = symbolSign.repeat(i * 2 - 1);
+    result += `${lines}${stars}${lines}\n`;
+  }
+  
+  return result;
+}
+
+testMe(paintStar, 6, `       
+        
+        ${'*'}
+       ${'***'}
+      ${'*****'}  
+     ${'*******'}
+    ${'*********'}`);
+
+
 // const lines = 5;
 // let result = '';
 
@@ -74,60 +108,28 @@ testMe(thirdTask, ['Homework', 20, 'Shopping', 10, 5])
 
 // console.log(result)
 
-//задача 3***
-// const lines = 5;
-// let result = '';
-// Проверяется именно переменная result, формируйте строку в ней
-
-// function paintStar(lines) {
-//   let trianglelFromArrays = [];
-//    for(let i=0, i)
-// }
-
-
-function paintStar(points) {
-      let result = '';
-    for (let i = 1; i <= points; i++) {
-      const lines = ' '.repeat(points - i);
-      const stars = '*'.repeat(i * 2 - 1);
-      result += `${lines}${stars}${lines}\n`;
-    }
-   return result;
-  }
-  
-  console.log(paintStar(6));
-
-testMe(paintStar, 6, `       
-        
-        ${'*'}
-       ${'***'}
-      ${'*****'}  
-     ${'*******'}
-    ${'*********'}`);
-
-
-
 //задача 4
 ////задача 3) Создайте функцию, которая будет принимать в себя 2 аргумента, оба числа. Первое число-это база, второе числа- это сколько раз нужно будет повторить это число в прогрессии. (Смотри пример ниже). Функция должна возеращать строку (или число в особых случаях, о которых ниже), где эти числа идут по порядку, разделенные тремя дефисами --- После последнега числа их не должно быть. Если второй аргумент не является числом, равен или меньше нуля-то возаращать просто первый аргумент. (Проверяем через оператар tvрeof)
 
 function createNewValue(base, num) {
-    if (typeof(num) !== 'number' || num <= 0) {
-        return base;
-    }
-    let str = '';
+  if (typeof(num) !== 'number' || num <= 0) {
+      return base;
+  }
+  // let str = '';
+  // for (let i = 1; i <= num; i++) {
+  //     if (i === num) {
+  //         str += `${base * i}`;
+  //     } else {
+  //         str += `${base * i}---`;
+  //     }
+  // }
+  let str = String(base);
+  for (let i = 2; i <= num; i++) {
+    str += `---${base * i}`;  
+  }
 
-    for (let i = 1; i <= num; i++) {
-        if (i === num) {
-            str += `${base * i}`;
-        } else {
-            str += `${base * i}---`;
-        }
-    }
-
-    return str;
+  return str;
 }
-createNewValue(5, 3);
-
   
 testMe(createNewValue, 5, 3, '5---10---15');
 testMe(createNewValue, 5, '3', '5');

@@ -13,7 +13,7 @@ import { testMe } from './utils.js'
 
 let user = { name: "John", years: 30 };
 
-let { name, years:age,isAdmin = false} = user
+const { name, years:age,isAdmin = false} = user
 
 // alert( name );
 // alert( age ); 
@@ -41,18 +41,23 @@ let salaries = {
 
 function topSalary(salaries) {
 
-  let highlyPaidEmployee = 0; //потому как переменная будет меняться
-  let highlyPaidEmployeeName = "";
+  let highlyPaidEmployeeMoney = 0; //потому как переменная будет меняться
+  let highlyPaidEmployeeName = null;
   for (let [name, money] of Object.entries(salaries)) {
-    if (highlyPaidEmployee < money) {
-     highlyPaidEmployee = money; //  если значение переменной с высшей зарплатой меньше чем текущая рассматриваемая зарплата, мы это значение( текущей зарплаты) присваиваем переменной нашей с наибольшей зарплатой
+    if (highlyPaidEmployeeMoney < money) {
+      highlyPaidEmployeeMoney = money; //  если значение переменной с высшей зарплатой меньше чем текущая рассматриваемая зарплата, мы это значение( текущей зарплаты) присваиваем переменной нашей с наибольшей зарплатой
       highlyPaidEmployeeName = name;//назначаем то значение которое содержится в имени(ключе) чье значение зарплаты присвоилось для большей
     }
   }
   return highlyPaidEmployeeName;
 }
 
-topSalary(salaries)
+topSalary(salaries);
+
+testMe(topSalary, salaries, "Pete");
+testMe(topSalary, { "Pete": 100, "John": 300, "Mary": 300 }, "John");
+testMe(topSalary, {}, null);
+
 
 // Задача 1
 // В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. В случае с английским алфавитом очки распределяются так:
@@ -84,35 +89,35 @@ topSalary(salaries)
 // }
 
 function countPoints(word) {
-  const englishWord = {
-    1: [A, E, I, O, U, L, N, S, T, R],
-    2: [D, G],
-    3: [B, C, M, P],
-    4: [F, H, V, W, Y],
-    5: [K],
-    8: [J, X],
-    10: [Q, Z ],
-  }
-  const russianWord = {
-    1: [ А, В, Е, И, Н, О, Р, С, Т],
-    2:[Д, К, Л, М, П, У],
-    3: [Б, Г, Ё, Ь, Я],
-    4: [Й, Ы],
-    5: [Ж, З, Х, Ц, Ч],
-    8: [Ш, Э, Ю ],
-    10:[Ф, Щ, Ъ],
-  }
+//   const englishWord = {
+//     1: ['A ,E, I, O, U, L, N, S, T, R'],
+//     2: [D, G],
+//     3: [B, C, M, P],
+//     4: [F, H, V, W, Y],
+//     5: [K],
+//     8: [J, X],
+//     10: [Q, Z ],
+//   }
+//   const russianWord = {
+//     1: [ А, В, Е, И, Н, О, Р, С, Т],
+//     2:[Д, К, Л, М, П, У],
+//     3: [Б, Г, Ё, Ь, Я],
+//     4: [Й, Ы],
+//     5: [Ж, З, Х, Ц, Ч],
+//     8: [Ш, Э, Ю ],
+//     10:[Ф, Щ, Ъ],
+//   }
 
-  for (i = 0; i <= word.length; i++ ){
-    if( )
-  }
+  // for (i = 0; i <= word.length; i++ ) {
+    
+  // }
 
 }
 
-function countPoints(word)
+countPoints('dog');
 
-testMe(countPoints, 'dog', 5);
-testMe(countPoints, 'игра',6)
+testMe (countPoints, 'dog', 5);
+testMe (countPoints, 'игра',6)
 
 
 
@@ -132,15 +137,17 @@ testMe(countPoints, 'игра',6)
 // задача 3
 // Даны два списка одинаковой длины. Необходимо создать из них объект таким образом, чтобы элементы первого списка были ключами, а элементы второго — соответственно значениями нашего объекта.
 
-const keys = [1, 2, 3, 4, 5];
-const values = ['jijkko, uioj, bin, hiujio, hj'];
-const obj = {};
+function createObjectFromArrays(keys, values) {
+  const obj = {};
 
-for(let i = 0; i < keys.length; i++) {
-  obj[keys] = values[i];
+  for(let i = 0; i < keys.length; i++) {
+    obj[keys[i]] = values[i];
+}
+  return obj;
 }
 
-// console.log(obj);
+
+testMe(createObjectFromArrays, [1, 2, 3], ['jijkko', 'uioj', 'bin'], { 1 : 'jijkko', 2 : 'uioj', 3 : 'bin'} )
 
 // задача 4
 // В базе данных ветеринарной клиники информация о пациентах-котах хранится в списке списков. Данные о кошках и их владельцах записаны в формате «Кличка животного, Возраст животного, Имя владельца, Фамилия владельца»:

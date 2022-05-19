@@ -9,11 +9,18 @@ function testMe(...args) {
     const error_message = `${func.name}(${functionArgs}) returned ${result} but not ${expected}`
     
     if (result instanceof Array) {
-        if (result.length === expected.length && result.every((value, index) => value === expected[index])){
+        if (result.length === expected.length && result.every((value, index) => value === expected[index])) {
             console.log(success_message)
         } else {
             console.log(error_message)
         }
+        
+    } else if (result instanceof Object) {
+        if (JSON.stringify(result) === JSON.stringify(expected)) {
+               console.log(success_message)
+        } else {
+            console.log(`${JSON.stringify(result)} !== ${JSON.stringify(expected)}`)
+           }
     } else {
         if (result === expected) {
             console.log(success_message)

@@ -97,6 +97,7 @@ function paintStar(points) {
   
   console.log(paintStar(6));
 
+
 testMe(paintStar, 6, `       
         
         ${'*'}

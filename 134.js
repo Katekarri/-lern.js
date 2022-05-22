@@ -4,7 +4,7 @@
 // 	alert('!');
 // }
 
-//так как функция не участвует ни в каком выражении, то браузер считает ее Function Declaration, но не находит ее имени и выдает ошибку.
+// Function Declaration
 	
 
 // Задача 2
@@ -13,7 +13,7 @@
 // 	alert('!');
 // }
 
-//Function Declaration
+//Function Expression
 
 
 // Задача 3
@@ -68,6 +68,17 @@
 // 	}
 // );
 
+//Function Expression
+
+// Задача 9
+// Определите, является ли представленная функция Function Declaration или Function Expression:
+// let test = function func() {
+// 	alert('!');
+// }
+
+//Function Expression
+
+
 // Задача 10
 // Определите, является ли представленная функция Function Declaration или Function Expression:
 // alert(
@@ -76,12 +87,16 @@
 // 	}
 // );
 
+//Function Expression
+
 
 // Задача 11
 // Определите, является ли представленная функция Function Declaration или Function Expression:
 // +function func() {
 // 	alert('!');
 // }
+
+//Function Expression
 
 
 // Задача 12
@@ -90,6 +105,7 @@
 // 	alert('!');
 // }
 
+//Function Declaration
 
 
 // Задача 13
@@ -99,6 +115,8 @@
 // 	alert('!');
 // }
 
+//Function Expression
+
 
 // Задача 14
 // Определите, является ли представленная функция Function Declaration или Function Expression:
@@ -106,6 +124,8 @@
 // function func() {
 // 	alert('!');
 // }
+
+//Function Declaration
 
 
 // Задача 15
@@ -115,6 +135,8 @@
 // 	alert('!');
 // }
 
+//Function Declaration
+
 
 // Задача 16
 // Определите, является ли представленная функция Function Declaration или Function Expression:
@@ -122,6 +144,8 @@
 // function func() {
 // 	alert('!');
 // }
+
+//Function Declaration
 
 
 // Задача 17
@@ -131,12 +155,17 @@
 // 	alert('!');
 //   }
 
+//Function Expression
+
+
 //   Задача 18
 // Определите, является ли представленная функция Function Declaration или Function Expression:
 // function func() {
 // 	alert('!');
 // }
 // +1;
+
+//Function Declaration
 
 
 // Задача 19
@@ -145,6 +174,7 @@
 // 	alert('!');
 // } + 1;
 
+//Function Declaration
 
 
 // Задача 20
@@ -152,6 +182,8 @@
 // +function func() {
 // 	alert('!');
 // } + 1;
+
+//Function Expression
 
 
 // Задача 21
@@ -161,6 +193,8 @@
 // 	alert('!');
 // } + 1;
 
+//Function Expression
+
 
 // Задача 22
 // Определите, является ли представленная функция Function Declaration или Function Expression:
@@ -169,9 +203,13 @@
 // 	alert('!');
 // } + 1;
 
+//Function Declaration
+
 
 // Задача 23
 // Определите, является ли представленная функция Function Declaration или Function Expression:
 // function func() {
 // 	alert('!');
 // } + alert('!');
+
+//Function Declaration

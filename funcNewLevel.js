@@ -72,21 +72,21 @@ testMe(isYearLeap, 200, false)
 testMe(isYearLeap, 400, true)
 testMe(isYearLeap, 500, false)
 
-function isYearLeap(number) {
-  if (number % 4 == 0) {
-    if (number % 100 == 0) {
-      if (number % 400 == 0) {
-        return true
-      } else {
-        return false
-      }
-    } else {
-      return true
-    }
-  } else {
-    return false
-  }
-}
+// function isYearLeap(number) {
+//   if (number % 4 == 0) {
+//     if (number % 100 == 0) {
+//       if (number % 400 == 0) {
+//         return true
+//       } else {
+//         return false
+//       }
+//     } else {
+//       return true
+//     }
+//   } else {
+//     return false
+//   }
+// }
 testMe(isYearLeap, 20, true)
 testMe(isYearLeap, 21, false)
 testMe(isYearLeap, 30, false)

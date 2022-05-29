@@ -5,13 +5,13 @@
 // Сделайте объект с тремя функциями. Пусть первая возвращает через return число 1, вторая - число 2, третья - число 3. С помощью созданных функций выведите на экран сумму возвращаемых чисел.
 
 const obj = {
-  funk1 : function() {
+  funk1: function() {
     return 1;
   },
-  funk2 : function() {
+  funk2: function() {
     return 2;
   },
-  funk3 : function() {
+  funk3: function() {
     return 3;
   }
 };
@@ -30,7 +30,7 @@ for(let key in obj) {
 
 
 const obj1 = {
-  sumOfElements : function(arr) {
+  sumOfElements: function(arr) {
       let sum = 0;
       for(let elem of arr) {
         sum += elem;    
@@ -38,7 +38,7 @@ const obj1 = {
         return sum;
   },
 
-  sumSquareOfElements : function(arr) {
+  sumSquareOfElements: function(arr) {
       let sum = 0;
       for(let elem of arr) {
         sum += elem * elem;
@@ -46,10 +46,10 @@ const obj1 = {
         return sum;
   },
 
-   sumCubOfElements : function(arr) {
+   sumCubOfElements: function(arr) {
       let sum = 0;
       for(let elem of arr) {
-          sum += elem ** elem; 
+          sum += elem * elem * elem; 
       };
         return sum;
     },

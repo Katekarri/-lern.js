@@ -54,10 +54,7 @@ function func3() {
     return 3;
 };
 
-test(func1, func2, func3)
-function test(func1, func2, func3) {   
-    return func1() + func2() + func3();
-};
+test(func1, func2, func3);
 
 // Задача 4
 // Модифицируйте предыдущую задачу так, чтобы функции были объявлены как Function Expression с теми же именами.
@@ -75,16 +72,13 @@ const func3 = function() {
 };
 
 test(func1, func2, func3)
-function test(func1, func2, func3) {   
-    return func1() + func2() + func3();//don't work , but alert(func1() + func2() + func3()); work 
-};
 
 
 // Задача 5
 // Скопируйте код моей функции test. Вызовите эту функцию, передав ей параметром анонимную функцию, которая параметром будет принимать число и возвращать его куб.
 
 test(function(num) {
-  return num * num;
+  return num * num * num;
 });
 
 function test(func) {
@@ -94,11 +88,39 @@ function test(func) {
 // Задача 6
 // Переделайте ваш код так, чтобы передаваемая функция была не анонимной, а была определена как Function Declaration с именем func.
 
+function func(num){
+  return num * num * num;
+};
+  test(func);
+
+  function test(func) {
+    alert(func(3));
+  }
+
 // Задача 7
 // Переделайте передаваемую функцию на Function Expression с тем же именем func.
 
+
+const funk = function(num){
+    return num * num * num;
+  };
+    test(func);
+  
+    function test(func) {
+      alert(func(3));
+    }
+
 // Задача 8
 // Пусть передаваемая функция теперь принимает два параметра и возвращает их сумму. При вызове передаваемая функции внутри test передайте в передаваемую функцию число 2 и число 3. Выведите алертом результат.
+
+const funk1 = function(a, b){
+    return a + b;
+  };
+    test(func1);
+  
+    function test(func) {
+      alert(func1(2, 3));
+    }
 
 // Задача 9
 // Пусть функция test первым параметром принимает число, а вторым и третьим параметрами - функции, также параметром принимающие числа.

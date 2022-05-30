@@ -91,11 +91,12 @@ function test(func) {
 function func(num){
   return num * num * num;
 };
-  test(func);
 
-  function test(func) {
-    alert(func(3));
-  }
+test(func);
+
+function test(func) {
+  alert(func(3));
+}
 
 // Задача 7
 // Переделайте передаваемую функцию на Function Expression с тем же именем func.
@@ -104,23 +105,25 @@ function func(num){
 const funk = function(num){
     return num * num * num;
   };
-    test(func);
+
+test(func)
   
-    function test(func) {
-      alert(func(3));
-    }
+function test(func) {
+  alert(func(3));
+};
 
 // Задача 8
 // Пусть передаваемая функция теперь принимает два параметра и возвращает их сумму. При вызове передаваемая функции внутри test передайте в передаваемую функцию число 2 и число 3. Выведите алертом результат.
 
 const funk1 = function(a, b){
     return a + b;
-  };
-    test(func1);
+};
+
+test(func1)
   
-    function test(func) {
-      alert(func1(2, 3));
-    }
+function test(func1) {
+  alert(func1(2, 3));
+}
 
 // Задача 9
 // Пусть функция test первым параметром принимает число, а вторым и третьим параметрами - функции, также параметром принимающие числа.
@@ -130,8 +133,41 @@ const funk1 = function(a, b){
 // }
 // Вызовите функцию test, первым параметром передав число 3, вторым параметром функцию, возводящую число в квадрат, а третьим - функцию, возводящую число в куб. Выведите результат работы на экран.
 
+
+const test = function(num, func1, func2) {
+  return func1(num) + func2(num);
+};
+
+const func1 = function() {
+  return num * num;
+};
+
+const func2 = function() {
+  return num * num * num;
+};
+
+test(3, func1, func2);
+
 // Задача 10
 // Не подсматривая в мой код реализуйте такую же функцию test самостоятельно.
+// Давайте сделаем функцию, которая параметром будет принимать массив, а вторым параметром - функцию. Переданная функция должна будет применится к каждому элементу массива
+
+const funcInArr = function(arr, func) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = func(arr[i]);
+  };
+    return arr;
+};
+   
+const result = funcInArr (
+  [1, 2, 3],
+  function(num) {
+    return num;
+  }
+);
+  
+  console.log(result);
+
 
 // Задача 11
 // Вызовите созданную вами функцию test, передав ей параметром массив с числами. Сделайте так, чтобы функция вернула массив с кубами этих чисел.

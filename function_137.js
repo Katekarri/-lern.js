@@ -166,8 +166,17 @@ const result = funcInArr (
   }
 );
   
-  console.log(result);
+console.log(result);
 
 
 // Задача 11
 // Вызовите созданную вами функцию test, передав ей параметром массив с числами. Сделайте так, чтобы функция вернула массив с кубами этих чисел.
+
+const result1 = funcInArr (
+    [1, 2, 3],
+    function(num) {
+      return num * num * num;
+    }
+  );
+    
+console.log(result1);

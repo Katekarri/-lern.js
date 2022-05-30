@@ -89,7 +89,7 @@ function test(func) {
 // Переделайте ваш код так, чтобы передаваемая функция была не анонимной, а была определена как Function Declaration с именем func.
 
 function func(num){
-  return num * num * num;
+  return num ** 3;
 };
 
 test(func);
@@ -103,7 +103,7 @@ function test(func) {
 
 
 const funk = function(num){
-    return num * num * num;
+    return num ** 3;
   };
 
 test(func)
@@ -143,7 +143,7 @@ const func1 = function() {
 };
 
 const func2 = function() {
-  return num * num * num;
+  return num ** 3;
 };
 
 test(3, func1, func2);
@@ -175,7 +175,7 @@ console.log(result);
 const result1 = funcInArr (
     [1, 2, 3],
     function(num) {
-      return num * num * num;
+      return num ** 3;
     }
   );
     

@@ -49,7 +49,7 @@ const obj1 = {
    sumCubOfElements: function(arr) {
       let sum = 0;
       for(let elem of arr) {
-          sum += elem * elem * elem; 
+          sum += elem ** 3; 
       };
         return sum;
     },

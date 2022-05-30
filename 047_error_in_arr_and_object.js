@@ -52,6 +52,8 @@ const obj3 = {a: 1, b: 2, c: 3};
 let key = 'a';
 console.log(obj3['a']);
 
+console.log(obj3[key]);
+
 // Задача 6
 // Код должен вывести сумму элементов объекта:
 // let obj = {a: 1, b: 2, c: 3};
@@ -62,9 +64,15 @@ const obj6 = {a: 1, b: 2, c: 3};
 let sum2 = obj6.a + obj6.b + obj6.c;
 console.log(sum2);
 
+let sum3 = 0;
+for (let num of Object.values(obj6)) {
+  sum3 += num;
+}
+console.log(sum3)
+
 // Задача 7
 // Код должен вывести количество элементов объекта
 // let obj = {a: 1, b: 2, c: 3};
 // console.log(obj.length); 
- 
+
 console.log(Object.keys(obj).length);

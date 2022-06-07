@@ -62,7 +62,7 @@ if (test != 10) {
 const test1 = 20;
 const test2 = 10;
 
-if (test1 < test2) {
+if (test1 > test2) {
     alert('верно');
   } else {
     alert('неверно');

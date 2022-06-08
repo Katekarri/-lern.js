@@ -4,15 +4,15 @@
 // В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
 
 let day;
-if (day <= 11 && day > 0) {
+if (day >= 1 && day <= 10) {
   alert('First decade');
 }
 
-if (day > 11 && day <= 20) {
+if (day >= 11 && day <= 20) {
   alert('Second decade');
 }
 
-if (day > 20 && day <= 31) {
+if (day >= 21 && day <= 31) {
   alert('Third decade');
 }
 
@@ -21,11 +21,11 @@ if (day > 20 && day <= 31) {
 // Решите предыдущую задачу на декады месяца через конструкцию else if.
 
 let day;
-if (day > 0 && day <= 11) {
+if (day >= 1 && day <= 10) {
   alert('First decade');
-} else if (day > 11 && day <= 20) {
+} else if (day >= 11 && day <= 20) {
   alert('Second decade');
-} else if (day > 20 && day <= 31) {
+} else if (day >= 21 && day <= 31) {
   alert('Third decade');
 } 
 
@@ -35,11 +35,11 @@ if (day > 0 && day <= 11) {
 
 
 let day;
-if (day > 0 && day <= 11) {
+if (day >= 1 && day <= 10) {
   alert('First decade');
-} else if (day > 11 && day <= 20) {
+} else if (day >= 11 && day <= 20) {
   alert('Second decade');
-} else if (day > 20 && day <= 31) {
+} else if (day >= 21 && day <= 31) {
   alert('Third decade');
 } else {
   alert('error'); 

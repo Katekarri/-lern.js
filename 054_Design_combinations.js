@@ -13,20 +13,20 @@ if (day > 11 && day <= 20) {
 }
 
 if (day > 20 && day <= 31) {
-  alert('third decade');
+  alert('Third decade');
 }
 
 
 // Задача 2
 // Решите предыдущую задачу на декады месяца через конструкцию else if.
 
-let month;
-if (month > 0 && month <= 11) {
+let day;
+if (day > 0 && day <= 11) {
   alert('First decade');
-} else if (month > 11 && month <= 20) {
+} else if (day > 11 && day <= 20) {
   alert('Second decade');
-} else if (month > 20 && month <= 31) {
-  alert('third decade');
+} else if (day > 20 && day <= 31) {
+  alert('Third decade');
 } 
 
 
@@ -34,15 +34,15 @@ if (month > 0 && month <= 11) {
 // Модифицируйте предыдущую задачу так, чтобы, если в переменной day будет не число от 1 до 31, выдавалось сообщение об ошибке.
 
 
-let monthNumber;
-if (monthNumber > 0 && monthNumber <= 11) {
+let day;
+if (day > 0 && day <= 11) {
   alert('First decade');
-} else if (monthNumber > 11 && monthNumber <= 20) {
+} else if (day > 11 && day <= 20) {
   alert('Second decade');
-} else if (monthNumber > 20 && monthNumber <= 31) {
-  alert('third decade');
+} else if (day > 20 && day <= 31) {
+  alert('Third decade');
 } else {
-  alert('arror'); 
+  alert('error'); 
 }
 
 
@@ -50,14 +50,14 @@ if (monthNumber > 0 && monthNumber <= 11) {
 // Пусть в переменной num хранится число. Если это число не попадает в диапазон от 10 до 99, то выведите на экран сообщение об этом. Если же число попадает в указанный диапазон, то найдите сумму цифр этого числа. Если полученная сумма меньше или равна 9, то выведите на экран сообщение о том, что сумма цифр однозначна, в противном случае выведите сообщение о том, что сумма цифр двузначна.
 
 let num;
-if (num < 10 || num > 99) {
+let string = num + '';
+if (string < 10 || string > 99) {
   alert('num меньше 10 или больше 99'); 
-} else if (num > 10 && num < 99) {
-  let sumNum = Number(num[0]) + Number(num[0]);
+} else if (string > 10 && string < 99) {
+  const sumNum = Number(string[0]) + Number(string[0]);
   if (sumNum <= 9) {
     alert ('Сумма цифр num однозначна');
   } else {
     alert ('Сумма цифр num двузначна');
   }
 } 
- 

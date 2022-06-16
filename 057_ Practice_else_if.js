@@ -35,12 +35,13 @@ if (string[0] == 'a') {
 // Дано число, например, 12345. Проверьте, что первым символом этого числа является цифра 1, 2 или 3. Если это так - выведите 'да', в противном случае выведите 'нет'.
 
 const num = 12345;
-const strNum = String(num);
-if(strNum[0] == 1 || strNum[0] == 2 || strNum[0] == 3) {
+const strNum =  String(Math.abs(num));
+if(strNum[0] === '1' || strNum[0] === '2' || strNum[0] ==='3') {
   alert('да');
 } else {
   alert('нет');
 }
+
 
 // Задача 4
 // Дано трехзначное число. Найдите сумму цифр этого числа.
@@ -48,21 +49,19 @@ if(strNum[0] == 1 || strNum[0] == 2 || strNum[0] == 3) {
 const number = 124;
 let sum = 0;
 
-const str = String(number);
+const str = String(Math.abs(number));
 for (let i = 0; i < str.length; i++) {
   sum += Number(str[i]);
 }
 
-console.log(sum)
   
-
 // Задача 5
 // Дано число из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'.
  
 const date = 456784;
-const strDate = String(date);
+const strDate = String(Math.abs(date));
 
-if(strDate[0] + strDate[1] + strDate[2] == strDate[3] + strDate[4] + strDate[5]) {
+if(strDate[0] + strDate[1] + strDate[2] === strDate[3] + strDate[4] + strDate[5]) {
     alert('да');
 } else {
     alert('нет'); 

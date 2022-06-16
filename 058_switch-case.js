@@ -13,10 +13,10 @@ switch (num) {
     alert('весна');
   break;
   case 3 :
-    alert('Лето');
+    alert('лето');
   break;
   case 4 :
-    alert('Осень');
+    alert('осень');
   break;
   default :
     alert('ошибка')

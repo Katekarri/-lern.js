@@ -13,6 +13,13 @@ if (month >= 3 && month <= 5) {
 }else if (month == 12 || month == 2 || month == 1) {
   alert('зима');
 }
+
+
+const monthNumber = 12
+const seasons = ['зими', 'весна', 'лето', 'осень']
+console.log(seasons[Math.floor((monthNumber % 12) / 3)]);
+
+
 // Задача 2
 // Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что первым символом этой строки является буква 'a'. Если это так - выведите 'да', в противном случае выведите 'нет'.
 
@@ -27,8 +34,9 @@ if (string[0] == 'a') {
 
 // Дано число, например, 12345. Проверьте, что первым символом этого числа является цифра 1, 2 или 3. Если это так - выведите 'да', в противном случае выведите 'нет'.
 
-const num = '12345';
-if(num[0] == '1' || num[0] == '2' || num[0] == '3') {
+const num = 12345;
+const strNum = String(num);
+if(strNum[0] == 1 || strNum[0] == 2 || strNum[0] == 3) {
   alert('да');
 } else {
   alert('нет');
@@ -40,7 +48,7 @@ if(num[0] == '1' || num[0] == '2' || num[0] == '3') {
 const number = 124;
 let sum = 0;
 
-let str = String(number);
+const str = String(number);
 for (let i = 0; i < str.length; i++) {
   sum += Number(str[i]);
 }
@@ -52,7 +60,7 @@ console.log(sum)
 // Дано число из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'.
  
 const date = 456784;
-let strDate = String(date);
+const strDate = String(date);
 
 if(strDate[0] + strDate[1] + strDate[2] == strDate[3] + strDate[4] + strDate[5]) {
     alert('да');

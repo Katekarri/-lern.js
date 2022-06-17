@@ -71,6 +71,13 @@ for (let i = 0; i < arr6.length; i++) {
   }
 }
 
+for (let i = 0; i < arr6.length; i++) {
+    const currentElement = arr6[i]
+    if (currentElement > 3 && currentElement < 10) {
+      console.log (currentElement);
+    }
+  }
+
 // Задача 7
 // Дан массив с числами. Числа могут быть положительными и отрицательными. Найдите сумму положительных элементов массива.
 
@@ -88,12 +95,13 @@ for (let i = 0; i < arr7.length; i++) {
 
 const arr8 = [1, 2, 3, 4, 5];
 let result = 0;
-let division;
 
 for (let i = 0; i < arr8.length; i++) {
   result += arr8[i];
-  division = result / arr8.length; 
 }
+
+let  division = result / arr8.length; 
+alert(division);
 
 
 // Задача 9
@@ -106,21 +114,31 @@ const arr9 = [10, 20, 30, 50, 235, 3000];
 
 for (let i = 0; i < arr9.length; i++) {
 const arr9Str = String(arr9[i]); 
+  const a = arr9Str[0];
 
-  if (arr9Str[0] == 1 || arr9Str[0] == 2 || arr9Str[0] == 5) {
+  if (String(a) === '1' || String(a) === '2' || String(a) === '5') {
   console.log(arr9[i]); 
   }
+  
 }
 
 
 // Задача 10
 // Дан массив с числами. Выведите элементы этого массива в обратном порядке.
 
+// const arr10 = [1, 2, 3, 4, 5, 6];
+// const reverseArr10 = arr10.reverse();
+
+// console.log(reverseArr10);
+
 const arr10 = [1, 2, 3, 4, 5, 6];
-const reverseArr10 = arr10.reverse();
+const reverseArr10 = [];
+
+for (let i = arr10.length-1; i >= 0; i--) {
+  reverseArr10.push(arr10[i]);
+}
 
 console.log(reverseArr10);
-
 
 
 // Задача 11

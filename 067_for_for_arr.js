@@ -100,7 +100,7 @@ for (let i = 0; i < arr8.length; i++) {
   result += arr8[i];
 }
 
-let  division = result / arr8.length; 
+const division = result / arr8.length; 
 alert(division);
 
 
@@ -113,10 +113,9 @@ alert(division);
 const arr9 = [10, 20, 30, 50, 235, 3000];
 
 for (let i = 0; i < arr9.length; i++) {
-const arr9Str = String(arr9[i]); 
-  const a = arr9Str[0];
+const firstDigit = String(arr9[i])[0];
 
-  if (String(a) === '1' || String(a) === '2' || String(a) === '5') {
+  if (firstDigit === '1' || firstDigit === '2' || firstDigit === '5') {
   console.log(arr9[i]); 
   }
   
@@ -158,7 +157,7 @@ for (let i = 0; i < arr11.length; i++) {
 
 
 const arr12 = [1, 5, 3, 7, 10, 6];
-  for (let i = 0; i < arr12.length - 1; i++) {
+  for (let i = 0; i < arr12.length; i++) {
   const element = document.write(arr12[i]+'<br>');
   console.log(element);
 }
@@ -168,8 +167,8 @@ const arr12 = [1, 5, 3, 7, 10, 6];
 // Задача 13
 // Дан массив с числами. С помощью цикла for и функции document.write выведите каждый элемент массива в отдельном абзаце.
 
-let arr13 = [1, 5, 3, 7, 10, 6];
-  for (let i = 0; i <= arr13.length - 1; i++) {
+const arr13 = [1, 5, 3, 7, 10, 6];
+  for (let i = 0; i <= arr13.length; i++) {
   document.write(arr13[i]+'<p>');
 }
 
@@ -178,5 +177,14 @@ let arr13 = [1, 5, 3, 7, 10, 6];
 // Задача 14
 // Составьте массив дней недели. С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
 
-// Задача 15⋕js
+const daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+for (let i = 0; i < daysOfTheWeek.length; i++) {
+  if (daysOfTheWeek[i] === 'Saturday' || daysOfTheWeek[i] === 'Sunday') {
+    document.write('<b>' + daysOfTheWeek[i]+ '</b>' +'<p>');
+} else { document.write(daysOfTheWeek[i]+'<p>');}
+}
+
+
+// Задача 15
 // Составьте массив дней недели. С помощью цикла for выведите все дни недели, а текущий день выведите курсивом. Номер текущего дня должен храниться в переменной day.

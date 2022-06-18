@@ -58,16 +58,12 @@ for (let i = 0; i < str.length; i++) {
 // Задача 5
 // Дано число из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'.
  
-const date = 456784;
+const date = 123321;
 const strDate = String(Math.abs(date));
-
-if(strDate[0] + strDate[1] + strDate[2] === strDate[3] + strDate[4] + strDate[5]) {
-    alert('да');
+const str1 = Number(strDate[0]) + Number(strDate[1]) + Number(strDate[2]);
+const str2 = Number(strDate[3]) + Number(strDate[4]) + Number(strDate[5]);
+if (str1 === str2) {
+  alert('Да');
 } else {
-    alert('нет'); 
+  alert('Нет');
 }
-
-
-
-
-

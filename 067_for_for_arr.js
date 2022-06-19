@@ -207,7 +207,7 @@ const day = 'Saturday';
 for (let i = 0; i < daysOfWeek.length; i++) {
   let today = daysOfWeek[i];
   if (today === day) {
-    today = `<em>${today}</em>`;
+    today = `<i>${today}</i>`;
   }
   document.write(`<p>${today}</p>`)
 } 

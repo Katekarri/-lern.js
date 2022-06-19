@@ -34,8 +34,17 @@ for (let i = 0; i < arr2.length; i++) {
 // Дан массив с числами. Найдите позицию первого числа 3 в этом массиве (считаем, что это число обязательно есть в массиве).
 
 
+// const arr3 = [5, 8, 9, 3, 6, 4, 3, 0, -10, 56];
+// console.log(arr3.indexOf(3));
+
 const arr3 = [5, 8, 9, 3, 6, 4, 3, 0, -10, 56];
-console.log(arr3.indexOf(3) + 1);
+
+for (let i = 0; i < arr3.length; i++) {
+  if (arr3[i] === 3) {
+    console.log(i);
+    break;
+  }
+}
 
 
 // Задача 4

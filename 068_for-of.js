@@ -29,21 +29,27 @@ for (let i = 0; i < arrMonths.length; i++) {
 }
 
 
+const arrMonths2 = ['January', 'February', 'March' ,'April' ,'May' ,'June' ,'July' ,'August' ,'September' ,'October' ,'November' ,'December'];
+
+for (let elem of arrMonths2) {
+  console.log(elem);
+}
+
+
 // Задача 4
 // Пусть у вас есть массив с названиями месяцев. Пусть в переменной month хранится номер текущего месяца, например, 10. С помощью цикла выведите все месяцы, а текущий месяц выведите курсивом. Определите, каким циклом удобнее будет решить эту задачу: циклом for-of или обычным for со счетчиком.
 
 const arrAllMonths =  ['January', 'February', 'March' ,'April' ,'May' ,'June' ,'July' ,'August' ,'September' ,'October' ,'November' ,'December'];
 
-const month = 'October';
-const october =  arrAllMonths[9];
-// const month = 10; ????
+let month = 10; 
 for (let i = 0; i < arrAllMonths.length; i++) {
   let thisMonth = arrAllMonths[i];
-  if (thisMonth === month) {
-    thisMonth = `<em>${thisMonth}</em>`;
+  if (month === i + 1) {
+    thisMonth = `<i>${thisMonth}</i>`;
   }
   document.write(`<p>${thisMonth}</p>`)
 }
+
 
 // const arrAllMonths = ['January', 'February', 'March' ,'April' ,'May' ,'June' ,'July' ,'August' ,'September' ,'October' ,'November' ,'December'];
 

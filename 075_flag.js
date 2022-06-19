@@ -7,16 +7,16 @@
 
 const arr = ['a', 'b', 'c', 'd', 'e'];
 
-let requiredValue = false;
+let isPresented = false;
 
 for (let elem of arr) {
   if (elem === 'c') {
-    requiredValue = true;
+    isPresented = true;
     break;  
    }
 }
 
-if (requiredValue === true) {
+if (isPresented) {
 	console.log('есть');
 } else {
 	console.log('нет');

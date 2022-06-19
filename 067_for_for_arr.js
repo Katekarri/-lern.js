@@ -177,14 +177,67 @@ const arr13 = [1, 5, 3, 7, 10, 6];
 // Задача 14
 // Составьте массив дней недели. С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
 
+// const daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+// for (let i = 0; i < daysOfTheWeek.length; i++) {
+//   if (daysOfTheWeek[i] === 'Saturday' || daysOfTheWeek[i] === 'Sunday') {
+//     document.write('<b>' + daysOfTheWeek[i]+ '</b>' +'<p>');
+// } else { document.write(daysOfTheWeek[i]+'<p>');}
+// }
+
+
+
 const daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 for (let i = 0; i < daysOfTheWeek.length; i++) {
-  if (daysOfTheWeek[i] === 'Saturday' || daysOfTheWeek[i] === 'Sunday') {
-    document.write('<b>' + daysOfTheWeek[i]+ '</b>' +'<p>');
-} else { document.write(daysOfTheWeek[i]+'<p>');}
+  let currentDay = daysOfTheWeek[i]
+  if (currentDay === 'Saturday' || currentDay === 'Sunday') {
+    currentDay = `<b>${currentDay}</b>`
+  }
+  document.write(`<p>${currentDay}</p>`)
 }
 
 
 // Задача 15
 // Составьте массив дней недели. С помощью цикла for выведите все дни недели, а текущий день выведите курсивом. Номер текущего дня должен храниться в переменной day.
+
+const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+const day = 'Saturday';
+for (let i = 0; i < daysOfWeek.length; i++) {
+  let today = daysOfWeek[i];
+  if (today === day) {
+    today = `<em>${today}</em>`;
+  }
+  document.write(`<p>${today}</p>`)
+} 
+
+
+// const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+// const day = 'Saturday';
+// for (let i = 0; i < daysOfWeek.length; i++) {
+//   let today = daysOfWeek[i];
+//   if (today === day) {
+//     document.write('<em>' + today + '</em>' + '<p>');
+//   } else { document.write(today+'<p>');}
+// } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

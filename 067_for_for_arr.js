@@ -159,20 +159,17 @@ for (let i = 0; i < arr11.length; i++) {
 const arr12 = [1, 5, 3, 7, 10, 6];
   for (let i = 0; i < arr12.length; i++) {
   const element = document.write(arr12[i]+'<br>');
-  console.log(element);
 }
 
-//?????????
 
 // Задача 13
 // Дан массив с числами. С помощью цикла for и функции document.write выведите каждый элемент массива в отдельном абзаце.
 
 const arr13 = [1, 5, 3, 7, 10, 6];
-  for (let i = 0; i <= arr13.length; i++) {
-  document.write(arr13[i]+'<p>');
+  for (let i = 0; i <= arr13.length - 1; i++) {
+  document.write('<p>' + arr13[i] + '<p>');
 }
 
-//?????????
 
 // Задача 14
 // Составьте массив дней недели. С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
@@ -203,14 +200,15 @@ for (let i = 0; i < daysOfTheWeek.length; i++) {
 
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const day = 'Saturday';
+const day = 6;
 for (let i = 0; i < daysOfWeek.length; i++) {
   let today = daysOfWeek[i];
-  if (today === day) {
+  if (day === i + 1) {
     today = `<i>${today}</i>`;
   }
   document.write(`<p>${today}</p>`)
 } 
+
 
 
 // const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -222,22 +220,3 @@ for (let i = 0; i < daysOfWeek.length; i++) {
 //     document.write('<em>' + today + '</em>' + '<p>');
 //   } else { document.write(today+'<p>');}
 // } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

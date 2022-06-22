@@ -36,11 +36,19 @@ for (let i = 1; i <= 10; i++) {
 // Задача 3
 // Используя цикл и метод push заполните массив 10-ю буквами 'x'.
 
+// let arr3 = [];
+// let str = 'x';
+
+// for (let i = 0; i <= 9; i++) {
+//   arr3[i] = str;
+// }
+
+
 let arr3 = [];
 let str = 'x';
 
-for (let i = 0; i <= 9; i++) {
-  arr3[i] = str;
+for (let i = 0; i < 10; i++) {
+  arr3.push('x');
 }
 
 

@@ -8,7 +8,7 @@
 
 
 const num = 12;
-isPrimeNumbers = true;
+let isPrimeNumbers = true;
 
 for (let i = 2; i < num; i++) {
   if (num % 2 === 0){

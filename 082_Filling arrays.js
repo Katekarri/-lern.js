@@ -19,7 +19,7 @@
 
 let arr1 = [];
 
-for (let i = 0; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
   arr1[i] = i;
 }
 console.log(arr1);
@@ -41,7 +41,7 @@ console.log(arr2);
 
 let arr3 = [];
 
-for (let i = 0; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
   arr3[i] = i;
 }
 

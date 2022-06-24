@@ -15,14 +15,13 @@
 
 
 const daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const values = [1, 2, 3, 4, 5, 6, 7];
+const value = [1, 2, 3, 4, 5, 6, 7];
 const obj1 = {};
 
-for (let i = 0; i <= 6; i++) {
+for (let i = 0; i < daysOfTheWeek.length; i++) {
   const dayOfTheWeek = daysOfTheWeek[i];
-  const value = values[i];
 
-  obj1[dayOfTheWeek] = value; 
+  obj1[dayOfTheWeek] = value[i]; 
 }
 
 console.log(obj1);
@@ -38,13 +37,15 @@ const arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 const arr2 = [1, 2, 3, 4, 5, 6, 7];
 const obj2 = {};
 
-for (let i = 0; i <= 6; i++) {
+for (let i = 0; i < arr1.length; i++) {
   const dayOfTheWeek2 = arr1[i];
   const value2 = arr2[i];
 
   obj2[dayOfTheWeek2] = value2;
 }
 
+
+console.log(obj2);
 
 
 // Задача 3
@@ -54,12 +55,13 @@ const arr3 = [1, 2, 3, 4, 5, 6, 7];
 const arr4 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 const obj3 = {};
 
-for (let i = 0; i <= 6; i++) {
+for (let i = 0; i < arr3.length; i++) {
   const dayOfTheWeek2 = arr3[i];
   const value2 = arr4[i];
 
   obj3[dayOfTheWeek2] = value2;
 }
+
 
 
 // Задача 4
@@ -68,12 +70,15 @@ for (let i = 0; i <= 6; i++) {
 // Запишите в новый объект те элементы, значения которых расположены в промежутке от 10 до 20.
 
 
-const newObj = {'a': 12, 'b': 21, 'c': 13, 'd': 23, 'e': 17};
-const result = {};
+const obj10 = {'a': 12, 'b': 21, 'c': 13, 'd': 23, 'e': 17};
+const newObj10 = {};
 
-for (let key in newObj) {
-  if (newObj[key] >= 10 && newObj[key] < 20) {
-    result[key] = newObj[key];
+
+for (let key in obj10) {
+  const newValue = obj10[key];
+
+  if (newValue >= 10 && newValue < 20) {
+    newObj10[key] = newValue;
     }
 }
 

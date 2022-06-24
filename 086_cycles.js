@@ -58,7 +58,7 @@ const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [6, 7, 8, 9, 10];
 const obj3 = {}
 
-for (let i = 0; i <= 4; i++) {
+for (let i = 0; i < arr1.length; i++) {
   const keyArr1 = arr1[i];
   const elemArr2 = arr2[i];
   
@@ -78,9 +78,10 @@ let result = 0;
 
 for (let key in obj4) {
   sumKey += Number(key);
-  sumElem += Number(obj4[elem]);
-  result = sumKey / sumElem;
+  sumElem += Number(obj4[key]); 
 }
+result = sumKey / sumElem;
+
 
 // Задача 5
 // Дан следующий объект:
@@ -97,6 +98,11 @@ for (let key in obj5) {
   nuwArr2.push(obj5[key]);
 }
 
+
+// for (const [key, value] of Object.entries(yourObj)) {
+//   console.log(key)
+//   console.log(value)
+// }
 
 // Задача 6
 // Дан следующий объект:
@@ -131,8 +137,8 @@ const obj6 = {
 let arr3 = [];
 
 for (let key in obj6) {
-  
-if ((String(obj6[key])[0] === '1' || String(obj6[key])[0] === '2')) {
+  let newValue = String(obj6[key])[0];
+if (newValue === '1' || newValue === '2') {
     arr3.push(obj6[key]);
   }
   

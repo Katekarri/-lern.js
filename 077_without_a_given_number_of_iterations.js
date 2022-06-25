@@ -20,14 +20,13 @@ console.log(i);
 
 
 let num2 = 32;
-let result = 0;
 
-  for (let i = 1; i <= 1000; i++) {
-  num2 *= 3;
-  result++;
-
-  if (num2 >= 1000) {
-  break;
+for (var i = 0;; i++){ 
+  if(num2 <= 1000) {
+    num2*=3
+  } else {
+    break;
   }
-}
-console.log(result);
+};
+
+console.log(i);

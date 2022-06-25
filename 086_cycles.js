@@ -78,7 +78,7 @@ let result = 0;
 
 for (let key in obj4) {
   sumKey += Number(key);
-  sumElem += Number(obj4[key]); 
+  sumElem += obj4[key]; 
 }
 result = sumKey / sumElem;
 
@@ -137,8 +137,8 @@ const obj6 = {
 let arr3 = [];
 
 for (let key in obj6) {
-  let newValue = String(obj6[key])[0];
-if (newValue === '1' || newValue === '2') {
+  const checkingFirstValues = String(obj6[key])[0];
+if (checkingFirstValues === '1' || checkingFirstValues === '2') {
     arr3.push(obj6[key]);
   }
   

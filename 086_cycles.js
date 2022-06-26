@@ -137,8 +137,8 @@ const obj6 = {
 let arr3 = [];
 
 for (let key in obj6) {
-  const checkingFirstValues = String(obj6[key])[0];
-if (checkingFirstValues === '1' || checkingFirstValues === '2') {
+  const firstDigit = String(obj6[key])[0];
+if (firstDigit === '1' || firstDigit === '2') {
     arr3.push(obj6[key]);
   }
   

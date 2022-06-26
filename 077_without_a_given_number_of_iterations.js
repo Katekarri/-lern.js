@@ -29,4 +29,11 @@ for (var i = 0;; i++){
   }
 };
 
-console.log(i);
+// console.log(i);
+
+// let num2 = 32;
+// let result = 0;
+// for (; num2 <= 1000; result++) {
+//   num2 *= 3;
+// }
+// console.log(result)

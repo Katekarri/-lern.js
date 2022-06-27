@@ -23,13 +23,13 @@ for (let i = 1; i <= 10; i++) {
 
 let firsNumber = 0;
 let secondNumber = 1;
-let thirdNumber = 3;
+let thirdNumber = 2;
 
 for (let i = 1; i <= 10; i++) {
   const current2 = firsNumber + secondNumber + thirdNumber;
 	
   firsNumber = secondNumber;
-  twsecondNumbero = thirdNumber;
+  secondNumber = thirdNumber;
   thirdNumber = current2;
 	
   console.log(current2);

@@ -8,12 +8,10 @@
 
 const arr1 = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < arr1.length; i++) {
+for (let i = 0; i < arr1.length-1; i++) {
   const nextArrayElement = arr1[i + 1];
-  
-  if (nextArrayElement != undefined) {
     console.log(nextArrayElement);
-  } 
+   
 }
 
 
@@ -22,12 +20,9 @@ for (let i = 0; i < arr1.length; i++) {
 
 const arr2 = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < arr2.length; i++) {
+for (let i = 0; i < arr2.length-1; i++) {
   const sumElement = arr2[i] + arr2[i + 1];
-
-  if (arr2[i + 1] != undefined) {
-    console.log(sumElement);
-  }  
+  console.log(sumElement);
 }
 
 
@@ -36,12 +31,9 @@ for (let i = 0; i < arr2.length; i++) {
 
 const arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for (let i = 0; i < arr3.length; i++) {
-  const twoPreviousElements = arr3[i-1] + ',' + arr3[i-2];
-  
-  if (arr3[i-1] != undefined && arr3[i-2] != undefined) {
+for (let i = 2; i < arr3.length; i++) {
+  const twoPreviousElements = arr3[i-2] + ',' + arr3[i-1];
     console.log(twoPreviousElements);
-  } 
 }
 
 
@@ -51,12 +43,9 @@ for (let i = 0; i < arr3.length; i++) {
 
 const arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for (let i = 0; i < arr4.length; i++) {
+for (let i = 2; i < arr4.length; i++) {
   const sumElements = arr4[i] + arr4[i-1] + arr4[i-2];
-
-  if (arr4[i-1] != undefined && arr4[i-2] != undefined) {
     console.log(sumElements);
-  } 
 }
 
 // Задача 5
@@ -64,10 +53,7 @@ for (let i = 0; i < arr4.length; i++) {
 
 const arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for (let i = 0; i < arr5.length; i++) {
-  const  sumThreeElements = arr5[i-1] + arr5[i] + [i+1];
-    
-  if (arr5[i-1] != undefined && arr5[i+1] != undefined) {
-    console.log(sumThreeElements);
-  } 
+for (let i = 1; i < arr5.length; i++) {
+  const  sumThreeElements = arr5[i-1] + arr5[i] + [i+1]; 
+  console.log(sumThreeElements);
 }

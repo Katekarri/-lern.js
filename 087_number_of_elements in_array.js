@@ -32,19 +32,29 @@ console.log(counter2);
 // Задача 3
 // Дана строка. Подсчитайте сколько раз в ней встречается каждый из ее символов.
 
+// const str = 'модифицируйте предыдущую задачу';
+// const arr3 = Array.from(str);
+// let counter3 = {};
+
+// for (let elem of arr3) {
+//   if (counter3[elem] === undefined) {
+//     counter3[elem] = 1;
+//   } else {
+//     counter3[elem]++;
+//   }
+// }
+
 const str = 'модифицируйте предыдущую задачу';
-const arr3 = Array.from(str);
-let counter3 = {};
+const counter3 = {};
+ 
+for (let i = 0; i < str.length; i++) {
+  key = str[i];
+ 
+	if (counter3[key]) {  // В объекте есть эта буква	
+			counter3[key]++;
 
-for (let elem of arr3) {
-  if (counter3[elem] === undefined) {
-    counter3[elem] = 1;
-  } else {
-    counter3[elem]++;
-  }
+	} else {// В объекте такой буквы нет, добавляем букву в объект
+		  counter3[key] = 1;
+	}
 }
-//!!!!!!По этому поводу есть вопрос, если значении у нас установлено как неизвестно, как  потом ему присвается единица, а потом при наличии нескольких одинаковых она увеличивается. Если изначально не известно... Принцип работы понятен,понятно что данный способ может работать с любой длиной строки. Но все равно полная картина не складывается
-
-
-
-
+	 console.log(counter3)

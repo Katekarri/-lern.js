@@ -53,7 +53,7 @@ for (let i = 2; i < arr4.length; i++) {
 
 const arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for (let i = 1; i < arr5.length; i++) {
-  const  sumThreeElements = arr5[i-1] + arr5[i] + [i+1]; 
-  console.log(sumThreeElements);
+for (let i = 1; i < arr5.length-1; i++) {
+  const  sumThreeElements = arr5[i-1] + arr5[i] + arr5[i+1]; 
+    console.log(sumThreeElements);
 }

@@ -9,13 +9,10 @@ const arr = [10, 20, 30, 40, 21, 32, 51];
 let sum = 0;
 
 for (let i = 0; i < arr.length; i++) {
-  let num = String(arr[i]);  
-  const char = num[0];
+  const num = arr[i];  
+  const char = String(num)[0];
 
   if (char === '1' || char === '2') {
-    num = Number(num);
     sum += num;   
   }
 }
-
-console.log(sum);

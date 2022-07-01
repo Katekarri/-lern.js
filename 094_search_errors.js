@@ -146,7 +146,7 @@ console.log(sum9);
 // }
 // console.log(sum); // почему-то выводит NaN
 
-let arr10 = ['1', '2', '3', '4', '5'];
+const arr10 = ['1', '2', '3', '4', '5'];
 let sum10 = 0;
 for (let i = 0; i < arr10.length; i++) {
   
@@ -201,12 +201,19 @@ console.log(sum12);
 // }
 // console.log(arr);
 
-const arr13 = [1, 2, 3, 4, 5];
-let result = 0;
-for (let elem of arr13) {
-	result = elem ** 2;
-  console.log(result);
-}
+// const arr13 = [1, 2, 3, 4, 5];
+// let result = 0;
+// for (let elem of arr13) {
+// 	result = elem ** 2;
+//   console.log(result);
+// }
+
+
+const arr13= [1, 2, 3, 4, 5];
+  console.log(arr13.map(function (elem){
+  return Math.pow(elem,2);
+}));
+
 
 // Задача 14
 // Код должен заполнить массив числами от 1 до 5:
@@ -234,6 +241,14 @@ console.log(arr14);
 // console.log(sum);
 
 
+const obj15 = {a: 1, b: 2, c: 3};
+let sum15 = 0;
+for (let elem in obj15) {
+	sum15 += +obj15[elem];
+}
+console.log(sum15);
+
+
 
 // Задача 16
 // Код должен найти сумму элементов объекта:
@@ -243,6 +258,13 @@ console.log(arr14);
 // 	sum = +obj.key;
 // }
 // console.log(sum);
+
+const obj16 = {a: 1, b: 2, c: 3};
+let sum16 = 0;
+for (let key in obj16) {
+	sum16 += +obj16[key];
+}
+console.log(sum16);
 
 
 
@@ -259,6 +281,18 @@ console.log(arr14);
 // }
 // console.log(res);
 
+const arr17 = [1, 2, 3, 4, 5];
+let res17 = '';
+for (let elem of arr17) {
+	if (elem === 3) {
+		res17 = '+++';
+    break;
+	} else {
+		res17 = '---';  
+	}
+}
+ console.log(res17);
+
 
 // Задача 18
 // Код должен проверить, есть ли в массиве число 3 или нет:
@@ -273,6 +307,19 @@ console.log(arr14);
 // console.log(res);
 
 
+const arr18 = [1, 2, 3, 4, 5];
+let res18 = true;;
+for (let elem of arr18) {
+	if (elem === 3) {
+		res18 = true;
+		break;
+	} else {
+    res18 = false;
+  }
+}
+console.log(res18);
+
+
 // Задача 19
 // Код должен вывести только четные элементы из массива:
 // let arr = [1, 2, 3, 4, 5];
@@ -281,3 +328,11 @@ console.log(arr14);
 // 		console.log(elem);
 // 	}
 // }
+
+const arr19 = [1, 2, 3, 4, 5];
+
+for (let elem of arr19) {
+	if (elem % 2 === 0) {
+		console.log(elem);
+	}
+}

@@ -209,10 +209,17 @@ console.log(sum12);
 // }
 
 
-const arr13= [1, 2, 3, 4, 5];
-  console.log(arr13.map(function (elem){
-  return Math.pow(elem,2);
-}));
+// const arr13= [1, 2, 3, 4, 5];
+//   console.log(arr13.map(function (elem){
+//   return Math.pow(elem,2);
+// }));
+
+
+let arr13 = [2, 3, 3, 4, 5];
+for (let elem in arr13) {
+  arr13[elem] = arr13[elem] ** 2;
+}
+console.log(arr13);
 
 
 // Задача 14
@@ -281,17 +288,27 @@ console.log(sum16);
 // }
 // console.log(res);
 
+// const arr17 = [1, 2, 3, 4, 5];
+// let res17 = '';
+// for (let elem of arr17) {
+// 	if (elem === 3) {
+// 		res17 = '+++';
+//     break;
+// 	} else {
+// 		res17 = '---';  
+// 	}
+// }
+//  console.log(res17);
+
+
 const arr17 = [1, 2, 3, 4, 5];
-let res17 = '';
+let res17 = '---';
 for (let elem of arr17) {
-	if (elem === 3) {
-		res17 = '+++';
+  if (elem === 3) {
+    res17 = '+++';
     break;
-	} else {
-		res17 = '---';  
-	}
+  }
 }
- console.log(res17);
 
 
 // Задача 18
@@ -307,17 +324,28 @@ for (let elem of arr17) {
 // console.log(res);
 
 
-const arr18 = [1, 2, 3, 4, 5];
-let res18 = true;;
+// const arr18 = [1, 2, 3, 4, 5];
+// let res18 = true;;
+// for (let elem of arr18) {
+// 	if (elem === 3) {
+// 		res18 = true;
+// 		break;
+// 	} else {
+//     res18 = false;
+//   }
+// }
+// console.log(res18);
+
+let arr18 = [1, 2, 3, 4, 5];
+let res18 = false;
 for (let elem of arr18) {
 	if (elem === 3) {
-		res18 = true;
+		 res18 = true;
 		break;
-	} else {
-    res18 = false;
-  }
+	}
 }
 console.log(res18);
+
 
 
 // Задача 19

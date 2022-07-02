@@ -17,7 +17,7 @@ const arr1 = [
 	['j', 'k', 'l'],
 ];
 
-let elementStr = arr1[3][2] + ',' + arr1[1][1] + ',' + arr1[2][0] + ',' + arr1[0][0];
+const elementStr = arr1[3][2] + ',' + arr1[1][1] + ',' + arr1[2][0] + ',' + arr1[0][0];
 console.log(elementStr);
 
 

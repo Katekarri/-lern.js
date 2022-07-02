@@ -217,7 +217,7 @@ console.log(sum12);
 
 let arr13 = [2, 3, 3, 4, 5];
 for (let elem in arr13) {
-  arr13[elem] = arr13[elem] ** 2;
+	arr13[elem] **= 2;
 }
 console.log(arr13);
 

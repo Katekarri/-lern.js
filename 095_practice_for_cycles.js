@@ -88,11 +88,14 @@ for (let i = 0; i < arr8.length; i++) {
 
 const arr9 = [1, 2, 3, 4, 5];
 let result9 = 0;
-let getSquareElements = 0;
+let squareElements = 0;
 
 for (let i = 0; i < arr9.length; i++) {  
-  result9 += (getSquareElements  = arr9[i] ** 2) ;
+  squareElements  = arr9[i] ** 2
+  result9 +=  squareElements;
 }
+
+console.log(result9)
 
 // Задача 10
 // Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество).
@@ -105,7 +108,7 @@ for (let i = 0; i < arr10.length; i++) {
   sum10Eements += arr10[i]; 
 }
 
-let result10 = sum10Eements/arr10.length;
+const result10 = sum10Eements/arr10.length;
 console.log(result10);
 
 // Задача 11

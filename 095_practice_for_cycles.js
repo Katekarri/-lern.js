@@ -28,12 +28,10 @@ for (let i = 1; i <= 100; i++) {
 // Заполните массив 10-ю иксами с помощью цикла.
 
 const arr4 = [];
-let str = '';
 
-for (let i = 0; i < 10; i++) {
-  str += 'x';
+for (let i = 1; i <= 10; i++) {
+  arr4.push('x');
 }
-arr4.push(str)
 
 
 // Задача 5
@@ -51,8 +49,9 @@ for (let i = 1; i <= 10; i++) {
 const arr6 = [1, 8, 4, 12, 78, -6, 2];
 
 for (let i = 0; i <= arr6.length; i++) {
-  if (arr6[i] > 0 && arr6[i] < 10) {
-     console.log(arr6[i])
+  const elementArr6 = arr6[i]
+  if (elementArr6 > 0 && elementArr6 < 10) {
+     console.log(elementArr6)
   }
 }
    
@@ -91,23 +90,41 @@ const arr9 = [1, 2, 3, 4, 5];
 let result9 = 0;
 
 for (let i = 0; i < arr9.length; i++) {  
-  let sum = arr9[i] ** 2;
-  result9 += sum;
+  const  squareElements  = arr9[i] ** 2
+  result9 +=  squareElements;
 }
-console.log(result9);
+
 
 // Задача 10
 // Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество).
+// ты описала само решение, а не алгоритм решения задачи
 
+// я ожидал что-то такое
+
+// найти сумму всех элементов
+// поделить эту сумму на количество элементов
+// решение:
+// шаг 1 - используем цикл for для нахождения суммы
+// шаг 2 - используем оператор деления и длину массива для нахождения среднего арифметического
+
+// если бы у тебя был такой алгоритм решения этой задачи, то у тебя бы не появилось мысли чтобы добавить result10 = sum10/arr10.length; в цикл for
 
 const arr10 = [1, 2, 3, 4, 5];
-let sum10 = 0;
-let result10 = 0;
+let sum10Eements = 0;
 
 for (let i = 0; i < arr10.length; i++) {
-  sum10 += arr10[i];
-  result10 = sum10/arr10.length;
+  sum10Eements += arr10[i]; 
 }
+
+const result10 = sum10Eements/arr10.length;
+console.log(result10);
 
 // Задача 11
 // Напишите скрипт, который будет находить факториал числа. Факториал (обозначается !) - это произведение (умножение) всех целых чисел, меньше данного, и его самого. Например, 4! = 1*2*3*4.
+
+let num = 4;
+let result11 = 1;
+
+for (let i = 1; i <= num; i++){
+result11 *= i;
+}

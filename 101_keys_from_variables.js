@@ -144,7 +144,7 @@ console.log(affairs[year][month1][day]);
 // console.log(obj['key1'][key2]);
 // Код, однако, выводит не то, что ожидал автор. Исправьте ошибку.
 
-// в консоле ошибка , надо записать следующим образом - console.log(obj[key1][key2]);
+// console.log надо исправить, надо записать следующим образом - console.log(obj[key1][key2]);
 
 
 // Задача 4
@@ -164,7 +164,7 @@ console.log(affairs[year][month1][day]);
 // console.log(obj.key1.key2);
 // Код, однако, выводит не то, что ожидал автор. Исправьте ошибку.
 
-// в консоль надо вывести следующие console.log(obj[key1][key2]);
+// console.log надо исправить -  console.log(obj[key1][key2]);
 
 
 // Задача 5
@@ -184,7 +184,7 @@ console.log(affairs[year][month1][day]);
 // console.log(obj.key1['key2']);
 // Код, однако, выводит не то, что ожидал автор. Исправьте ошибку.
 
-//в консоль надо вывести следующие console.log(obj[key1][key2]);
+//console.log надо исправить - console.log(obj[key1][key2]);
 
 // Задача 6
 // Автор следующего кода хотел вывести элемент со значением '24':

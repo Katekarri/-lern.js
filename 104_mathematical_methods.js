@@ -23,10 +23,9 @@ let sumOfElementCubes = 0;// моя любимая переменная
 let result = 0;
 
 for (const elem of arr) {
-  sumOfElementCubes += Math.pow(elem, 3);
-  result =  Math.sqrt(sumOfElementCubes);
-   
+  sumOfElementCubes += Math.pow(elem, 3);  
 }
+result =  Math.sqrt(sumOfElementCubes);
 console.log(result);
 
 // Задача 4

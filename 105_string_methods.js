@@ -110,24 +110,40 @@ if (string9.lastIndexOf(lastCharacters) === string9.length-lastCharacters.length
 // Задача 10
 // Дана строка. Проверьте, начинается ли эта строка на 'http://'.
 
+const string10 = 'http://frttttuy';
+
+console.log(string10.startsWith('http://'));
 
 
 // Задача 11
 // Дана строка. Проверьте, заканчивается ли эта строка на '.html'.
 
+const string11 = 'doc.html';
 
+console.log(string11.endsWith('.html'));
 
 // Задача 12
-// Дана строка '1-2-3-4-5'. С помощью метода split запишите каждое число этой строки в отдельный элемент массива.
+// Дана строка'1-2-3 -4-5'. С помощью метода split запишите каждое число этой строки в отдельный элемент массива.
 
+const string12 = '1-2-3 -4-5';
+const arr12 = string12.split('-');
 
+console.log(arr12);
 
 // Задача 13
 // Дана строка '12345'. С помощью метода split запишите каждый символ этой строки в отдельный элемент массива.
 
+const string13 = '12345';
+const arr13 = string13.split('');
 
+console.log(arr13);
 
 // Задача 14
 // Дан следующий массив:
 // let arr = [1, 2, 3, 4, 5];
 // С помощью метода join слейте его в строку '1-2-3-4-5'.
+
+const arr14 = [1, 2, 3, 4, 5];
+const string14 = arr14.join('-');
+
+console.log(string14);

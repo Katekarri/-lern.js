@@ -64,7 +64,7 @@ console.log(cutElements);
 const arr6 = [1, 2, 3, 4, 5];
 const cutElement = arr6.slice(3);
 
-console.log(cutElement);hs
+console.log(cutElement);
 
 
 // Задача 7

@@ -3,19 +3,20 @@
 // №1
 // Сделайте функцию, которая параметром будет принимать массив с числами, и проверять, что все элементы в этом массиве являются четными числами.
 
-function checNumbersInArr(arr) {
-  let  allNumbersPositive = true;
-  for (const elem of arr) {
-    if (elem < 0) {
-      allNumbersPositive = false;
-    }  
-  }
-   return allNumbersPositive;  
+function checEvenNumbersInArr(arr) {
+  let allEvenNumbers = true;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      allEvenNumbers = false;
+      break;
+    }
+  } 
+  return allEvenNumbers;
 }
 
-const arr = [1, 2, 3, 4];
-// const arr = [1, 2, -3, 4];
-console.log(checNumbersInArr(arr));
+const arr = [2, 5, 6, 6];
+
+console.log(checEvenNumbersInArr(arr));
 
 // №2
 // Сделайте функцию, которая параметром будет принимать число и проверять, что все цифры это числа являются нечетными.
@@ -41,13 +42,13 @@ console.log(checOddNumbers(num));
 function checPairedElementsTogether(arr3) {
   let pairedElements = false;
   for (let i = 0; i < arr3.length; i++) {
-    if (arr3[i] === arr3[i + 1]) {
+    if (arr3[i] === arr3[i - 1]) {
       pairedElements = true;
     }
   }
   return pairedElements;
 }
 
-// const arr3 = [1, 2, 2, 5];
-const arr3 = [1, 2, 5];
+const arr3 = [1,2,undefined];
+// const arr3 = [1, 2, 5];
 console.log(checPairedElementsTogether(arr3));

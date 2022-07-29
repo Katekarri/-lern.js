@@ -10,18 +10,26 @@
 // }
 // console.log( func1() + func2() );
 
-
-function func1(num) {
-	return num;
+function func1() {
+	return 3;
 }
-const a = func1(3); 
-
-function func2(num) {
-	return num;
+function func2() {
+	return 5;
 }
-const b = func2(5);
+console.log( func1() + func2() );
 
-console.log(a + b);
+
+// function func1(num) {
+// 	return num;
+// }
+// const a = func1(3); 
+
+// function func2(num) {
+// 	return num;
+// }
+// const b = func2(5);
+
+// console.log(a + b);
 
 
 // №2
@@ -56,17 +64,17 @@ console.log(sum([1, 2, 3, 4, 5]));
 // 	console.log(res);
 // }
 
-const arr = [1, 2, 3, 4, 5];
+const arr3 = [1, 2, 3, 4, 5];
 
-function func(arr) {
+function func(arr3) {
 	let res = 0;
-	for (const elem of arr) {
+	for (const elem of arr3) {
 		res += elem;
 	}
-	console.log(res);
+	return res;
 }
 
-func(arr);
+func(arr3);
 
 
 // №4
@@ -79,18 +87,13 @@ func(arr);
 // }
 // console.log( func1 + func2 );
 
-function func1(num) {
-	return num;
+function func1() {
+	return 3;
 }
-const c = func1(3); 
-
-function func2(num) {
-	return num;
+function func2() {
+	return 5;
 }
-const d = func2(5);
-
-console.log(c + d);
-
+console.log( func1() + func2() );
 
 
 // №5
@@ -109,13 +112,11 @@ const arr5 = [1, 2, 3, 4, 5];
 
 function func(arr5) {
 	let sum = 0;
-	for (let elem of arr5) {
+	for (const elem of arr5) {
 		sum += elem;
 	}
-	console.log(sum);
+	return sum;
 }
-
-func(arr5)
 
 
 // №6
@@ -130,17 +131,28 @@ func(arr5)
 // }
 
 
-const arr6 = [1, 2, 3, 4, 5];
+// const arr6 = [1, 2, 3, 4, 5];
 
-function func(arr6) {
+// function func(arr6) {
+// 	let sum = 0;
+// 	for (let elem of arr6) {
+// 		sum += elem;
+// 	}
+// 	return sum;
+// }
+
+// func(arr6)
+
+const res6 = sum([1, 2, 3, 4, 5]);
+console.log(res6);
+
+function sum(arr) {
 	let sum = 0;
-	for (let elem of arr6) {
+	for (const elem of arr) {
 		sum += elem;
 	}
-	console.log(sum);
+  return sum;
 }
-
-func(arr6)
 
 
 // №7
@@ -152,16 +164,11 @@ func(arr6)
 // }
 
 function add(num) {
-	if (num <= 9 || num >= 1) {
+	if (num <= 9) {
 		return '0' + num;
-	} 
-  if ( num > 9) {
-    return num;
-  }
+	}
+  return num;
 }
-
-add(num)
-console.log(num);
 
 // №8
 // Код должен найти сумму элементов массива:
@@ -176,16 +183,81 @@ console.log(num);
 // 	return res;
 // }
 
-const arr8 = [1, 2, 3, 4, 5];
+// const arr8 = [1, 2, 3, 4, 5];
 
-function func(arr8) {
-	let sum = 0;
-	for (let elem of arr8) {
-		sum += elem;
-	}
-	console.log(sum);
+// function func(arr8) {
+// 	let sum = 0;
+// 	for (let elem of arr8) {
+// 		sum += elem;
+// 	}
+// 	return sum;
+// }
+
+// func(arr8)
+
+const arr = [1, 2, 3, 4, 5];
+const sume = sum(arr);
+console.log(sume);
+
+function sum(arr) {
+	let res = 0;
+	for (let elem of arr) {
+		res += elem;
+	}	
+	return res;
 }
 
-func(arr8)
 
 
+// №9
+// Код должен найти сумму цифр числа:
+// let num = 12345;
+// let res = getDigitsSum(num);
+// console.log(res);
+// function getDigitsSum(num) {
+// 	let arr = num.split('');
+// 	let sum = 0;
+// 	for (let elem of arr) {
+// 		sum += elem;
+// 	}
+// 	return sum;
+// }
+
+
+const num = 12345;
+const res = getDigitsSum(num);
+console.log(res);
+
+function getDigitsSum(num) {
+	const arr = String(num).split('');
+	let sum = 0;
+	for (let elem of arr) {
+		sum += +elem;
+	}
+	return sum;
+}
+
+
+// №10
+// Код должен проверить число на то, что оно является простым:
+// console.log(isPrime(13)); // должен вывести true
+// function isPrime(num) {
+// 	for (let i = 2; i < num; i++) {
+// 		if (num % i !== 0) {
+// 			return true;
+// 		} else {
+// 			return false;
+// 		}
+// 	}
+// }
+
+
+console.log(isPrime(13)); // должен вывести true
+function isPrime(num) {
+	for (let i = 2; i < num; i++) {
+		if (num % i === 0) {
+			return false;
+		} 
+	}
+  return true;
+}

@@ -41,14 +41,14 @@ console.log(checOddNumbers(num));
 
 function checPairedElementsTogether(arr3) {
   let pairedElements = false;
-  for (let i = 0; i < arr3.length; i++) {
-    if (arr3[i] === arr3[i - 1]) {
+  for (let i = 0; i < arr3.length-1; i++) {
+    if (arr3[i] === arr3[i + 1]) {
       pairedElements = true;
     }
   }
   return pairedElements;
 }
 
-const arr3 = [1,2,undefined];
+const arr3 = [undefined,2,9];
 // const arr3 = [1, 2, 5];
 console.log(checPairedElementsTogether(arr3));

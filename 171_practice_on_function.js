@@ -38,6 +38,10 @@ function getArrey(str) {
   return arrFromStr;
 }
 
+// function getArrey(str) {
+//   return str.split(''); 
+// }
+
 // console.log(getArrey('cats are my love'));
 
 
@@ -55,19 +59,26 @@ function getReversStr(str) {
 // №5
 // Сделайте функцию, которая параметром будет принимать строку и делать заглавной первую букву этой строки.
 
-function makeCapitalizeFirstLetter(str) {
-  const capitalizeFirstLetter = str.charAt(0).toUpperCase() + str.slice(1);
-  return capitalizeFirstLetter;
+function makeCapitalize(str) {
+  const capitalize = str.charAt(0).toUpperCase() + str.slice(1);
+  return capitalize;
 }
 
-// console.log(makeCapitalizeFirstLetter('cats are my love'));
+// console.log(makeCapitalize('cats are my love'));
 
 // №6
 // Сделайте функцию, которая параметром будет принимать строку и делать заглавной первую букву каждого слова этой строки.
 
-// function  makeCapitalizeFirstLetterEveryword(str) {
-
-// }
+function makeCapitalizeEveryword(str)
+{
+  const arr6 = str.split(' ');
+  const newarray = [];
+  for(let i = 0; i < arr6.length; i++){
+      newarray.push(arr6[i].charAt(0).toUpperCase()+arr6[i].slice(1));
+  }
+  return newarray.join(' ');
+}
+console.log(makeCapitalizeEveryword('cats are my love'));
 
 
 
@@ -93,6 +104,8 @@ function getRandomElement(arr) {
  }
  
  console.log(getRandomElement([1, 2, 3, 4, 5]));
+
+ //
 
 // №9
 // Сделайте функцию, которая параметром будет принимать число и проверять, простое оно или нет.

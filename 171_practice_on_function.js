@@ -80,6 +80,13 @@ function makeCapitalizeEveryword(str)
 }
 console.log(makeCapitalizeEveryword('cats are my love'));
 
+// function makeCapitalizeEveryword(str)
+// {
+//   const arr6 = str.split(' ');
+//   const newarray =  arr6.map(makeCapitalize)
+//   return newarray.join(' ');
+// }
+
 
 
 // №7

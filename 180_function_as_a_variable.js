@@ -13,10 +13,10 @@ console.log(func1());
 // Выведите результат работы функции func алертом в консоль.
 
 function func2() {
-  alert('hello');
+  return 'hello';
 }
 
-func2();
+alert(func2());
 
 
 // №3
@@ -74,7 +74,7 @@ let func1 = function() {
 // Сделайте безымянную функцию, которая будет возвращать через return число 2. Запишите эту функцию в переменную func2.
 
 let func2 = function() {
-  return 3;
+  return 2;
 };
 
 // №10

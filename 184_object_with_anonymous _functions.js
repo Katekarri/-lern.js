@@ -26,22 +26,38 @@ for (const key in object) {
 };
 
 
+// for (const func in Object.values(object)) {
+//   console.log(func());
+// };
+
 // №3
 // Сделайте объект с тремя функциями, каждая из которых будет принимать параметром массив с числами. Сделайте так, чтобы первая функция возвращала сумму элементов массива, вторая функция - сумму квадратов, а третья - сумму кубов.
 
 const arr = [1, 2, 3];
-var sum = 0;
-
-const object3 = {
-  func1: function(arr) {
-    return 
-  },
-  func2: function(arr) {
-    return 2;
-  },
-  func3: function(arr) {
-    return 3;
+const obj = {
+getSumOfElem: function(arr) { 
+  let sum = 0;
+  for (const elem of arr) {
+    sum += elem;
+  } 
+  return sum;
+},
+getSqrtOfElem: function(arr) {
+  let sum = 0;
+  for (const elem of arr) {
+    sum += elem * elem;
   }
+  return sum;
+},
+getCubeOfElem: function(arr) { 
+  let sum = 0;
+  for (const elem of arr) {
+    sum += elem * elem * elem;
+  }
+  return sum;
+}
 };
 
-// function();
+for (const key in obj) {
+alert (obj[key](arr));
+};

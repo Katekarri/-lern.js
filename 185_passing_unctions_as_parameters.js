@@ -145,17 +145,49 @@ function test(func) {
 // }
 // Вызовите функцию test, первым параметром передав число 3, вторым параметром функцию, возводящую число в квадрат, а третьим - функцию, возводящую число в куб. Выведите результат работы в консоль.
 
-// function test(num, func1, func2) {
-// 	return func1(num) + func2(num);
-// };
+function test(num, func1, func2) {
+	return func1(num) + func2(num);
+};
 
-// test(func);
+const func1 = function() {
+  return num ** 2;
+};
+
+const func2 = function() {
+  return num ** 3;
+};
+
+const num = 3;
+
+console.log(test(num,func1,func2));
 
 
 // №10
-// Не подсматривая в мой код реализуйте такую же функцию test самостоятельно.
+// Не подсматривая в мой код реализуйте такую же функцию test самостоятельно : 'Давайте сделаем функцию, которая параметром будет принимать массив, а вторым параметром - функцию. Переданная функция должна будет применится к каждому элементу массива:
+// function test(arr, func) {
+// 	// вернем измененный массив
+// }'
 
+function test(arr, func) {
+	for (let i = 0; i < arr.length; i++) {
+		arr[i] = func(arr[i]);
+	}
+	
+	return arr;
+}
 
+const nuwArr = test([1, 2, 3], function(num) {
+	return num ** 2;
+});
+
+console.log(nuwArr); 
+// +-
 
 // №11
 // Вызовите созданную вами функцию test, передав ей параметром массив с числами. Сделайте так, чтобы функция вернула массив с кубами этих чисел.
+
+const nuwArr2 = test([2, 4, 6], function(num) {
+	return num ** 2;
+});
+
+console.log(nuwArr2); 

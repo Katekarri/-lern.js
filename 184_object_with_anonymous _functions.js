@@ -61,3 +61,21 @@ getCubeOfElem: function(arr) {
 for (const key in obj) {
 alert (obj[key](arr));
 };
+
+
+const arr = [1, 2, 3];
+const obj = {
+getSumOfElem: function(arr) { 
+    return arr.reduce((sum, current) => sum + current);
+},
+getSqrtOfElem: function(arr) {  
+  return arr.reduce((sum, current) => sum + current**2);
+},
+getCubeOfElem: function(arr) { 
+    return arr.reduce((sum, current) => sum + current**3);
+}
+};
+
+for (const key in obj) {
+    console.log(obj[key](arr));
+};

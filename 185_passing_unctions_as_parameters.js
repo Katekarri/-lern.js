@@ -19,6 +19,18 @@ function test(func1, func2, func3) {
   console.log(func1() + func2() + func3());
 }
 
+
+test (
+  () => 1,
+  () => 2,
+  () => 3,
+);
+
+function test(func1, func2, func3) {
+  console.log(func1() + func2() + func3());
+}
+
+
 // №2
 // Сделайте функцию test, параметрами принимающую 3 функции и возвращающую сумму результатов переданных функций.
 
@@ -182,6 +194,17 @@ const nuwArr = test([1, 2, 3], function(num) {
 
 console.log(nuwArr); 
 // +-
+
+function test(arr, func){
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = func(arr[i]);
+}
+  return arr;
+}
+const arr = [1, 2, 3];
+const nuwArr = test(arr, (num) => num ** 2);
+console.log(nuwArr);
+
 
 // №11
 // Вызовите созданную вами функцию test, передав ей параметром массив с числами. Сделайте так, чтобы функция вернула массив с кубами этих чисел.

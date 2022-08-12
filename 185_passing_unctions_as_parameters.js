@@ -180,20 +180,20 @@ console.log(test(num,func1,func2));
 // 	// вернем измененный массив
 // }'
 
-function test(arr, func) {
-	for (let i = 0; i < arr.length; i++) {
-		arr[i] = func(arr[i]);
-	}
+// function test(arr, func) {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		arr[i] = func(arr[i]);
+// 	}
 	
-	return arr;
-}
+// 	return arr;
+// }
 
-const nuwArr = test([1, 2, 3], function(num) {
-	return num ** 2;
-});
+// const nuwArr = test([1, 2, 3], function(num) {
+// 	return num ** 2;
+// });
 
-console.log(nuwArr); 
-// +-
+// console.log(nuwArr); 
+// // +-
 
 function test(arr, func){
   for (let i = 0; i < arr.length; i++) {

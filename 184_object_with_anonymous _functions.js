@@ -33,34 +33,34 @@ for (const key in object) {
 // №3
 // Сделайте объект с тремя функциями, каждая из которых будет принимать параметром массив с числами. Сделайте так, чтобы первая функция возвращала сумму элементов массива, вторая функция - сумму квадратов, а третья - сумму кубов.
 
-const arr = [1, 2, 3];
-const obj = {
-getSumOfElem: function(arr) { 
-  let sum = 0;
-  for (const elem of arr) {
-    sum += elem;
-  } 
-  return sum;
-},
-getSqrtOfElem: function(arr) {
-  let sum = 0;
-  for (const elem of arr) {
-    sum += elem * elem;
-  }
-  return sum;
-},
-getCubeOfElem: function(arr) { 
-  let sum = 0;
-  for (const elem of arr) {
-    sum += elem * elem * elem;
-  }
-  return sum;
-}
-};
+// const arr = [1, 2, 3];
+// const obj = {
+// getSumOfElem: function(arr) { 
+//   let sum = 0;
+//   for (const elem of arr) {
+//     sum += elem;
+//   } 
+//   return sum;
+// },
+// getSqrtOfElem: function(arr) {
+//   let sum = 0;
+//   for (const elem of arr) {
+//     sum += elem * elem;
+//   }
+//   return sum;
+// },
+// getCubeOfElem: function(arr) { 
+//   let sum = 0;
+//   for (const elem of arr) {
+//     sum += elem * elem * elem;
+//   }
+//   return sum;
+// }
+// };
 
-for (const key in obj) {
-alert (obj[key](arr));
-};
+// for (const key in obj) {
+// alert (obj[key](arr));
+// };
 
 
 const arr = [1, 2, 3];
@@ -79,3 +79,9 @@ getCubeOfElem: function(arr) {
 for (const key in obj) {
     console.log(obj[key](arr));
 };
+
+// const obj = {
+//   getSumOfElem: arr => arr.reduce((sum, current) => sum + current),
+//   getSqrtOfElem: arr => arr.reduce((sum, current) => sum + current ** 2),
+//   getCubeOfElem: arr => arr.reduce((sum, current) => sum + current ** 3),
+// };

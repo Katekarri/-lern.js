@@ -20,42 +20,51 @@ func();
 // №2
 // Пусть функция в замыкании хранит число 10. Сделайте так, чтобы каждый вызов функции уменьшал это число на 1 и выводил в консоль уменьшенное число.
 
-function decreaseNumber() {
+function test() {
   let num = 10;
+  
   return function() {
-    for (let i = num; i <= 10; i++) {
+    alert(num);
+    num--;
+  }
+}
 
-    }
-    console.log(num);
-    num --;
-  };
-};
-
-const func2 = decreaseNumber();
-
-func2(); 
+const func2 = test();
 func2();
-
+func2();
+func2();
 
 // №3
 // Модифицируйте предыдущую задачу так, чтобы отсчет доходил до 0, а затем каждый последующий вызов функции выводил в консоль сообщение о том, что отсчет окончен.
 
-function test() {
-  return function() {
-  let num = 10;
 
-    for( let i = num; i <= num; i--) {
-      if (i >= 0) {
-        alert(i);
-      } 
-      if (i < 0) {// что то тут не то 
-        alert ('Отсчет окончен');
+function test() {
+  let num = 10;
+  
+  return function() {
+      if (num < 0) {
+       return console.log('Отсчет окончен');
       }
-    }
+      console.log(num);
+      num--;
   }
 }
-  const func3 = test();
-  func3();
+ 
+const func3 = test();
+
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
+func3();
 
 
 // №4

@@ -79,21 +79,21 @@ function test(func1,func2,func3) {
 
 function test(func1,func2,func3) {
   alert(func1() + func2() + func3());
-  };
+};
 
-  const func1 = function()  {
+function func1() {
   return 1;
-  };
+};
 
-  const func2 = function() {
+function func2() {
   return 2;
-  };
+};
 
-  const func3 = function() {
+function func3() {
   return 3;
-  };
+};
 
-  test(func1, func2, func3);
+test(func1, func2, func3);
 
 
 // №5

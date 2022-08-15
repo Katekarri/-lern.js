@@ -41,7 +41,7 @@ console.log(func()()()()());
 
 
 function func(num) {
-  return function(num1) {
+	return function(num1) {
 		return function(num2) {
       return num + num1 + num2;
     };
@@ -56,7 +56,7 @@ console.log(func(2)(3)(4));
 // Сделайте функцию func, которая будучи вызвана вот так: func(2)(3)(4)(5)(), вернет массив переданных в параметры чисел.
 
 function func(num) {
-  const arr = [];
+  let arr = [];
     return function(num1) {
       return function(num2) {
         return function(num3) {
@@ -69,4 +69,4 @@ function func(num) {
     };
   };
   
-console.log(func(2)(3)(4)(5)());
+  console.log(func(2)(3)(4)(5)());

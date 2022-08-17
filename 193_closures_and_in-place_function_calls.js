@@ -24,9 +24,9 @@ const func2 = (function() {
   return function() {
       console.log(num);
       num++;
-    if (num <= 5) {
+    if (num >= 5) {
       console.log(num);
-      num++;
+      num = 1;
     }
   }
 })();
@@ -36,4 +36,5 @@ func2();
 func2(); 
 func2();
 func2(); 
-func2();// еще не решено, думаю
+func2();
+func2(); 

@@ -69,31 +69,31 @@ const gettingFirstCapitaLetter = (each(arr3, function(str) {
 // 	return num ** 3;
 // }
 
-// function each(arr, callback) {
-//   const arrayOfCubeNumbers = [];
+function each(arr, callback) {
+  const arrayOfCubeNumbers = [];
   
-//   for (let elem of arr) {
-//     arrayOfCubeNumbers.push( callback(elem) ); 
-//   }
-//   return arrayOfCubeNumbers;
-// }
-
-// function cube(num) {
-//   return num ** 3;
-// }
-
-// const arrayOfCubeNumbers = each([1, 2, 3, 4, 5], cube);
-// console.log(arrayOfCubeNumbers);
-
-
-function each(arr) {  
-  return arr.map(function(i){
-    return i ** 3
-  });
+  for (let elem of arr) {
+    arrayOfCubeNumbers.push( callback(elem) ); 
+  }
+  return arrayOfCubeNumbers;
 }
 
-const arrayOfCubeNumbers = each([1, 2, 3, 4, 5]);
+function cube(num) {
+  return num ** 3;
+}
+
+const arrayOfCubeNumbers = each([1, 2, 3, 4, 5], cube);
 console.log(arrayOfCubeNumbers);
+
+
+// function getArr(arr) {  
+//   return arr.map(function(i){
+//     return i ** 3
+//   });
+// }
+
+// const arrayOfCubeNumbers = getArr([1, 2, 3, 4, 5]);
+// console.log(arrayOfCubeNumbers);
 
 // function each(arr) {  
 //   return arr.map(i => i ** 3);

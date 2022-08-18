@@ -46,12 +46,64 @@ getElem(obj);
 // [1, 2, 7, 8, 3, 4, 5, 6, 7]
 
 
+function SimpleArr(arr) {
+  const result = [];
+    
+    function func(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] == 'object') {
+          func(arr[i]);
+        } else { 
+          result.push(arr[i]);
+        }
+      }
+        return result;
+    }
+    
+    console.log(func(arr));
+  }
+  
+  SimpleArr([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
+
+
 // №3
 // Дан многомерный объект произвольного уровня вложенности, например, такой:
 // {a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}}
 // С помощью рекурсии найдите сумму элементов этого объекта.
 
+const obj3 = {
+  a: 1,
+  b: {
+    c: 2,
+    d: 3,
+    e: 4
+  },
+  f: {
+    g: 5,
+    j: 6,
+    k: {
+      l: 7,
+      m: {
+        n: 8,
+        o: 9
+      }
+    }
+  }
+}
 
+function sumOfElemOfObj(obj3) {
+  let sum = 0;
+  for (const key in obj3) {
+    if (typeof obj3[key] == 'object') {
+     sum += sumOfElemOfObj(obj3[key]);
+  } else {
+    sum += obj3[key];        
+    }
+
+  }
+  return sum;
+}
+console.log(sumOfElemOfObj(obj3));
 
 
 // №4

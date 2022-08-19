@@ -36,13 +36,13 @@ func(arr);
 // console.log(getCube(arr2)); 
 
 
-function getСubeElem(arr) {
-  let sum = arr.shift() ** 3;
-  if (arr.length !== 0) {    
-    sum += getСubeElem(arr);
-  }
-  
+const arr2 = [1, 2, 3, 4, 5];
+
+function getSum(arr2) {
+  const sumArr = arr2.map(i => i**3);
+  const sum = sumArr.reduce((prev, count) => prev + count);  
   return sum;
 }
 
-console.log(getСubeElem([1, 2, 3, 4, 5]));
+// console.log(getSum(arr2));
+// console.log(arr2);

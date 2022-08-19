@@ -49,21 +49,20 @@ getElem(obj);
 function SimpleArr(arr) {
   const result = [];
     
-    function func(arr) {
-      for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] == 'object') {
-          func(arr[i]);
+  function func(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] == 'object') {
+        func(arr[i]);
         } else { 
           result.push(arr[i]);
-        }
       }
-        return result;
     }
-    
-    console.log(func(arr));
-  }
+      return result;
+  } 
+  console.log(func(arr));
+}
   
-  SimpleArr([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
+SimpleArr([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
 
 
 // №3
@@ -95,11 +94,10 @@ function sumOfElemOfObj(obj3) {
   let sum = 0;
   for (const key in obj3) {
     if (typeof obj3[key] == 'object') {
-     sum += sumOfElemOfObj(obj3[key]);
-  } else {
-    sum += obj3[key];        
-    }
-
+      sum += sumOfElemOfObj(obj3[key]);
+    } else {
+        sum += obj3[key];        
+      }
   }
   return sum;
 }
@@ -112,10 +110,40 @@ console.log(sumOfElemOfObj(obj3));
 // С помощью рекурсии слейте элементы этого массива в одну строку:
 // 'abcdefgjk'
 
-
+function getStringFromArr(arr) {
+  let str = '';
+  for (const elem of arr) {
+    if (typeof elem == 'object') {
+      str += getStringFromArr(elem);
+      } else { 
+        str += elem;
+    }
+  }
+  return str;
+}
+  
+// console.log(getStringFromArr(['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]]));
 
 
 // №5
 // Дан многомерный массив произвольного уровня вложенности, например, такой:
 // [1, [2, 7, 8], [3, 4], [5, [6, 7]]]
 // Возведите все элементы-числа этого массива в квадрат.
+
+function getNumberSquaredInArray(arr) {
+  const result = [];
+    
+  function func(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] == 'object') {
+        func(arr[i]);
+        } else { 
+          result.push(arr[i] ** 2);
+      }
+    }
+      return result;
+  } 
+  console.log(func(arr));
+}
+  
+getNumberSquaredInArray([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);

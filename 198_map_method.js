@@ -40,13 +40,16 @@ const result3 = arr3.map(function(elem) {
 // 	[7, 8, 9]
 // ];
 
-// const arr4 = ['123', '456', '789'];
-// const result4 = arr4.map(function(elem) {
-// elem = elem.split('');
-// }
-// что то сложно пока разобраться 
+const arr4 = ['123', '456', '789'];
+const iterateElementsInArray = arr4.map(function(elem) {
+  elem = elem.split('');
+  let iterateNumbersInElement = elem.map(function(subElem) {
+    return subElem = Number(subElem);
+  })
+  return iterateNumbersInElement;
+});
 
-
+// console.log(iterateElementsInArray);
 
 // №5
 // Дан массив с числами. Используя метод map запишите в каждый элемент массива значение этого элемента, умноженное на его порядковый номер в массиве.
@@ -56,4 +59,4 @@ const result5 = arr5.map(function(elem, index) {
   return elem = elem * index;
 });
 
-console.log(result5);
+// console.log(result5);

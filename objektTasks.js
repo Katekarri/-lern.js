@@ -126,7 +126,6 @@ function createObjectFromArrays(keys, values) {
   return obj;
 }
 
-
 testMe(createObjectFromArrays, [1, 2, 3], ['jijkko', 'uioj', 'bin'], { 1 : 'jijkko', 2 : 'uioj', 3 : 'bin'} )
 
 // задача 4
@@ -158,22 +157,16 @@ testMe(createObjectFromArrays, [1, 2, 3], ['jijkko', 'uioj', 'bin'], { 1 : 'jijk
 // Дана строка в виде случайной последовательности чисел от 0 до 9.
 // Требуется создать объект, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом num), а в качестве значений – количество этих чисел в имеющейся последовательности. Для построения объекта создайте функцию countIt(sequence), принимающую строку из цифр.
 
-str = '1233458756576878989809';
+const num = '1233458756576878989809';
+const arr = Array.from(num);
+const  obj = {};
+arr.forEach(function countIt(sequence) {
+  obj[sequence] = (obj[sequence] || 0) + 1;
+});
+console.log(obj);
 
-obj = {
-  1: 1,
-  2: 1,
-  3: 2,
-}
+//arr.forEach перебор в виде содержащего внутри себя функцию нашла в документации, не скажу что в даннном решении  
 
- 
-function countIt(sequence) {
-  const obj = {};
-
-  return obj;
-}
-console.log(obj)
-countIt(str);
 
 // const num = "1234";
 // const arr = Array.from(num);

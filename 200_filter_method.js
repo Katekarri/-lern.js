@@ -5,7 +5,7 @@
 
 const arr1 = [-1, 2, -3, 4, 5];
 let result1 = arr1.filter(function(elem) {
-	return elem > 0;
+  return elem > 0;
 });
 
 
@@ -14,7 +14,7 @@ let result1 = arr1.filter(function(elem) {
 
 const arr2 = [-1, 2, -3, 4, 5];
 const result2 = arr2.filter(function(elem) {
-	return elem < 0;
+  return elem < 0;
 });
 
 
@@ -60,8 +60,12 @@ const result5 = arr5.filter(function(elem, index) {
 
 const arr6 = [1, 2, [3, 4], 5, [6, 7]];
 const result6 = arr6.filter(elem => typeof elem != 'object');
-console.log(result6);
+// console.log(result6);
 
 
 // №7
 // Дан массив с числами. Посчитайте количество отрицательных чисел в этом массиве.
+
+const arr7 = [-1, 2, -3, 4, 5, 13];
+const result7 = arr7.filter(elem => elem < 0).length ;
+// console.log(result7)

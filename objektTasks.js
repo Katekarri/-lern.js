@@ -157,15 +157,15 @@ testMe(createObjectFromArrays, [1, 2, 3], ['jijkko', 'uioj', 'bin'], { 1 : 'jijk
 // Дана строка в виде случайной последовательности чисел от 0 до 9.
 // Требуется создать объект, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом num), а в качестве значений – количество этих чисел в имеющейся последовательности. Для построения объекта создайте функцию countIt(sequence), принимающую строку из цифр.
 
-const num = '1233458756576878989809';
-const arr = Array.from(num);
-const  obj = {};
-arr.forEach(function countIt(sequence) {
-  obj[sequence] = (obj[sequence] || 0) + 1;
-});
-console.log(obj);
+// const num = '1233458756576878989809';
+// const arr = Array.from(num);
+// const  obj = {};
+// arr.forEach(function countIt(sequence) {
+//   obj[sequence] = (obj[sequence] || 0) + 1;
+// });
+// console.log(obj);
 
-//arr.forEach перебор в виде содержащего внутри себя функцию нашла в документации, не скажу что в даннном решении  
+
 
 
 // const num = "1234";
@@ -174,3 +174,19 @@ console.log(obj);
 // const obj = Object.assign({}, array);
 // console.log(obj)
 //работает в случае не повторяемых чисел(не счетает если и склько повторяется)
+
+
+
+function countIt(num) {
+  const arr = Array.from(num);
+  const obj = {};
+
+  return arr.forEach((item) => (obj[num] = (obj[num] || 0) + 1));
+}
+  
+  // console.log(countIt('1233458756576878989809'));
+
+
+
+
+

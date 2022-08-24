@@ -152,6 +152,29 @@ testMe(createObjectFromArrays, [1, 2, 3], ['jijkko', 'uioj', 'bin'], { 1 : 'jijk
 
 // Игорь Бероев: Муся, 7; Изольда, 2
 
+const customers = [
+  {
+    firstname: 'Александр',
+    lastname: 'Березуев',
+    pets: [
+      {name: 'Вася', age: 3},
+      {name: 'Матильда', age: 11}
+    ]
+  },
+    {
+    firstname: 'Андрей',
+    lastname: 'Белов',
+    pets: [
+      {name: 'Гарфилд', age: 4},
+    ]
+  }
+]
+
+// for (let item of customers) {
+//   const { firstname, lastname, pets } = item
+//   const petsNames = pets.map(({name, age}) => ${name} ${age}).join(', ')  
+//   console.log(${firstname} ${lastname}: ${petsNames})
+// }
 
 // задача 5
 // Дана строка в виде случайной последовательности чисел от 0 до 9.
@@ -181,11 +204,26 @@ function countIt(num) {
   const arr = Array.from(num);
   const obj = {};
 
-  return arr.forEach((item) => (obj[num] = (obj[num] || 0) + 1));
+  arr.forEach(
+    (item) => (
+      obj[item] = (obj[item] || 0) + 1
+    )
+  ); 
+  return obj
 }
-  
-  // console.log(countIt('1233458756576878989809'));
+console.log(countIt('1233458756576878989809'));
 
+
+
+function countIt(num) {
+  const obj = {};
+
+  for (let char of num) {
+    obj[char] = (obj[char] || 0) + 1
+  }
+
+  return obj
+}
 
 
 

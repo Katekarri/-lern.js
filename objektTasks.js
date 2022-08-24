@@ -80,39 +80,19 @@ testMe(topSalary, {}, null);
 // Ф, Щ, Ъ – 10 очков.
 // Напишите функцию, которая вычисляет стоимость введенного пользователем слова. Будем считать, что на вход подается только одно слово, которое содержит либо только английские, либо только русские буквы.
 
-// function countPoints(word) {
-//   const arrWord = Array.from(word);
-
-//   for (i = 0; i <= arrWord.length; i++ ){
-//     if()
-//   }
-// }
 
 function countPoints(word) {
-//   const englishWord = {
-//     1: ['A ,E, I, O, U, L, N, S, T, R'],
-//     2: [D, G],
-//     3: [B, C, M, P],
-//     4: [F, H, V, W, Y],
-//     5: [K],
-//     8: [J, X],
-//     10: [Q, Z ],
-//   }
-//   const russianWord = {
-//     1: [ А, В, Е, И, Н, О, Р, С, Т],
-//     2:[Д, К, Л, М, П, У],
-//     3: [Б, Г, Ё, Ь, Я],
-//     4: [Й, Ы],
-//     5: [Ж, З, Х, Ц, Ч],
-//     8: [Ш, Э, Ю ],
-//     10:[Ф, Щ, Ъ],
-//   }
-
-  // for (i = 0; i <= word.length; i++ ) {
-    
-  // }
-
+  const englishWord = { a: 1, e: 1, i: 1, o: 1, u: 1, l: 1, n: 1, r: 1, s: 1, t: 1, d: 2, g: 2, b: 3, c: 3, m: 3, p: 3, f: 4, h: 4, v: 4, w: 4, y: 4, k: 5, j: 8, x: 8, q: 10, z: 10};
+  
+  const russianWord = { а: 1, в: 1, е: 1, и: 1, н: 1, о: 1, р: 1, с: 1, т: 1, д: 2, к: 2, л: 2, м: 2, п: 2, у: 2, б: 3, г: 3, ё: 3, ь: 3, я: 3, й: 4, ы: 4, ж: 5, з: 5, х: 5, ц: 5, ч: 5, ч: 8, ш: 8, э: 8, ю: 8, ф: 10, щ: 10, ъ: 10}
+  let  sum = 0;
+    for (let i = 0; i < word.length; i++) {
+        sum += englishWord[word[i].toLowerCase()] || 0;
+        sum += russianWord[word[i].toLowerCase()] || 0;
+    }
+    return sum;
 }
+
 
 countPoints('dog');
 
@@ -146,7 +126,6 @@ function createObjectFromArrays(keys, values) {
   return obj;
 }
 
-
 testMe(createObjectFromArrays, [1, 2, 3], ['jijkko', 'uioj', 'bin'], { 1 : 'jijkko', 2 : 'uioj', 3 : 'bin'} )
 
 // задача 4
@@ -173,7 +152,79 @@ testMe(createObjectFromArrays, [1, 2, 3], ['jijkko', 'uioj', 'bin'], { 1 : 'jijk
 
 // Игорь Бероев: Муся, 7; Изольда, 2
 
+const customers = [
+  {
+    firstname: 'Александр',
+    lastname: 'Березуев',
+    pets: [
+      {name: 'Вася', age: 3},
+      {name: 'Матильда', age: 11}
+    ]
+  },
+    {
+    firstname: 'Андрей',
+    lastname: 'Белов',
+    pets: [
+      {name: 'Гарфилд', age: 4},
+    ]
+  }
+]
+
+// for (let item of customers) {
+//   const { firstname, lastname, pets } = item
+//   const petsNames = pets.map(({name, age}) => ${name} ${age}).join(', ')  
+//   console.log(${firstname} ${lastname}: ${petsNames})
+// }
+
 // задача 5
 // Дана строка в виде случайной последовательности чисел от 0 до 9.
+// Требуется создать объект, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом num), а в качестве значений – количество этих чисел в имеющейся последовательности. Для построения объекта создайте функцию countIt(sequence), принимающую строку из цифр.
 
-// Требуется создать объект, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом int), а в качестве значений – количество этих чисел в имеющейся последовательности. Для построения объекта создайте функцию countIt(sequence), принимающую строку из цифр.
+// const num = '1233458756576878989809';
+// const arr = Array.from(num);
+// const  obj = {};
+// arr.forEach(function countIt(sequence) {
+//   obj[sequence] = (obj[sequence] || 0) + 1;
+// });
+// console.log(obj);
+
+
+
+
+// const num = "1234";
+// const arr = Array.from(num);
+// const array = arr;
+// const obj = Object.assign({}, array);
+// console.log(obj)
+//работает в случае не повторяемых чисел(не счетает если и склько повторяется)
+
+
+
+function countIt(num) {
+  const arr = Array.from(num);
+  const obj = {};
+
+  arr.forEach(
+    (item) => (
+      obj[item] = (obj[item] || 0) + 1
+    )
+  ); 
+  return obj
+}
+console.log(countIt('1233458756576878989809'));
+
+
+
+function countIt(num) {
+  const obj = {};
+
+  for (let char of num) {
+    obj[char] = (obj[char] || 0) + 1
+  }
+
+  return obj
+}
+
+
+
+

@@ -3,9 +3,13 @@
 // №1
 // Модифицируйте полученный выше код так, чтобы при отсутствии в массиве значения для месяца по умолчанию брался текущий месяц, а при отсутствии значения для года - соответственно текущий год.
 
-function func() {
-  return (new Date).getDate();
+function getCurrentMonth() {
+  return (new Date).getMonth();
 }
+const [year, month = getCurrentMonth(), day] = arr;
 
-const [year = func(), month = func(), day] = arr;
 
+function getCurrentYear() {
+  return (new Date).getFullYear();
+}
+const [year1, month1 = getCurrentYear(), day1] = arr1;

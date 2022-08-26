@@ -18,6 +18,6 @@
 
 //если честно не весьма понятно ... ведь под индексом 3 в массиве 'programmer'... надо пометь значение , или указать  переменной значение по умолчанию 4? 
 
-const arr = ['John', 'Smit', 'development', 'programmer'];
-const [name, surname, department,trainee = 3] = arr;
-// console.log(trainee);
+const arr = ['John', 'Smit', 'development'];
+const [name, surname, department, position = 'trainee'] = arr;
+console.log(position);

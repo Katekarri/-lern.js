@@ -57,10 +57,10 @@ function func([name, surname, info]) {
 // func( ['John', 'Smit', 'development'] );
 
 func( ['John', 'Smit', 'development'] );
-function func([name, surname, info, position = 'джуниор']) {
+function func([name, surname, department, position = 'джуниор']) {
   console.log(name);
   console.log(surname);
-  console.log(info);
+  console.log(department);
   console.log(position);
   
 }

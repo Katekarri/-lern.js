@@ -3,20 +3,20 @@
 // №1
 // Выведите на экран текущий день.
 
-const dayNuw = new Date();
-console.log(dayNuw.getDate());
+const dayNew = new Date();
+console.log(dayNew.getDate());
 
 // №2
 // Выведите на экран текущий месяц.
 
-const monthNuw = new Date();
-console.log(monthNuw.getMonth());
+const monthNew = new Date();
+console.log(monthNew.getMonth());
 
 // №3
 // Выведите на экран текущий год.
 
-const yearNuw = new Date();
-console.log(yearNuw.getFullYear());
+const yearNew = new Date();
+console.log(yearNew.getFullYear());
 
 
 // years = Math.floor(t / (1000 * 60 * 60 * 24 * 30 * 12)),

@@ -94,27 +94,49 @@ const date7 = new Date(now7.getFullYear(), now7.getMonth() - 1, now7.getDay());
 // №8
 // Определите, сколько дней между 1 января и 10 сентября текущего года.
 
+const date1 = new Date(2022, 8, 10);
+const date8 = new Date(2022, 0, 1);
+const diff = date1 - date8;
+console.log(diff / (1000 * 60 * 60 * 24));
 
 
 // №9
 // Определите, сколько дней между 20 числом текущего месяца и 10 числом следующего.
 
-
+const date9 = new Date(2022, 8, 10);
+const date10 = new Date(2022, 7, 20);
+const diff9 = date9 - date10;
+console.log(diff9 / (1000 * 60 * 60 * 24));
 
 // №10
 // Определите, сколько часов прошло между вчерашним полднем и текущим моментом времени
 
-
+let now1  = new Date();
+let date11 = new Date(now1.getFullYear(), now1.getMonth(), now1.getDate());
+let date12= new Date(now1.getFullYear(), now1.getMonth(), now1.getDate() - 1, 12);
+// console.log(date11 - date12);
 
 // №11
 // Определите, сколько часов прошло между началом дня и текущим моментом времени.
 
+// const now  = new Date();
+// const date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 6);
+
+// const date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0);
+// const diff = date - date1;
+// console.log(diff / (1000 * 60 * 60));
+
+// что то не совсем понимаю
 
 
 // №12
 // Определите, сколько часов осталось до конца дня.
 
+// Определите, сколько часов прошло между началом дня и текущим моментом времени.
 
+// const now  = new Date();
+// const date = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-// №13
-// Рассмотрите промежуток от 2000 года до текущего года. Определите, сколько раз 1 января в этом промежутке попадало на выходной день, то есть на субботу или на воскресенье.
+// const date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0);
+// const diff = date - date1;
+// console.log(diff / (1000 * 60 * 60));

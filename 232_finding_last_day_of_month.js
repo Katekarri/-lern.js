@@ -6,7 +6,7 @@
 
 
 function lastDay(year, month) {
-  const date = new Date(year, month + 1, 0);
+  const date = new Date(year, month, 0);
   return date.getDate();
 }
 console.log(lastDay(2022, 8));

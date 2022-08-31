@@ -1,7 +1,6 @@
 // https://code.mu/ru/javascript/book/prime/time/dates-string-comparison/
 
 
-
 // №1
 // Напишите код, который сравнит две приведенные ниже даты и выведет сообщение о том, какая из них больше:
 // let date1 = '2020-11-31';

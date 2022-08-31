@@ -15,6 +15,4 @@ function checkDate(year, month, day) {
 }
 
 console.log(checkDate(2025, 0, 31)); // выведет true
-console.log(checkDate(2025, 0, 32)); // выведет false
-
-//с этим я еще разбираюсь
+console.log(checkDate(2025, 0, 32)); // выведет fals

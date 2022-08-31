@@ -119,24 +119,27 @@ let date12= new Date(now1.getFullYear(), now1.getMonth(), now1.getDate() - 1, 12
 // №11
 // Определите, сколько часов прошло между началом дня и текущим моментом времени.
 
-// const now  = new Date();
-// const date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 6);
+const now11  = new Date();
+const date13 = new Date(now11.getFullYear(), now11.getMonth(), now11.getDate(), 6);
 
-// const date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0);
-// const diff = date - date1;
-// console.log(diff / (1000 * 60 * 60));
+const diff11 = now11 - date13;
+console.log(diff11 / (1000 * 60 * 60));
 
-// что то не совсем понимаю
 
+
+
+// years = Math.floor(t / (1000 * 60 * 60 * 24 * 30 * 12)),
+// months = Math.floor(t / (1000 * 60 * 60 * 24 * 30) % 12),
+// days = Math.floor(t / (1000 * 60 * 60 * 24) % 30),
+// hours = Math.floor((t / (1000 * 60 * 60)) % 24),
+// minutes = Math.floor((t / (1000 * 60)) % 60),
+// seconds = Math.floor((t / 1000) % 60);
 
 // №12
 // Определите, сколько часов осталось до конца дня.
 
-// Определите, сколько часов прошло между началом дня и текущим моментом времени.
+const now12  = new Date();
+const date14 = new Date(now12.getFullYear(), now12.getMonth(), now12.getDate(), 24);
 
-// const now  = new Date();
-// const date = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-// const date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0);
-// const diff = date - date1;
-// console.log(diff / (1000 * 60 * 60));
+const diff12 = date14 - now12;
+console.log(diff12 / (1000 * 60 * 60));

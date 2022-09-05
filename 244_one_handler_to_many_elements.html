@@ -30,26 +30,35 @@ function func() {
     <p id="elem5">text</p>    
 		
 		<script>
+      const elem = document.querySelectorAll('p');
 
-      function func() {
-        console.log('message');
-      }
+      elem.forEach((p) => {
+        p.addEventListener('click', func => {
+          console.log('message');
+        });
+      });
+      
+      // function func() {
+      //   console.log('message');
+      // }
 			
-      const elem1 = document.querySelector('#elem1');
-      elem1.addEventListener('click', func);
+      // const elem1 = document.querySelector('#elem1');
+      // elem1.addEventListener('click', func);
 
-      const elem2 = document.querySelector('#elem2');
-      elem2.addEventListener('click', func);
+      // const elem2 = document.querySelector('#elem2');
+      // elem2.addEventListener('click', func);
 
-      const elem3 = document.querySelector('#elem3');
-      elem3.addEventListener('click', func);
+      // const elem3 = document.querySelector('#elem3');
+      // elem3.addEventListener('click', func);
 
-      const elem4 = document.querySelector('#elem4');
-      elem4.addEventListener('click', func);
+      // const elem4 = document.querySelector('#elem4');
+      // elem4.addEventListener('click', func);
 
-      const elem5 = document.querySelector('#elem5');
-      elem5.addEventListener('click', func);
+      // const elem5 = document.querySelector('#elem5');
+      // elem5.addEventListener('click', func);
 
 		</script>
 	</body>
 </html>
+
+

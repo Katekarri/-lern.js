@@ -20,7 +20,7 @@ console.log(p1, p2, p3);
 // </div>
 // Получите ссылку на первый абзац из дива с id, равным block.
 
-const p = document.querySelector('p');//document.getElementsByTagName('p')[0]
+const p = document.querySelector('#block p');//document.getElementsByTagName('p')[0]
 console.log(p);
 
 
@@ -32,7 +32,7 @@ console.log(p);
 // </div>
 // Получите ссылку на первый абзац из дива с классом block.
 
-const  newP = document.querySelector('p');
+const  newP = document.querySelector('.block p');
 console.log(newP);
 
 // №4
@@ -41,7 +41,5 @@ console.log(newP);
 // <p class="www">text</p>
 // Получите ссылку на первый абзац с классом www.
 
-const elem = document.querySelector('.www');
+const elem = document.querySelector('p .www');
 console.log(elem);
-
-//!!! не уверена в правильности оформление этих заданий

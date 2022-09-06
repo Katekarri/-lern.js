@@ -41,5 +41,5 @@ console.log(newP);
 // <p class="www">text</p>
 // Получите ссылку на первый абзац с классом www.
 
-const elem = document.querySelector('p .www');
+const elem = document.querySelector('p.www');
 console.log(elem);

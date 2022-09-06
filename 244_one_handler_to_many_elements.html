@@ -30,9 +30,9 @@ function func() {
     <p id="elem5">text</p>    
 		
 		<script>
-      const elem = document.querySelectorAll('p');
+      const elems = document.querySelectorAll('p');
 
-      elem.forEach((p) => {
+      elems.forEach((p) => {
         p.addEventListener('click', func => {
           console.log('message');
         });
@@ -56,6 +56,11 @@ function func() {
 
       // const elem5 = document.querySelector('#elem5');
       // elem5.addEventListener('click', func);
+
+      //["#elem1", "#elem2", "#elem3", "#elem4", "#elem5",].forEach(selector => {
+      //const el = document.querySelector(selector);
+      //el.addEventListener('click', () => console.log('message'));
+      // })
 
 		</script>
 	</body>

@@ -26,8 +26,13 @@
     
   </head>
   <body>
+    <button onclick="buttonClick()">Нажми на меня</button>
+    <span id="elem">Это span с текстом.</span>
     <script>
-
+      function buttonClick() {
+      var elem = document.getElementById('elem');
+      elem.innerHTML = '!!!';
+    }
     </script>
   </body>
 </html>

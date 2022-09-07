@@ -26,13 +26,67 @@
     
   </head>
   <body>
-    <button onclick="buttonClick()">Нажми на меня</button>
-    <span id="elem">Это span с текстом.</span>
+<!-- 1 -->
+      <p class="elem">text</p>
+    <button id="button">go</button>
+
+<!-- 2 -->
+    <p class="elem1">Hi!</p>
+    <button id="button1">go</button> 
+<!-- 3 -->
+    <p class="elem2">123</p>
+    <p class="elem3">6</p>
+    <button id="button2">go</button>
+
+    <!-- 4 -->
+    <p class="elem4">1</p>
+    <p class="elem5">2</p>
+    <p class="elem6">3</p>
+    <div class="div">sum:</div>
+    <button id="button3">go</button>
+
+
     <script>
-      function buttonClick() {
-      var elem = document.getElementById('elem');
-      elem.innerHTML = '!!!';
-    }
+      // 1
+
+    const elem = document.querySelector('.elem');
+    const button = document.querySelector('#button');
+
+    button.addEventListener('click', function() {
+      console.log(elem.textContent);
+    });
+
+      // 2
+
+    const elem1 = document.querySelector('.elem1');
+    const button1 = document.querySelector('#button1');
+
+    button1.addEventListener('click', function() {
+      elem1.textContent = '!!!';
+    });
+
+
+      // 3
+
+    const elem2 = document.querySelector('.elem2');
+    const elem3 = document.querySelector('.elem3');
+    const button2 = document.querySelector('#button2');
+
+    button2.addEventListener('click', function() {
+      alert(Number(elem2.textContent) + Number(elem3.textContent));
+    });
+
+      // 4
+      const elem4 = document.querySelector('.elem4');
+      const elem5 = document.querySelector('.elem5');
+      const elem6 = document.querySelector('.elem6');
+      const div = document.querySelector('.div');
+      const button3 = document.querySelector('.button3');
+
+      button3.addEventListener('click', function() {
+        const sum = (Number(elem4.textContent) + Number(elem5.textContent) + Number(elem6.textContent));
+        alert (sum + String(div))
+      });
     </script>
   </body>
 </html>

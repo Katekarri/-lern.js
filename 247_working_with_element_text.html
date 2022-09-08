@@ -38,15 +38,19 @@
     <p class="elem3">6</p>
     <button id="button2">go</button>
 
-    <!-- 4 -->
+<!-- 4 -->
     <p class="elem4">1</p>
-    <p class="elem5">2</p>
-    <p class="elem6">3</p>
+    <p class="elem4">2</p>
+    <p class="elem4">3</p>
     <div class="div">sum:</div>
     <button id="button3">go</button>
+<!-- 5 -->
+    <p class="elem5">1</p>
+    <button id="button5">go</button>
 
 
     <script>
+
       // 1
 
     const elem = document.querySelector('.elem');
@@ -77,16 +81,30 @@
     });
 
       // 4
+      
       const elem4 = document.querySelector('.elem4');
-      const elem5 = document.querySelector('.elem5');
-      const elem6 = document.querySelector('.elem6');
       const div = document.querySelector('.div');
       const button3 = document.querySelector('.button3');
 
-      button3.addEventListener('click', function() {
-        const sum = (Number(elem4.textContent) + Number(elem5.textContent) + Number(elem6.textContent));
-        alert (sum + String(div))
+      button3.addEventListener('click', function() { 
+        let sum = 0;
+        for (let i = 0; i < elem4.length; i++) {
+		      sum += Number(elem4[i].textContent);
+	      }
+          div.textContent = sum;
+      }); 
+
+        //5
+        
+      const elem5 = document.querySelector('.elem5');
+      const button5 = document.querySelector('#button5');
+
+      button5.addEventListener('click', function() {
+        elem5.textContent + "1";
       });
+
+
     </script>
   </body>
 </html>
+

@@ -1,0 +1,143 @@
+<!-- https://code.mu/ru/javascript/book/prime/dom/basis/attributes-via-properties/ -->
+
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body> 
+
+  <!-- №1
+  Дан следующий инпут:
+  <input id="elem" type="email">
+  Дана также кнопка. По нажатию на кнопку выведите на экран содержимое атрибута type указанного выше инпута. -->
+
+    <input id="elem" type="email">
+    <button id="button">go</button>
+
+  <!-- №2
+  Дан следующий инпут:
+  <input id="elem" type="email">
+  Дана также кнопка. По нажатию на кнопку запишите в атрибут type значение submit. -->
+
+    <input id="elem1" type="email">
+    <button id="button1">go</button>
+
+  <!-- №3
+  Пусть у вас есть ссылка в виде тега a, кнопка и абзац. По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки. -->
+
+    <a id="link" href="https://www">text</a>
+    <button id="button2">go</button>
+    <p class="elem2">text</p>
+
+  <!-- №4
+  Пусть у вас есть ссылка и кнопка. По нажатию на кнопку добавьте в конец текста ссылки содержимое ее атрибута href в круглых скобках. -->
+
+    <a id="link4" href="https://www">text</a>
+    <button id="button4">go</button>
+
+  <!-- №5
+  Пусть у вас есть картинка. Разместите ее на странице в помощью тега img. Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац записался путь к картинки из ее атрибута src. -->
+
+    <button id="button5">go</button>
+    <p class="elem5">text</p>
+    <img class="img" src="img_blabla.jpg" alt="foto">
+
+    
+<!-- №6
+Дана картинка в теге img и кнопка. По нажатию на кнопку в атрибут width запишите значение 300. -->
+
+    <img class="img6" src="img_bla.jpg" width="100" alt="foto">
+    <button id="button6">go</button>
+
+<!-- №7
+Дана картинка в теге img и кнопка. Пусть в атрибуте width задана некоторая ширина. Сделайте кнопку, по нажатию на которую ширина картинки будет увеличиваться в 2 раза. -->
+
+  <img class="img7" src="img_foto.jpg" width="100" alt="foto">
+  <button id="button7">go</button>  
+
+<!-- №8
+Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке.  -->
+
+<img class="img8" src="img_foto2.jpg" alt="foto">
+<img class="img8" src="img_foto3.jpg"  alt="foto">
+  <button id="button8">go to foto2</button>   
+  <button id="button9">go to foto3</button> 
+    <script>
+
+      // 1
+      const elem = document.querySelector('#elem');
+      const button = document.querySelector('#button');
+
+      button.addEventListener('click', function() {
+        alert(elem.type);
+      });
+
+      //2
+      const elem1 = document.querySelector('#elem1');
+      const button1 = document.querySelector('#button1');
+      
+      button1.addEventListener('click', function() {
+        alert(elem1.type = 'submit');
+      });
+
+      //3  	
+      const link = document.querySelector('#link');
+      const button2 = document.querySelector('#button2');
+      const elem2 = document.querySelector('.elem2');
+      
+      button2.addEventListener('click', function() {
+        elem2.textContent = link.href;
+      });
+
+      //4
+      const link4 = document.querySelector('#link4');
+      const button4 = document.querySelector('#button4');
+
+      button4.addEventListener('click', function() {
+        link4.textContent = link4.textContent + '(' + link4.href + ')';
+      });
+
+      //5
+      const button5 = document.querySelector('#button5');
+      const elem5 = document.querySelector('.elem5');
+      const img = document.querySelector('.img');
+
+      button5.addEventListener('click', function() {
+        elem5.textContent = img.src;
+      });
+
+      //6
+      const button6 = document.querySelector('#button6');
+      const img6 = document.querySelector('.img6');
+
+      button6.addEventListener('click', function() {
+        img6.width = img6.textContent + '300';
+      });
+
+
+      //7
+      const button7 = document.querySelector('#button7');
+      const img7 = document.querySelector('.img7');
+
+      button7.addEventListener('click', function() {
+       img7.width = Number(img7.textContent) * 2;
+      });// не рaботает
+
+      //8
+      const button8 = document.querySelector('#button8');
+      const button9 = document.querySelector('#button9');
+      const img8 = document.querySelector('.img8');
+      const img9 = document.querySelector('.img8');
+      
+      button8.addEventListener('click', function() {
+       
+      });
+
+      button9.addEventListener('click', function() {
+       
+      });//еще не решила
+    </script>
+  </body>
+</html>

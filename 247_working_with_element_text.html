@@ -44,10 +44,14 @@
     <p class="elem4">3</p>
     <div class="div">sum:</div>
     <button id="button3">go</button>
+
 <!-- 5 -->
     <p class="elem5">1</p>
     <button id="button5">go</button>
 
+<!-- 6 -->
+    <p class="elem6">Hello</p>
+    <button id="button6">go</button>
 
     <script>
 
@@ -82,27 +86,36 @@
 
       // 4
       
-      const elem4 = document.querySelector('.elem4');
+      const elem4 = document.querySelectorAll('.elem4');
       const div = document.querySelector('.div');
-      const button3 = document.querySelector('.button3');
+      const button3 = document.querySelector('#button3');
 
       button3.addEventListener('click', function() { 
         let sum = 0;
         for (let i = 0; i < elem4.length; i++) {
-		      sum += Number(elem4[i].textContent);
-	      }
+          sum += Number(elem4[i].textContent);
+          
+        }
           div.textContent = sum;
       }); 
-
+      
         //5
         
       const elem5 = document.querySelector('.elem5');
       const button5 = document.querySelector('#button5');
 
       button5.addEventListener('click', function() {
-        elem5.textContent + "1";
+      elem5.textContent = Number(elem5.textContent) + 1;  
       });
 
+      //6
+
+      const elem6 = document.querySelector('.elem6');
+      const button6 = document.querySelector('#button6');
+
+      button6.addEventListener('click', function() {
+      elem6.textContent = elem5.textContent + '!';  
+      });
 
     </script>
   </body>

@@ -34,7 +34,7 @@
   <!-- №4
   Пусть у вас есть ссылка и кнопка. По нажатию на кнопку добавьте в конец текста ссылки содержимое ее атрибута href в круглых скобках. -->
 
-    <a id="link4" href="https://www">text</a>
+    <a id="link4" href="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573">text</a>
     <button id="button4">go</button>
 
   <!-- №5
@@ -42,26 +42,25 @@
 
     <button id="button5">go</button>
     <p class="elem5">text</p>
-    <img class="img" src="img_blabla.jpg" alt="foto">
+    <img class="img" src="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573" alt="photo">
 
     
 <!-- №6
 Дана картинка в теге img и кнопка. По нажатию на кнопку в атрибут width запишите значение 300. -->
 
-    <img class="img6" src="img_bla.jpg" width="100" alt="foto">
+    <img class="img6" src="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573" width="100" alt="photo">
     <button id="button6">go</button>
 
 <!-- №7
 Дана картинка в теге img и кнопка. Пусть в атрибуте width задана некоторая ширина. Сделайте кнопку, по нажатию на которую ширина картинки будет увеличиваться в 2 раза. -->
 
-  <img class="img7" src="img_foto.jpg" width="100" alt="foto">
+  <img class="img7" src="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573" width="100" alt="photo">
   <button id="button7">go</button>  
 
 <!-- №8
 Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке.  -->
 
-<img class="img8" src="img_foto2.jpg" alt="foto">
-<img class="img8" src="img_foto3.jpg"  alt="foto">
+<img class="img8" src="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573" alt="photo">
   <button id="button8">go to foto2</button>   
   <button id="button9">go to foto3</button> 
     <script>
@@ -79,7 +78,7 @@
       const button1 = document.querySelector('#button1');
       
       button1.addEventListener('click', function() {
-        alert(elem1.type = 'submit');
+        elem1.type = 'submit';
       });
 
       //3  	
@@ -96,7 +95,7 @@
       const button4 = document.querySelector('#button4');
 
       button4.addEventListener('click', function() {
-        link4.textContent = link4.textContent + '(' + link4.href + ')';
+        link4.textContent = link4.textContent + `(${link4.href})`;
       });
 
       //5
@@ -122,22 +121,23 @@
       const img7 = document.querySelector('.img7');
 
       button7.addEventListener('click', function() {
-       img7.width = Number(img7.textContent) * 2;
-      });// не рaботает
+       img7.width = img7.width  * 2;
+      });
+
 
       //8
       const button8 = document.querySelector('#button8');
       const button9 = document.querySelector('#button9');
       const img8 = document.querySelector('.img8');
-      const img9 = document.querySelector('.img8');
       
       button8.addEventListener('click', function() {
-       
+        img8.textContent = img8.src;
       });
 
       button9.addEventListener('click', function() {
-       
-      });//еще не решила
+        img8.src = img8.textContent + 'https://bigpicture.ru/wp-content/uploads/2012/07/cats-32.jpg';
+      });
+      
     </script>
   </body>
 </html>

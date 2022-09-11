@@ -1,0 +1,45 @@
+<!-- https://code.mu/ru/javascript/book/prime/dom/basis/element-html/
+
+№1
+Дан абзац и кнопка. По клику на кнопку прочитайте HTML код абзаца и выведите его в консоль.
+
+
+№2
+Дан абзац и кнопка. По клику на кнопку запишите в абзац новый текст так, чтобы он был жирным. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+
+    <!-- 1 -->
+    <p class="elem">text</p>
+    <button id="button">go</button>
+
+    <!-- 2 -->
+    <p class="elem2">text</p>
+    <button id="button2">go</button>
+
+
+    <script>
+
+      // 1
+      const elem = document.querySelector('.elem');
+      const button = document.querySelector('#button');
+
+      button.addEventListener('click', function() {
+        console.log(elem.innerHTML);
+      });
+
+      // 2
+      const elem2 = document.querySelector('.elem2');
+      const button2 = document.querySelector('#button2');
+
+      button2.addEventListener('click', function() {
+        elem.innerHTML = '<b>!!!</b>';
+      });
+    </script>
+  </body>
+</html>

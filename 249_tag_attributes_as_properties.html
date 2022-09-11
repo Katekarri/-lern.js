@@ -1,0 +1,141 @@
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body> 
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/attributes-via-properties/">249</a></h1>
+
+    <h2>Task 1</h2>
+    <p> Дан следующий инпут:  &lt;input id="elem" type="email"&gt;
+      Дана также кнопка. По нажатию на кнопку выведите на экран содержимое атрибута type указанного выше инпута.</p>
+
+    <input id="elem" type="email">
+    <button id="button">go</button>
+
+    <h2>Task 2</h2>
+    <p>Дан следующий инпут:
+      &lt;input id="elem" type="email"&gt;
+      Дана также кнопка. По нажатию на кнопку запишите в атрибут type значение submit.</p>
+
+    <input id="elem1" type="email">
+    <button id="button1">go</button>
+
+    <h2>Task 3</h2>
+    <p>Пусть у вас есть ссылка в виде тега a, кнопка и абзац. По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки.</p>
+
+
+    <a id="link" href="https://www">text</a>
+    <button id="button2">go</button>
+    <p class="elem2">text</p>
+
+    <h2>Task 4</h2>
+    <p>Пусть у вас есть ссылка и кнопка. По нажатию на кнопку добавьте в конец текста ссылки содержимое ее атрибута href в круглых скобках.</p>
+
+    <a id="link4" href="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573">text</a>
+    <button id="button4">go</button>
+
+    <h2>Task 5</h2>
+    <p>Пусть у вас есть картинка. Разместите ее на странице в помощью тега img. Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац записался путь к картинки из ее атрибута src.</p>
+
+    <button id="button5">go</button>
+    <p class="elem5">text</p>
+    <img class="img" src="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573" alt="photo">
+
+    <h2>Task 6</h2>
+    <p>Дана картинка в теге img и кнопка. По нажатию на кнопку в атрибут width запишите значение 300.</p>
+
+    <img class="img6" src="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573" width="100" alt="photo">
+    <button id="button6">go</button>
+
+    <h2>Task 7</h2>
+    <p>Дана картинка в теге img и кнопка. Пусть в атрибуте width задана некоторая ширина. Сделайте кнопку, по нажатию на которую ширина картинки будет увеличиваться в 2 раза.</p>
+
+    <img class="img7" src="https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573" width="100" alt="photo">
+    <button id="button7">go</button>  
+
+    <h2>Task 8</h2>
+    <p>Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке.</p>
+
+    <img class="img8" src="#" alt="photo">
+    <button id="button8">go to photo2</button>   
+    <button id="button9">go to photo3</button> 
+    <script>
+
+      // 1
+      const elem = document.querySelector('#elem');
+      const button = document.querySelector('#button');
+
+      button.addEventListener('click', function() {
+        alert(elem.type);
+      });
+
+      //2
+      const elem1 = document.querySelector('#elem1');
+      const button1 = document.querySelector('#button1');
+      
+      button1.addEventListener('click', function() {
+        elem1.type = 'submit';
+      });
+
+      //3  	
+      const link = document.querySelector('#link');
+      const button2 = document.querySelector('#button2');
+      const elem2 = document.querySelector('.elem2');
+      
+      button2.addEventListener('click', function() {
+        elem2.textContent = link.href;
+      });
+
+      //4
+      const link4 = document.querySelector('#link4');
+      const button4 = document.querySelector('#button4');
+
+      button4.addEventListener('click', function() {
+        link4.textContent = `${link4.textContent}(${link4.href})`;
+      });
+
+      //5
+      const button5 = document.querySelector('#button5');
+      const elem5 = document.querySelector('.elem5');
+      const img = document.querySelector('.img');
+
+      button5.addEventListener('click', function() {
+        elem5.textContent = img.src;
+      });
+
+      //6
+      const button6 = document.querySelector('#button6');
+      const img6 = document.querySelector('.img6');
+
+      button6.addEventListener('click', function() {
+        img6.width = '300';
+      });
+
+
+      //7
+      const button7 = document.querySelector('#button7');
+      const img7 = document.querySelector('.img7');
+
+      button7.addEventListener('click', function() {
+       img7.width *= 2;
+      });
+
+
+      //8
+      const button8 = document.querySelector('#button8');
+      const button9 = document.querySelector('#button9');
+      const img8 = document.querySelector('.img8');
+
+      button8.addEventListener('click', function() {
+        img8.src = 'https://mtdata.ru/u1/photoE0B3/20299693573-0/original.jpg#20299693573';
+      });
+
+      button9.addEventListener('click', function() {
+        img8.src = 'https://bigpicture.ru/wp-content/uploads/2012/07/cats-32.jpg';
+      });
+      
+    </script>
+  </body>
+</html>

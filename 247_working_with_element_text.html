@@ -1,0 +1,123 @@
+<!-- https://code.mu/ru/javascript/book/prime/dom/basis/element-text/
+
+
+№1
+Дан абзац и кнопка. По клику на кнопку прочитайте текст абзаца и выведите его в консоль.
+
+№2
+Дан абзац и кнопка. По клику на кнопку запишите в абзац новый текст.
+
+№3
+Даны два абзаца, содержащие своим текстом какие-то числа, и кнопка. По нажатию на кнопку выведите на экран сумму хранящихся чисел.
+
+№4
+Даны три абзаца с числами, див, и кнопка. По нажатию на кнопку запишите в текст дива сумму чисел.
+
+№5
+Дан абзац с числом и кнопка. По нажатию на кнопку прибавьте к значению абзаца единицу и запишите полученное число обратно.
+
+№6
+Дан абзац с текстом и кнопка. По нажатию на кнопку запишите в конец текста абзаца восклицательный знак. -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+<!-- 1 -->
+      <p class="elem">text</p>
+    <button id="button">go</button>
+
+<!-- 2 -->
+    <p class="elem1">Hi!</p>
+    <button id="button1">go</button> 
+<!-- 3 -->
+    <p class="elem2">123</p>
+    <p class="elem3">6</p>
+    <button id="button2">go</button>
+
+<!-- 4 -->
+    <p class="elem4">1</p>
+    <p class="elem4">2</p>
+    <p class="elem4">3</p>
+    <div class="div">sum:</div>
+    <button id="button3">go</button>
+
+<!-- 5 -->
+    <p class="elem5">1</p>
+    <button id="button5">go</button>
+
+<!-- 6 -->
+    <p class="elem6">Hello</p>
+    <button id="button6">go</button>
+
+    <script>
+
+      // 1
+
+    const elem = document.querySelector('.elem');
+    const button = document.querySelector('#button');
+
+    button.addEventListener('click', function() {
+      console.log(elem.textContent);
+    });
+
+      // 2
+
+    const elem1 = document.querySelector('.elem1');
+    const button1 = document.querySelector('#button1');
+
+    button1.addEventListener('click', function() {
+      elem1.textContent = '!!!';
+    });
+
+
+      // 3
+
+    const elem2 = document.querySelector('.elem2');
+    const elem3 = document.querySelector('.elem3');
+    const button2 = document.querySelector('#button2');
+
+    button2.addEventListener('click', function() {
+      alert(Number(elem2.textContent) + Number(elem3.textContent));
+    });
+
+      // 4
+      
+      const elem4 = document.querySelectorAll('.elem4');
+      const div = document.querySelector('.div');
+      const button3 = document.querySelector('#button3');
+
+      button3.addEventListener('click', function() { 
+        let sum = 0;
+        for (let i = 0; i < elem4.length; i++) {
+          sum += Number(elem4[i].textContent);
+          
+        }
+          div.textContent = sum;
+      }); 
+      
+        //5
+        
+      const elem5 = document.querySelector('.elem5');
+      const button5 = document.querySelector('#button5');
+
+      button5.addEventListener('click', function() {
+      elem5.textContent = Number(elem5.textContent) + 1;  
+      });
+
+      //6
+
+      const elem6 = document.querySelector('.elem6');
+      const button6 = document.querySelector('#button6');
+
+      button6.addEventListener('click', function() {
+      elem6.textContent = elem5.textContent + '!';  
+      });
+
+    </script>
+  </body>
+</html>
+

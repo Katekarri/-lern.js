@@ -1,0 +1,47 @@
+<!-- https://code.mu/ru/javascript/book/prime/dom/basis/several-handlers/
+
+
+№1
+Дан абзац:
+<p id="elem">text</p>
+Даны следующие функции:
+function func1() {
+  console.log('1');
+}
+function func2() {
+  console.log('2');
+}
+function func3() {
+  console.log('3');
+}
+Привяжите все эти функции к нашему абзацу. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+   
+    <p id="elem">text</p>
+    <script>
+
+      function func1() {
+        console.log('1');
+      }
+      function func2() {
+        console.log('2');
+      }
+      function func3() {
+        console.log('3');
+      }
+
+      const elem = document.querySelector('p#elem');
+
+      elem.addEventListener('click', func1);
+      elem.addEventListener('click', func2);
+      elem.addEventListener('click', func3);
+
+    </script>
+  </body>
+</html>

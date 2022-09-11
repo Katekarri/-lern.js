@@ -1,0 +1,54 @@
+<!-- https://code.mu/ru/javascript/book/prime/dom/basis/different-events-handlers/
+
+№1
+Дана кнопка. По двойному клику по ней выведите какое-нибудь сообщение.
+
+№2
+Дана кнопка. По наведению на нее выведите какое-нибудь сообщение.
+
+№3
+Дана кнопка. По уходу курсора с нее выведите какое-нибудь сообщение.
+
+№4
+Дана кнопка. По наведению на нее выведите одно сообщение, а по уходу с нее - другое. -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+    <input id="button" type="submit">
+    <!-- <input id="button2" type="submit">  все что касается 4 задачи закометированно-->
+		<script>
+
+      // function func1() {
+      //   console.log('hi');
+      // }
+      // function func2() {
+      //   console.log('boo');
+      // }
+
+      function func1() {
+        console.log('hello');
+      }
+      function func2() {
+        console.log('hi');
+      }
+      function func3() {
+        console.log('boo');
+      }
+
+      // const button = document.querySelector('#button2');
+      const button = document.querySelector('#button');
+
+      elem.addEventListener('dblclick', func1);
+      elem.addEventListener('mouseover', func2);
+      elem.addEventListener('mouseout', func3);
+
+      // elem.addEventListener('mouseover', func1);
+      // elem.addEventListener('mouseout', func2);
+
+		</script>
+	</body>
+</html>

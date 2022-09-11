@@ -1,0 +1,69 @@
+<!-- https://code.mu/ru/javascript/book/prime/dom/basis/many-elements-handler/
+
+
+
+№1
+Даны 5 абзацев:
+<p id="elem1">text</p>
+<p id="elem2">text</p>
+<p id="elem3">text</p>
+<p id="elem4">text</p>
+<p id="elem5">text</p>
+Дана следующая функция:
+
+function func() {
+	console.log('message');
+}
+Привяжите эту функцию ко всем 5-ти абзацам. -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<p id="elem1">text</p>
+    <p id="elem2">text</p>
+    <p id="elem3">text</p>
+    <p id="elem4">text</p>
+    <p id="elem5">text</p>    
+		
+		<script>
+      const elems = document.querySelectorAll('p');
+
+      elems.forEach((p) => {
+        p.addEventListener('click', func => {
+          console.log('message');
+        });
+      });
+      
+      // function func() {
+      //   console.log('message');
+      // }
+			
+      // const elem1 = document.querySelector('#elem1');
+      // elem1.addEventListener('click', func);
+
+      // const elem2 = document.querySelector('#elem2');
+      // elem2.addEventListener('click', func);
+
+      // const elem3 = document.querySelector('#elem3');
+      // elem3.addEventListener('click', func);
+
+      // const elem4 = document.querySelector('#elem4');
+      // elem4.addEventListener('click', func);
+
+      // const elem5 = document.querySelector('#elem5');
+      // elem5.addEventListener('click', func);
+
+      //["#elem1", "#elem2", "#elem3", "#elem4", "#elem5",].forEach(selector => {
+      //const el = document.querySelector(selector);
+      //el.addEventListener('click', () => console.log('message'));
+      // })
+
+		</script>
+	</body>
+</html>
+
+

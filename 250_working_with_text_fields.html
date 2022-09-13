@@ -45,11 +45,11 @@
     <h2>Task 6</h2>
     <p>Даны 5 инпутов, абзац и кнопка. В инпут вводятся числа. По нажатию на кнопку запишите среднее арифметическое введенных чисел в абзац.</p>
       
-    <input id="elem6" value="1">
-    <input id="elem6" value="2">
-    <input id="elem6" value="3">
-    <input id="elem6" value="4">
-    <input id="elem6" value="5">
+    <input class="elem6" value="1">
+    <input class="elem6" value="2">
+    <input class="elem6" value="3">
+    <input class="elem6" value="4">
+    <input class="elem6" value="5">
     <p id="paragraph6"></p>
     <button id="button6">average</button>
 
@@ -57,19 +57,19 @@
 
       //1
       
-      // const elem1 = document.querySelector('#elem1');
-      // const button1 = document.querySelector('#button1');
+      const elem1 = document.querySelector('#elem1');
+      const button1 = document.querySelector('#button1');
 
-      // button1.addEventListener('click', function() {
-      //   alert(elem1.value);
-      // });
+      button1.addEventListener('click', function() {
+        alert(elem1.value);
+      });
 
-      // button1.addEventListener('click', function() {
-      //   elem1.value = 'new text';
+      button1.addEventListener('click', function() {
+        elem1.value = 'new text';
         
-      // });
+      });
 
-      // alert(elem1.value);
+      alert(elem1.value);
 
       // 2
 
@@ -107,14 +107,14 @@
       const button5 = document.querySelector('#button5');
 
       button5.addEventListener('click', function() {
-        let result = elem5_1.value;
+        const result = elem5_1.value;
         elem5_1.value = elem5_2.value;
         elem5_2.value = result;
       });
 
       //6
 
-      const elem6 = document.querySelectorAll('#elem6');
+      const elem6 = document.querySelectorAll('.elem6');
       const paragraph6 = document.querySelector('#paragraph6');
       const button6 = document.querySelector('#button6');
 

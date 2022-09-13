@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/exception-attributes/">252</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан див:
+    &lt;div id="elem" class="content no-gap"&gt;&lt;/div&gt;
+    Дана также кнопка. По нажатию на кнопку прочитайте и выведите на экран значение атрибута class нашего дива.</p>
+
+    <div id="elem1" class="content no-gap"></div>
+    <button id="button1">attribute value</button>
+
+    <h2>Task 2</h2>
+    <p>Дан див:
+    &lt;div id="elem"&gt;&lt;/div&gt;
+    Дана также кнопка. По нажатию на кнопку запишите в атрибут class нашего дива какой-нибудь класс.</p>
+
+    <div id="elem2"></div>
+    <button id="button2">attribute value</button>
+
+    <h2>Task 3</h2>
+    <p>Дан див с несколькими CSS классами, записанными через пробел:
+    &lt;div id="elem" class="aaa bbb ccc"&gt;&lt;/div&gt;
+    Дана также кнопка. По нажатию на кнопку получите массив CSS классов нашего дива.</p>
+
+    <div id="elem3" class="aaa bbb ccc"></div>
+    <button id="button3">attribute value</button>
+    <script>
+    
+    //1
+
+    const elem1 = document.querySelector('#elem1');
+    const button1 = document.querySelector('#button1');
+
+    button1.addEventListener('click', function() {
+      alert(elem1.className);
+    });
+    
+    //2
+
+    const elem2 = document.querySelector('#elem2');
+    const button2 = document.querySelector('#button2');
+
+    button2.addEventListener('click', function() {
+      elem2.className = 'elem2';
+    });
+
+    //3
+
+    const elem3 = document.querySelector('#elem3');
+    const button3 = document.querySelector('#button3');
+
+    button3.addEventListener('click', function() {
+      let arr;
+      arr = (elem3.className).split(' ');
+      
+    });
+
+    </script>
+  </body>
+</html>

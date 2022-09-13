@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/chaining/">253</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан следующий код: &lt;img id="image" src="avatar.png"&gt;
+    <p>let image = document.querySelector('#image');</p>
+    <p>console.log(image.src);</p>
+      Переделайте приведенный выше код так, чтобы вместо введения переменной image использовалась цепочка.</p>
+
+    <img id="image" src="https://goodhands.vet/upload/iblock/555/555e6ed7d3b4f48330cc2789309c06f6.jpg">
+
+    <h2>Task 2</h2>
+    <p>Дан следующий код:
+    &lt;img id="image2" src="avatar.png" width="300" height="500"&gt;
+    <p>console.log(document.querySelector('#image').src);</p>
+    <p>console.log(document.querySelector('#image').width);</p>
+    <p>console.log(document.querySelector('#image').height);</p>
+      Укажите на недостатки данного кода. Исправьте их.</p>
+
+    <img id="image" src="avatar.png" width="300" height="500">
+
+    <script> 
+    //1 
+
+    console.log(document.querySelector('#image').srs);
+
+    //2
+    
+      const image2 = document.querySelector('#image2');
+      image2.src = 'https://ichef.bbci.co.uk/news/800/cpsprodpb/1DB0/production/_98300670_gettyimages-545766130.jpg.webp';
+      image2.width = '300';
+      image2.height = '500';
+    </script>
+  </body>
+</html>

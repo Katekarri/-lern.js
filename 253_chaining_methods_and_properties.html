@@ -23,7 +23,7 @@
     <p>console.log(document.querySelector('#image').height);</p>
       Укажите на недостатки данного кода. Исправьте их.</p>
 
-    <img id="image" src="avatar.png" width="300" height="500">
+    <img id="image" src="https://ichef.bbci.co.uk/news/800/cpsprodpb/1DB0/production/_98300670_gettyimages-545766130.jpg.webp" width="300" height="500">
 
     <script> 
     //1 
@@ -33,9 +33,9 @@
     //2
     
       const image2 = document.querySelector('#image2');
-      image2.src = 'https://ichef.bbci.co.uk/news/800/cpsprodpb/1DB0/production/_98300670_gettyimages-545766130.jpg.webp';
-      image2.width = '300';
-      image2.height = '500';
+      console.log(image2.src);
+      console.log(image2.width);
+      console.log(image2.height);
     </script>
   </body>
 </html>

@@ -49,7 +49,7 @@
     <input class="elem6" value="3">
     <input class="elem6" value="4">
     <input class="elem6" value="5">
-    <p id="paragraph6"></p>
+    <p id="paragraph6">average:</p>
     <button id="button6">average</button>
 
      <script>
@@ -109,16 +109,15 @@
       const elem6 = document.querySelectorAll('.elem6');
       const paragraph6 = document.querySelector('#paragraph6');
       const button6 = document.querySelector('#button6');
-
-      button6.addEventListener('click', function() {
-        let sum = 0;
-        for (let i = 0; i < elem6.lenght; i++) {
-          sum += Number(elem6[i].value);  //на этой строке есть ошибка, не могу найти какая
-        } 
-	      paragraph6.textContent =  sum / elem6.lenght;
+      
+      button6.addEventListener('click', function() { 
+      let sum = 0;
+      const arr = [];   
+      elem6.forEach(i => arr.push(i));    
+      sum = arr.map(i => +i.value).reduce((sum, current) => sum + current, 0);
+      paragraph6.textContent =  sum;
       });
 
      </script>
    </body>
  </html>
-  

@@ -28,7 +28,8 @@
     
     const elem1 = document.querySelector('#elem1');
 
-    elem1.addEventListener('focus', function() {    
+    elem1.addEventListener('focus', function() {  
+      elem1.value = '1';  
     });
     elem1.addEventListener('blur', function() { 
       elem1.value = '2';

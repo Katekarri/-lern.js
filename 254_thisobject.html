@@ -19,15 +19,19 @@
     <script>
 
     //1
+
     const input = document.querySelector('#elem1');
+    function func1_1 () {
+      this.value = '1';
+    }
+    input.addEventListener('focus', func1_1);
 
-    elem1.addEventListener('focus', function() {
-      this.value = '1'
-    });
+    function func1_2 () {
+      this.value = '2';      
+    }
+    input.addEventListener('blur', func1_2);
 
-    elem1.addEventListener('blur', function() {
-      this.value = '2'
-    });
+    
 
     //2
 

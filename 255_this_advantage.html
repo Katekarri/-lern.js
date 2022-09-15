@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/this-advantage/">255</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Даны 5 абзацев с какими-то текстами. По клику на любой абзац запишите в конец его текста восклицательный знак.</p>
+
+    <p class="paragraph">hi</p>
+    <p class="paragraph">go</p>
+    <p class="paragraph">hello</p>
+    <p class="paragraph">add</p>
+    <p class="paragraph">cat</p>
+
+    <h2>Task 2</h2>
+    <p>Даны 3 инпута, в которых записаны какие-то числа. По потери фокуса в любом из инпутов возведите стоящее в нем число в квадрат.</p>
+
+    <input class="elem" value="1">
+    <input class="elem" value="2">
+    <input class="elem" value="3">
+    <script>
+    
+    //1
+
+    const paragraphs = document.querySelectorAll('.paragraph');
+       
+    function addString() {
+      this.textContent += '!';
+    }
+
+    for (const elem of paragraphs) {
+      elem.addEventListener('click', addString);
+    } 
+
+    //2
+
+    const elemNum = document.querySelectorAll('.elem');
+
+    function getSquareOfNumber() {
+      this.value **= 2;
+    }
+
+    for (const num of elemNum) {
+      num.addEventListener('blur', getSquareOfNumber);
+    }
+    </script>
+  </body>
+</html>

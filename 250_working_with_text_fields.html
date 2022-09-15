@@ -106,17 +106,35 @@
 
       //6
 
+      // const elem6 = document.querySelectorAll('.elem6');
+      // const paragraph6 = document.querySelector('#paragraph6');
+      // const button6 = document.querySelector('#button6');
+      
+      // button6.addEventListener('click', function() { 
+      // let sum = 0;
+      // const arr = [];   
+      // elem6.forEach(i => arr.push(i));    
+      // sum = arr.map(i => +i.value).reduce((sum, current) => sum + current, 0);
+      // paragraph6.textContent =  sum;
+      // });
+
       const elem6 = document.querySelectorAll('.elem6');
       const paragraph6 = document.querySelector('#paragraph6');
       const button6 = document.querySelector('#button6');
-      
-      button6.addEventListener('click', function() { 
-      let sum = 0;
-      const arr = [];   
-      elem6.forEach(i => arr.push(i));    
-      sum = arr.map(i => +i.value).reduce((sum, current) => sum + current, 0);
-      paragraph6.textContent =  sum;
+
+      button6.addEventListener('click', function() {
+        let sum = 0;
+        // for (let i = 0; i < elem6.length; i++) {
+        //   sum += Number(elem6[i].value);
+        // }
+        
+        for (const elem of elem6) {
+          sum += Number(elem.value);
+        }
+	      paragraph6.textContent =  sum / elem6.length;
       });
+
+
 
      </script>
    </body>

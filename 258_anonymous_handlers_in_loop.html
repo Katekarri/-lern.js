@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/loop-anonymous-handlers/">258</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан следующий код:
+
+      &lt;div&gt;1&lt;/div&gt;
+      &lt;div&gt;2&lt;/div&gt;
+      &lt;div&gt;2&lt;/div&gt;
+      &lt;div&gt;3&lt;/div&gt;
+      &lt;div&gt;4&lt;/div&gt;
+      &lt;div&gt;5&lt;/div&gt;
+      let divs = document.querySelectorAll('div');
+      
+      for (let div of divs) {
+        div.addEventListener('click', func);
+      }
+      
+      function func() {
+        this.textContent++;
+      }
+      Сделайте функцию-обработчик анонимной.</p>
+
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+
+    <script>  
+    
+    let divs = document.querySelectorAll('div');
+      
+      for (let div of divs) {
+        div.addEventListener('click', function() {
+          this.textContent++;
+        });
+      }
+      
+      function func() {
+        this.textContent++;
+      }
+
+    </script>
+  </body>
+</html>

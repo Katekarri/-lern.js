@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/handlers-unbinding/">259</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дана ссылка. По нажатию на эту ссылку добавьте в конец ее текста содержимое ее атрибута href в круглых скобках. Сделайте так, чтобы это добавление происходило лишь по первому нажатию.</p>
+    <a id="link" href="https://blabla">link</a>
+
+    <h2>Task 2</h2>
+    <p>Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу. После того, как значение кнопки достигнет 10 - отвяжите обработчик события, чтобы кнопка больше не реагировала на нажатие.</p>
+
+    <button id="button1">1</button>
+
+    <script>
+
+    //1
+
+    const link = document.querySelector('#link');
+    link.addEventListener('click', func);
+
+    function func() {
+	    link.textContent = `${link.textContent}(${link.href})`;
+      this.removeEventListener('click', func);
+    }
+
+    //2
+
+    const button = document.querySelector('#button1');
+
+    button.addEventListener('click', func);
+
+    function func() {
+      if ( button.textContent <= 9) {
+        button.textContent ++;
+      }
+    }
+    
+
+    </script>
+  </body>
+</html>
+
+

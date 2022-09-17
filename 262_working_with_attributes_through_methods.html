@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/attributes-via-methods/">262</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан элемент: &lt;input id="elem" value="text"&gt;
+      Получите значение его атрибута value.</p>
+
+      <input id="elem1" value="text">
+
+    <h2>Task 2</h2>
+    <p>Дан элемент:
+      &lt;input id="elem" class="www zzz"&gt;
+      Получите значение его атрибута class.</p>
+
+      <input id="elem2" class="www zzz">
+
+    <h2>Task 3</h2>
+    <p>Дан элемент:
+      &lt;input id="elem"&gt;
+      Установите его атрибут value в значение 'text'.</p>
+
+      <input id="elem3">
+
+    <h2>Task 4</h2>
+    <p>Дан элемент:
+      &lt;input id="elem"&gt;
+      Установите ему атрибут class в значение 'valid'.</p>
+
+      <input id="elem4">
+
+    <h2>Task 5</h2>
+    <p>Дан элемент:
+      &lt;input id="elem" value="text"&gt;
+      Удалите у него атрибут value.</p>
+
+      <input id="elem5" value="text">
+
+    <h2>Task 6</h2>
+    <p>Дан элемент:
+      &lt;input id="elem" value="text"&gt;
+      Проверьте наличие у него атрибута value.</p>
+
+      <input id="elem5" value="text">
+
+    <script> 
+    
+    //1
+    const elem1 = document.querySelector('#elem1');
+    const value = elem1.getAttribute('value');
+
+    //2
+    const elem2 = document.querySelector('#elem2');
+    const textClass = elem2.getAttribute('class');
+    
+    //3
+    const elem3 = document.querySelector('#elem3');
+    elem3.setAttribute('value', 'text');
+
+    //4
+    const elem4 = document.querySelector('#elem4');
+    elem4.setAttribute('class', 'valid');
+
+    //5
+    const elem5 = document.querySelector('#elem5');
+    elem5.removeAttribute('value');
+    
+    //6
+    const elem6 = document.querySelector('#elem6');  
+    elem6.hasAttribute('value');
+
+    </script>
+  </body>
+</html>

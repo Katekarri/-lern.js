@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/loop-handlers-unbinding/">260</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Даны абзацы. По нажатию на любой из абзацев добавьте ему в конец восклицательный знак. Сделайте так, чтобы это добавление происходило лишь по первому нажатию.</p>
+
+    <p class="paragraph">hello</p>
+    <p class="paragraph">hello</p>
+    <p class="paragraph">hello</p>
+
+    <script> 
+
+    const paragraphs = document.querySelectorAll('.paragraph'); 
+
+    function func() {
+      this.textContent += '!';
+      this.removeEventListener('click', func);
+    } 
+
+    for (let paragraph of paragraphs) {
+      paragraph.addEventListener('click', func);
+    } 
+
+     
+    </script>
+  </body>
+</html>

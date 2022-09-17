@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/css-classes-manipulation/">263
+    </a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан элемент:
+      &lt;p id="elem" class="www ggg zzz"&gt;&lt;/p&gt;
+      Узнайте количество его классов.</p>
+
+      <p id="elem1" class="www ggg zzz"></p>
+
+    <h2>Task 2</h2>
+    <p>Дан элемент:
+      &lt;p id="elem" class="www ggg zzz"&gt;&lt;/p&gt;
+      Переберите в цикле его классы.</p>
+
+      <p id="elem2" class="www ggg zzz"></p>
+
+    <h2>Task 3</h2>
+    <p>Дан элемент:
+      &lt;p id="elem" class="www ggg zzz"&gt;&lt;/p&gt;
+      Добавьте ему класс xxx.</p>
+
+      <p id="elem3" class="www ggg zzz"></p>
+
+    <h2>Task 4</h2>
+    <p>Дан элемент:
+      &lt;p id="elem" class="www ggg zzz"&gt;&lt;/p&gt;
+      Удалите у него класс www и класс zzz.</p>
+
+      <p id="elem4" class="www ggg zzz"></p>
+
+    <h2>Task 5</h2>
+    <p>Дан элемент:
+      &lt;p id="elem" class="www ggg zzz"&gt;&lt;/p&gt;
+      Проверьте наличие у него класса ggg.</p>
+
+      <p id="elem5" class="www ggg zzz"></p>
+
+    <h2>Task 6</h2>
+    <p>Дан элемент. Добавьте ему класс www, если его нет и удалите - если есть.</p>
+
+    <p id="elem6" class="www ggg zzz"></p>
+
+    <script>  
+    
+    //1
+    const elem1 = document.querySelector('#elem1');
+    const length = elem1.classList.length;
+
+    //2
+    const elem2 = document.querySelector('#elem2');
+    const nameClass = elem2.classList;
+
+    for (const name of nameClass) {
+      console.log(name);
+    }
+
+    //3
+    const elem3 = document.querySelector('#elem3');
+    elem3.classList.add('xxx');
+    
+    //4
+    const elem4 = document.querySelector('#elem4');
+    elem4.classList.remove('www', 'zzz');
+
+    //5
+    const elem5 = document.querySelector('#elem5');
+    elem5.classList.contains('ggg');
+
+    //6
+    const elem6 = document.querySelector('#elem6');
+
+    if (elem6.classList.contains('www') === false) {
+      elem6.classList.add('www');
+    } else {
+      elem6.classList.remove('www');
+    }
+
+    </script>
+  </body>
+</html>

@@ -46,21 +46,25 @@
       &lt;input id="elem" value="text"&gt;
       Проверьте наличие у него атрибута value.</p>
 
-      <input id="elem5" value="text">
+      <input id="elem6" value="text">
 
     <script> 
     
     //1
+
     const elem1 = document.querySelector('#elem1');
     const value = elem1.getAttribute('value');
+    console.log(value);
 
     //2
     const elem2 = document.querySelector('#elem2');
     const textClass = elem2.getAttribute('class');
+    console.log(textClass);
     
     //3
     const elem3 = document.querySelector('#elem3');
     elem3.setAttribute('value', 'text');
+   
 
     //4
     const elem4 = document.querySelector('#elem4');
@@ -70,9 +74,11 @@
     const elem5 = document.querySelector('#elem5');
     elem5.removeAttribute('value');
     
+    
     //6
-    const elem6 = document.querySelector('#elem6');  
-    elem6.hasAttribute('value');
+    const elem6 = document.querySelector('#elem6');   
+    const value6 = elem6.hasAttribute('value');
+    console.log(value6);
 
     </script>
   </body>

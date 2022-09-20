@@ -53,6 +53,7 @@
     //1
     const elem1 = document.querySelector('#elem1');
     const length = elem1.classList.length;
+    console.log(length);
 
     //2
     const elem2 = document.querySelector('#elem2');
@@ -64,20 +65,23 @@
 
     //3
     const elem3 = document.querySelector('#elem3');
-    elem3.classList.add('xxx');
+    const nuwClass = elem3.classList.add('xxx');
+    console.log(nuwClass);
     
     //4
     const elem4 = document.querySelector('#elem4');
-    elem4.classList.remove('www', 'zzz');
+    const hasClass = elem4.classList.remove('www', 'zzz');
+    console.log(hasClass); 
 
     //5
     const elem5 = document.querySelector('#elem5');
-    elem5.classList.contains('ggg');
-
+    const containsClass = elem5.classList.contains('ggg');
+    console.log(containsClass);
+    
     //6
     const elem6 = document.querySelector('#elem6');
 
-    if (elem6.classList.contains('www') === false) {
+    if (!elem6.classList.contains('www')) {
       elem6.classList.add('www');
     } else {
       elem6.classList.remove('www');

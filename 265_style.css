@@ -1,0 +1,15 @@
+.body {
+  background-color: rebeccapurple;
+}
+
+#text1.active1 {
+	text-decoration: line-through;
+};
+
+#text1.active2 {
+	font-weight: bold;
+};
+
+#text1.active3 {
+	color: red;
+};

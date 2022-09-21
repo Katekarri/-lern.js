@@ -18,59 +18,59 @@
     <h2>Task 2</h2>
     <p>Дан абзац. Даны кнопки 'перечеркнуть', 'сделать жирным', 'сделать красным'. Пусть по нажатию на каждую кнопку заданное действие происходит с абзацем (становится красным, например).</p>
 
-    <p id="text1">Hello</p>
-    <button id="button1_1">cross out</button>
-    <button id="button1_2">make bold</button>
-    <button id="button1_3">make red</button>
-
-    <h2>Task 3</h2>
-    <p>Модифицируйте предыдущую задачу так, чтобы повторное нажатие на кнопку отменяло действие этой кнопки.</p>
-
     <p id="text2">Hello</p>
     <button id="button2_1">cross out</button>
     <button id="button2_2">make bold</button>
     <button id="button2_3">make red</button>
 
+    <h2>Task 3</h2>
+    <p>Модифицируйте предыдущую задачу так, чтобы повторное нажатие на кнопку отменяло действие этой кнопки.</p>
+
+    <p id="text3">Hello</p>
+    <button id="button3_1">cross out</button>
+    <button id="button3_2">make bold</button>
+    <button id="button3_3">make red</button>
+
     <script> 
     
-    //1
+    //2
 
-    const text1 = document.querySelector('#text1');
-    const buttonCrossOut = document.querySelector('#button1_1');
-    const buttonMakeBold = document.querySelector('#button1_2');
-    const buttonMakeRed = document.querySelector('#button1_3');
-
-    buttonCrossOut.addEventListener('click', function() {
-      text1.style.cssText = 'text-decoration: line-through'; 
-      // text1.classList.toggle('active1');
-    });
-
-    buttonMakeBold.addEventListener('click', function() {
-      // text1.classList.toggle('active2');
-      text1.style.cssText = 'font-weight: bold;'; 
-    });
-
-    buttonMakeRed.addEventListener('click', function() {
-      // text1.classList.toggle('active3');
-      text1.style.cssText = 'color: red;';
-    });
-
-
-    //2 
     const text2 = document.querySelector('#text2');
     const buttonCrossOut2 = document.querySelector('#button2_1');
     const buttonMakeBold2 = document.querySelector('#button2_2');
     const buttonMakeRed2 = document.querySelector('#button2_3');
 
     buttonCrossOut2.addEventListener('click', function() {
-     
+      // text2.style.cssText = 'text-decoration: line-through'; 
+      text2.classList.toggle('active2_1');
     });
 
     buttonMakeBold2.addEventListener('click', function() {
-      
+      text2.classList.toggle('active2_2');
+      // text2.style.cssText = 'font-weight: bold;'; 
     });
 
     buttonMakeRed2.addEventListener('click', function() {
+      text2.classList.toggle('active2_3');
+      // text2.style.cssText = 'color: red;';
+    });
+
+
+    //3
+    const text3 = document.querySelector('#text3');
+    const buttonCrossOut3 = document.querySelector('#button3_1');
+    const buttonMakeBold3 = document.querySelector('#button3_2');
+    const buttonMakeRed3 = document.querySelector('#button2_3');
+
+    buttonCrossOut3.addEventListener('click', function() {
+     
+    });
+
+    buttonMakeBold3.addEventListener('click', function() {
+      
+    });
+
+    buttonMakeRed3.addEventListener('click', function() {
       
     });
     //не подключился файл со стилями, зависла на этом задании 

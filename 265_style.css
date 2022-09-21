@@ -2,14 +2,14 @@
   background-color: rebeccapurple;
 }
 
-#text1.active1 {
+p .active2_1 {
 	text-decoration: line-through;
-};
+}
 
-#text1.active2 {
-	font-weight: bold;
-};
+p .active2_2 {
+	font-weight: 800;
+}
 
-#text1.active3 {
+p .active2_3 {
 	color: red;
-};
+}

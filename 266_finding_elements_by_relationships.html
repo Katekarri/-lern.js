@@ -148,28 +148,64 @@
     //
 
     const firstChild = document.querySelector('#elem1');
-    const text1 = parent1.firstElementChild.textContent;
-    const coloredText = text1.style.cssText('color: red;');
+    firstChild.firstElementChild.style.color  = 'red';
 
     //2
 
-    const lasCthild = document.querySelector('#elem2');
+    const lasCthildElem = document.querySelector('#elem2');
+    lasCthildElem.lastElementChild.style.color = 'red';
 
     //3
 
-    const allChilds = document.querySelector('#elem3');
+    const allChildsElems = document.querySelector('#elem3');
+    const elems3 = allChildsElems.children; 
+
+    for (const elem3 of  elems3) {
+      elem3.textContent += '!';
+    } 
 
     //4
 
     const parent = document.querySelector('#elem4');
-
+    const elem4 = parent.parentElement;
+    elem4.style.cssText = 'border: 2px solid red';
+  
     //5
 
     const parentParent = document.querySelector('#elem5');
+    const elem5 = parentParent.parentElement;
+    elem5.parentElement.style.cssText = 'border: 2px solid red';
 
     //6
 
-    
+    const nearestParent = document.querySelector('#elem6');
+    const elem6 = nearestParent.closest('div');
+    console.log(elem6);
+
+    //7
+
+    const nearestParentWithClass = document.querySelector('#elem7');
+    const elem7 = nearestParentWithClass.closest('.www7');
+    console.log(elem7);
+
+    //8
+
+    const upstairsNeighbor = document.querySelector('#elem8');
+    const elem8 = upstairsNeighbor.previousElementSibling;
+    elem8.textContent += '!';
+    //все должно по идее работать, нашла верхнего соседа, добавила '!'
+     
+    //9
+
+    const bottomNeighbor = document.querySelector('#elem9');
+
+    //10
+
+    const nextElementAfterNext = document.querySelector('#elem10');
+
+    //11
+
+    const swapText = document.querySelector('#elem11');
 
     </script>
   </body>

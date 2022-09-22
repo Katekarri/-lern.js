@@ -41,18 +41,15 @@
     const buttonMakeRed2 = document.querySelector('#button2_3');
 
     buttonCrossOut2.addEventListener('click', function() {
-      // text2.style.cssText = 'text-decoration: line-through'; 
       text2.classList.toggle('active2_1');
     });
 
     buttonMakeBold2.addEventListener('click', function() {
-      text2.classList.toggle('active2_2');
-      // text2.style.cssText = 'font-weight: bold;'; 
+      text2.classList.toggle('active2_2'); 
     });
 
     buttonMakeRed2.addEventListener('click', function() {
       text2.classList.toggle('active2_3');
-      // text2.style.cssText = 'color: red;';
     });
 
 
@@ -60,20 +57,20 @@
     const text3 = document.querySelector('#text3');
     const buttonCrossOut3 = document.querySelector('#button3_1');
     const buttonMakeBold3 = document.querySelector('#button3_2');
-    const buttonMakeRed3 = document.querySelector('#button2_3');
+    const buttonMakeRed3 = document.querySelector('#button3_3');
 
     buttonCrossOut3.addEventListener('click', function() {
-     
+      text3.classList.toggle('active3_1');
     });
 
     buttonMakeBold3.addEventListener('click', function() {
-      
+      text3.classList.toggle('active3_2');
     });
 
     buttonMakeRed3.addEventListener('click', function() {
-      
+      text3.classList.toggle('active3_3');
     });
-    //не подключился файл со стилями, зависла на этом задании 
+    //так же как и во втором варианте при нажатии повторно класс убирается 
     </script>
   </body>
 </html>

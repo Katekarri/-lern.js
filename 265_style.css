@@ -1,15 +1,25 @@
-.body {
-  background-color: rebeccapurple;
-}
 
-p .active2_1 {
+#text2.active2_1 {
 	text-decoration: line-through;
 }
 
-p .active2_2 {
+#text2.active2_2 {
 	font-weight: 800;
 }
 
-p .active2_3 {
+#text2.active2_3 {
+	color: red;
+}
+
+
+#text3.active3_1 {
+	text-decoration: line-through;
+}
+
+#text3.active3_2 {
+	font-weight: 800;
+}
+
+#text3.active3_3 {
 	color: red;
 }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/parent-relationships-searching/">266</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан элемент #elem: (код ниже)
+      Найдите первого потомка этого элемента и сделайте его текст красного цвета.</p>
+
+      <ul id="elem1">
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+      </ul>
+
+      <h2>Task 2</h2>
+      <p>Дан элемент #elem: (код ниже)
+        Найдите последнего потомка этого элемента и сделайте его текст красного цвета.</p>
+  
+      <ul id="elem2">
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+      </ul>
+
+      <h2>Task 3</h2>
+      <p>Дан элемент #elem: (код ниже)
+        Найдите всех потомков этого элемента и добавьте им в конец текст '!'.</p>
+
+        <ul id="elem3">
+          <li>text</li>
+          <li>text</li>
+          <li>text</li>
+          <li>text</li>
+          <li>text</li>
+        </ul>
+
+      <h2>Task 4</h2> 
+      <p>Дан элемент #elem: (код ниже)
+        Найдите его родителя и задайте ему красную границу.</p>
+
+        <div>
+          <ul>
+            <li>text</li>
+            <li>text</li>
+            <li id="elem4">text</li>
+            <li>text</li>
+            <li>text</li>
+          </ul>
+        </div>
+
+      <h2>Task 5</h2> 
+      <p>Дан элемент #elem: (код ниже)
+        Найдите его родителя родителя и задайте ему красную границу.</p>
+      
+      <div>
+        <ul>
+          <li>text</li>
+          <li>text</li>
+          <li id="elem5">text</li>
+          <li>text</li>
+          <li>text</li>
+        </ul>
+      </div>
+
+      <h2>Task 6</h2> 
+      <p>Дан элемент: (код ниже)
+        Найдите ближайшего родителя этого элемента, являющегося тегом div</p>
+        
+      <header>
+        <div>
+          <p>
+            <span id="elem6"></span>
+          </p>
+        </div>
+      </header>
+
+        <h2>Task 7</h2> 
+        <p>Дан элемент: (код ниже)
+          Найдите ближайшего родителя этого элемента, являющегося элементом с классом www.</p>
+
+        <header>
+          <div class="www7">
+            <p class="www7">
+              <span id="elem7"></span>
+            </p>
+          </div>
+        </header>
+
+        <h2>Task 8</h2> 
+        <p>Дан элемент #elem: (код ниже)
+          Найдите его соседа сверху и добавьте ему в конец текст '!'.</p>
+        
+        <ul>
+          <li>text</li>
+          <li>text</li>
+          <li id="elem8">text</li>
+          <li>text</li>
+          <li>text</li>
+        </ul>
+
+        <h2>Task 9</h2>
+        <p>Дан элемент #elem: (код ниже)
+          Найдите его соседа снизу и добавьте ему в конец текст '!'.</p> 
+
+        <ul>
+          <li>text</li>
+          <li>text</li>
+          <li id="elem9">text</li>
+          <li>text</li>
+          <li>text</li>
+        </ul>
+
+        <h2>Task 10</h2>
+        <p>Дан элемент #elem: (код ниже)
+        Найдите его соседа снизу его соседа снизу (следующий элемент за соседним) и добавьте ему в конец текст '!'.</p>  
+
+        <ul>
+          <li>text</li>
+          <li>text</li>
+          <li id="elem10">text</li>
+          <li>text</li>
+          <li>text</li>
+        </ul>
+
+        <h2>Task 11</h2>
+        <p>Дан элемент #elem:
+          Поменяйте местами текст его соседа сверху и текст его соседа снизу.</p>
+
+        <ul>
+          <li>text1</li>
+          <li>text2</li>
+          <li id="elem11">text3</li>
+          <li>text4</li>
+          <li>text5</li>
+        </ul>
+
+    <script>  
+    
+    //
+
+    const firstChild = document.querySelector('#elem1');
+    firstChild.firstElementChild.style.color  = 'red';
+
+    //2
+
+    const lasCthildElem = document.querySelector('#elem2');
+    lasCthildElem.lastElementChild.style.color = 'red';
+
+    //3
+
+    const elem3 = document.querySelector('#elem3');
+    const allChildsElems = elem3.children; 
+
+    for (const allChildsElem of  allChildsElems) { 
+      allChildsElem.textContent += '!';
+    } 
+
+    //4
+
+    const elem4 = document.querySelector('#elem4');
+    const parent = elem4.parentElement;
+    elem4.style.cssText = 'border: 2px solid red';
+  
+    //5
+
+    const elem5 = document.querySelector('#elem5');
+    const parentParent = elem5.parentElement;
+    elem5.parentElement.style.cssText = 'border: 2px solid red';
+
+    //6
+
+    const elem6 = document.querySelector('#elem6');
+    const nearestParent = elem6.closest('div');
+    console.log(nearestParent);
+
+    //7
+
+    const elem7 = document.querySelector('#elem7');
+    const nearestParentWithClass = elem7.closest('.www7');
+    console.log(nearestParentWithClass);
+
+    //8
+
+    const elem8 = document.querySelector('#elem8');
+    const upstairsNeighbor = elem8.previousElementSibling;
+    upstairsNeighbor.textContent += '!';
+   
+     
+    //9
+
+    const bottomNeighbor = document.querySelector('#elem9');
+
+    //10
+
+    const nextElementAfterNext = document.querySelector('#elem10');
+
+    //11
+
+    const swapText = document.querySelector('#elem11');
+
+    </script>
+  </body>
+</html>

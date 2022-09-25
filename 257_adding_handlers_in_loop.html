@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/loop-named-handlers/">257</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дана следующая функция:
+
+      function func() {
+        this.value = Number(this.value) + 1;
+      }
+      Даны также инпуты. Сделайте так, чтобы по потери фокуса в любом из наших инпутов выполнялась приведенная выше функция.</p>
+
+    <input class="elem" value="1">
+    <input class="elem" value="2">
+    <input class="elem" value="3">
+
+    <h2>Task 2</h2>
+    <p>Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его число в нем возводилось в квадрат.</p>
+
+    <p class="paragraphs">2</p>
+    <p class="paragraphs">4</p>
+    <p class="paragraphs">6</p>
+
+    <script>  
+    
+    //1
+    const elems = document.querySelectorAll('.elem');
+
+    function func1() {
+        this.value = Number(this.value) + 1;
+      }
+
+    for (const elem of elems) {
+      elem.addEventListener('blur',func1);
+    }
+
+    //2
+
+    const paragraphs = document.querySelectorAll('.paragraphs');
+
+    function func2() {
+        this.textContent = Number(this.textContent) ** 2;
+      }
+
+    for (const paragraph of paragraphs) {
+      paragraph.addEventListener('click',func2);
+    }
+
+    </script>
+  </body>
+</html>

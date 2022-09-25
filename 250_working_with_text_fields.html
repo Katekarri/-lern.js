@@ -1,0 +1,141 @@
+
+ <!DOCTYPE html>
+ <html>
+   <head>
+     
+   </head>
+   <body>
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/text-fields/">250</a></h1>
+    <h2>Task 1</h2>
+    <p>Дан инпут:
+      &lt;input id="elem" value="text"&gt;
+      Сделайте кнопку, нажатие на которую будет выводить текущий текст инпута. После захода на страницу нажмите на кнопку, чтобы увидеть текущий текст инпута, затем поредактируйте текст в инпуте и еще раз нажмите на кнопку. Убедитесь в том, что выведется новый текст инпута.</p>
+      
+    <input id="elem1" value="text">
+    <button id="button1">input text</button>
+
+    <h2>Task 2</h2>
+    <p>Дан инпут и кнопка. По нажатию на кнопку запишите в инпут какой-нибудь текст.</p>
+      
+    <input id="elem2" value="">
+    <button id="button2">get some text</button>
+
+    <h2>Task 3</h2>
+    <p>Дан инпут, абзац и кнопка. По нажатию на кнопку запишите в абзац текст из инпута.</p>
+      
+    <input id="elem3" value="hello">
+    <p id="paragraph3"></p>
+    <button id="button3">text from imput</button>
+   
+    <h2>Task 4</h2>
+    <p>Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа</p>
+
+    <input id="elem4_1" value="2">
+    <input id="elem4_2" value="">
+    <button id="button4">square number</button>
+    
+    <h2>Task 5</h2>
+    <p>Даны два инпута и кнопка. По нажатию на кнопку запишите в первый инпут значение второго инпута, а во второй инпут - значение первого. Ваш код должен работать универсально, для любых значений инпутов.</p>
+
+    <input id="elem5_1" value="hello!">
+    <input id="elem5_2" value="123">
+    <button id="button5">swap</button>
+
+    <h2>Task 6</h2>
+    <p>Даны 5 инпутов, абзац и кнопка. В инпут вводятся числа. По нажатию на кнопку запишите среднее арифметическое введенных чисел в абзац.</p>
+      
+    <input class="elem6" value="1">
+    <input class="elem6" value="2">
+    <input class="elem6" value="3">
+    <input class="elem6" value="4">
+    <input class="elem6" value="5">
+    <p id="paragraph6">average:</p>
+    <button id="button6">average</button>
+
+     <script>
+
+      //1
+      
+      const elem1 = document.querySelector('#elem1');
+      const button1 = document.querySelector('#button1');
+
+      button1.addEventListener('click', function() {
+        alert(elem1.value);
+      });
+
+      // 2
+
+      const elem2 = document.querySelector('#elem2');
+      const button2 = document.querySelector('#button2');
+
+      button2.addEventListener('click', function() {
+        elem2.value = elem2.value + 'text';
+      });
+
+      //3
+
+      const elem3 = document.querySelector('#elem3');
+      const paragraph3 = document.querySelector('#paragraph3')
+      const button3 = document.querySelector('#button3');
+
+      button3.addEventListener('click', function() {
+        paragraph3.textContent = elem3.value ;
+      });
+
+      //4
+
+      const elem4_1 = document.querySelector('#elem4_1');
+      const elem4_2 = document.querySelector('#elem4_2');
+      const button4 = document.querySelector('#button4');
+      
+      button4.addEventListener('click', function() {
+        elem4_2.value = elem4_1.value ** 2;
+      });
+
+      //5
+
+      const elem5_1 = document.querySelector('#elem5_1');
+      const elem5_2 = document.querySelector('#elem5_2');
+      const button5 = document.querySelector('#button5');
+
+      button5.addEventListener('click', function() {
+        const result = elem5_1.value;
+        elem5_1.value = elem5_2.value;
+        elem5_2.value = result;
+      });
+
+      //6
+
+      // const elem6 = document.querySelectorAll('.elem6');
+      // const paragraph6 = document.querySelector('#paragraph6');
+      // const button6 = document.querySelector('#button6');
+      
+      // button6.addEventListener('click', function() { 
+      // let sum = 0;
+      // const arr = [];   
+      // elem6.forEach(i => arr.push(i));    
+      // sum = arr.map(i => +i.value).reduce((sum, current) => sum + current, 0);
+      // paragraph6.textContent =  sum;
+      // });
+
+      const elem6 = document.querySelectorAll('.elem6');
+      const paragraph6 = document.querySelector('#paragraph6');
+      const button6 = document.querySelector('#button6');
+
+      button6.addEventListener('click', function() {
+        let sum = 0;
+        // for (let i = 0; i < elem6.length; i++) {
+        //   sum += Number(elem6[i].value);
+        // }
+        
+        for (const elem of elem6) {
+          sum += Number(elem.value);
+        }
+	      paragraph6.textContent =  sum / elem6.length;
+      });
+
+
+
+     </script>
+   </body>
+ </html>

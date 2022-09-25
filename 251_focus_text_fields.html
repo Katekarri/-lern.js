@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/text-fields-focus/">251</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан инпут. По получению фокуса запишите в него число 1, а по потери фокуса - число 2.</p>
+
+    <input id="elem1" value="">
+
+    <h2>Task 2</h2>
+    <p>Дан инпут. Пусть в него вводится число. По потери фокуса выведите на экран квадрат этого числа.</p>
+
+    <input id="elem2" value="">
+
+    <h2>Task 3</h2>
+    <p>Дан инпут, в котором изначально есть какой-то текст. По получению фокуса инпутом очистите содержимое этого инпута.</p>
+
+    <input id="elem3" value="hello">
+
+    <script>
+
+    //1
+    
+    const elem1 = document.querySelector('#elem1');
+
+    elem1.addEventListener('focus', function() {  
+      elem1.value = '1';  
+    });
+    elem1.addEventListener('blur', function() { 
+      elem1.value = '2';
+    });
+
+    //2
+
+    const elem2 = document.querySelector('#elem2');
+
+    elem2.addEventListener('focus', function() {    
+    });
+    elem2.addEventListener('blur', function() { 
+      elem2.value **= 2;
+    });
+
+    //3
+
+    const elem3 = document.querySelector('#elem3');
+    
+    elem3.addEventListener('focus', function() {  
+      elem3.value = '';  
+    });
+    </script>
+  </body>
+</html>

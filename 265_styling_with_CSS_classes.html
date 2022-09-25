@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 265</title>
+    <link rel="stylesheet" href="265_style.css">
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/css-classes-stylization/">265</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Объясните, почему я выбрал для названия класса слово colored, а не слово green, явно указывающее на желаемый нами цвет.</p>
+
+    <p>цвет может быть любым или поментяться в дальнейшем, плохая идея давать название классу по конкретному цвету</p>
+
+    <h2>Task 2</h2>
+    <p>Дан абзац. Даны кнопки 'перечеркнуть', 'сделать жирным', 'сделать красным'. Пусть по нажатию на каждую кнопку заданное действие происходит с абзацем (становится красным, например).</p>
+
+    <p id="text2">Hello</p>
+    <button id="button2_1">cross out</button>
+    <button id="button2_2">make bold</button>
+    <button id="button2_3">make red</button>
+
+    <h2>Task 3</h2>
+    <p>Модифицируйте предыдущую задачу так, чтобы повторное нажатие на кнопку отменяло действие этой кнопки.</p>
+
+    <p id="text3">Hello</p>
+    <button id="button3_1">cross out</button>
+    <button id="button3_2">make bold</button>
+    <button id="button3_3">make red</button>
+
+    <script> 
+    
+    //2
+
+    const text2 = document.querySelector('#text2');
+    const buttonCrossOut2 = document.querySelector('#button2_1');
+    const buttonMakeBold2 = document.querySelector('#button2_2');
+    const buttonMakeRed2 = document.querySelector('#button2_3');
+
+    buttonCrossOut2.addEventListener('click', function() {
+      text2.classList.toggle('active2_1');
+    });
+
+    buttonMakeBold2.addEventListener('click', function() {
+      text2.classList.toggle('active2_2'); 
+    });
+
+    buttonMakeRed2.addEventListener('click', function() {
+      text2.classList.toggle('active2_3');
+    });
+
+
+    //3
+    const text3 = document.querySelector('#text3');
+    const buttonCrossOut3 = document.querySelector('#button3_1');
+    const buttonMakeBold3 = document.querySelector('#button3_2');
+    const buttonMakeRed3 = document.querySelector('#button3_3');
+
+    buttonCrossOut3.addEventListener('click', function() {
+      text3.classList.toggle('active3_1');
+    });
+
+    buttonMakeBold3.addEventListener('click', function() {
+      text3.classList.toggle('active3_2');
+    });
+
+    buttonMakeRed3.addEventListener('click', function() {
+      text3.classList.toggle('active3_3');
+    });
+    //так же как и во втором варианте при нажатии повторно класс убирается 
+    </script>
+  </body>
+</html>

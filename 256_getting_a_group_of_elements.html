@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/elements-group-getting/">256</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Даны абзацы и кнопка. По нажатию на кнопку найдите все абзацы, переберите из циклом и установите текст каждого абзаца в значение 'text'.</p>
+
+    <p class="paragraphs1">1</p>
+    <p class="paragraphs1">2</p>
+    <p class="paragraphs1">3</p>
+    <button id="button1">Write text</button>
+
+    <h2>Task 2</h2>
+    <p>Даны абзацы с текстом и кнопка. По нажатию на кнопку запишите в конец текста каждого абзаца его порядковый номер.</p>
+
+    <p class="paragraphs2">hello</p>
+    <p class="paragraphs2">hello</p>
+    <p class="paragraphs2">hello</p>
+    <button id="button2">Write text</button>
+
+    <h2>Task 3</h2>
+    <p>Даны инпуты с числами, абзац и кнопка. По нажатию на кнопку найдите сумму чисел из инпутов и запишите эту сумму в текст абзаца.</p>
+
+    <input class="elem" value="1">
+    <input class="elem" value="2">
+    <input class="elem" value="3">
+    <button id="button3">sum number</button>
+    <p id="paragraphs3"></p>
+
+    <script> 
+    
+    //1
+
+    const paragraphs1 = document.querySelectorAll('.paragraphs1');
+    const button1 = document.querySelector('#button1');
+
+    button1.addEventListener('click', function() {
+      for (const paragraph of paragraphs1) {
+        paragraph.textContent = 'text';
+      }
+    });
+
+    //2
+
+    const paragraphs2 = document.querySelectorAll('.paragraphs2');
+    const button2 = document.querySelector('#button2');
+
+    button2.addEventListener('click', function() {
+      for (let i = 0; i < paragraphs2.length; i++) {
+        paragraphs2[i].textContent = paragraphs2[i].textContent + (1 + i);
+      }
+    });
+    
+    //3
+
+    const elems = document.querySelectorAll('.elem');
+    const paragraphs3 = document.querySelector('#paragraphs3');
+    const button3 = document.querySelector('#button3');
+
+    button3.addEventListener('click', function() {
+      let sum = 0;
+      for (let i = 0; i < elems.length; i++) {
+        sum += Number(elems[i].value)
+      }
+      paragraphs3.textContent = sum;
+    });
+
+    </script>
+  </body>
+</html>

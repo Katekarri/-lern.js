@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/this/">254</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан инпут. По получению фокуса этим инпутом запишите в него число 1, а по потери фокуса - число 2. Для обращения у инпуту внутри функции-обработчика используйте объект this.</p>
+
+    <input id="elem1" value="">
+
+    <h2>Task 2</h2>
+    <p>Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу.</p>
+
+    <button id="button2">1</button>
+    <script>
+
+    //1
+
+    const input = document.querySelector('#elem1');
+    function func1_1 () {
+      this.value = '1';
+    }
+    input.addEventListener('focus', func1_1);
+
+    function func1_2 () {
+      this.value = '2';      
+    }
+    input.addEventListener('blur', func1_2);
+
+    
+
+    //2
+
+    const button2 = document.querySelector('#button2');
+
+    button2.addEventListener('click', function() {
+      this.textContent ++;
+    });
+
+    </script>
+  </body>
+</html>

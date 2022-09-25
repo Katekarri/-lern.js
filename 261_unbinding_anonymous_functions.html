@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/anonymous-handlers-unbinding/">261</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан список ul, в каждом пункте которого записано число. Сделайте так, чтобы по клику на любую li ее число увеличивалось на единицу.</p>
+
+    <ul id="list1">
+      <li class="elem1">1</li>
+      <li class="elem1">2</li>
+      <li class="elem1">3</li>
+    </ul>
+
+    <h2>Task 2</h2>
+    <p>Модифицируйте предыдущую задачу так, чтобы каждая li увеличивала свое значение только по первому нажатию на нее.</p>
+
+    <ul id="list2">
+      <li class="elem2">1</li>
+      <li class="elem2">2</li>
+      <li class="elem2">3</li>
+    </ul>
+
+    <h2>Task 3</h2>
+    <p>Модифицируйте предыдущую задачу так, чтобы каждая li увеличивала свое значение только если ее значение меньше 10.</p>
+
+    <ul id="list3">
+      <li class="elem3">1</li>
+      <li class="elem3">22</li>
+      <li class="elem3">3</li>
+    </ul>
+
+    <script>
+    
+    //1
+
+    const elems1 = document.querySelectorAll('.elem1');
+
+    for (const elem1 of elems1) {
+      elem1.addEventListener('click', function func1() {
+        elem1.textContent ++;
+      });
+    }
+
+    //2 
+
+    const elems2 = document.querySelectorAll('.elem2');
+
+    for (const elem2 of elems2) {
+      elem2.addEventListener('click', function func2() {
+        elem2.textContent ++;
+        this.removeEventListener('click', func2)
+      });
+    }
+
+    //3
+
+    const elems3 = document.querySelectorAll('.elem3');
+
+    for (const elem3 of elems3) {
+      elem3.addEventListener('click', function func3() {
+        if (elem3.textContent < 10) {
+          this.textContent ++;
+        }  
+      });
+    }
+    </script>
+  </body>
+</html>

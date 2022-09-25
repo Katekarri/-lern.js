@@ -157,43 +157,43 @@
 
     //3
 
-    const allChildsElems = document.querySelector('#elem3');
-    const elems3 = allChildsElems.children; 
+    const elem3 = document.querySelector('#elem3');
+    const allChildsElems = elem3.children; 
 
-    for (const elem3 of  elems3) {
-      elem3.textContent += '!';
+    for (const allChildsElem of  allChildsElems) { 
+      allChildsElem.textContent += '!';
     } 
 
     //4
 
-    const parent = document.querySelector('#elem4');
-    const elem4 = parent.parentElement;
+    const elem4 = document.querySelector('#elem4');
+    const parent = elem4.parentElement;
     elem4.style.cssText = 'border: 2px solid red';
   
     //5
 
-    const parentParent = document.querySelector('#elem5');
-    const elem5 = parentParent.parentElement;
+    const elem5 = document.querySelector('#elem5');
+    const parentParent = elem5.parentElement;
     elem5.parentElement.style.cssText = 'border: 2px solid red';
 
     //6
 
-    const nearestParent = document.querySelector('#elem6');
-    const elem6 = nearestParent.closest('div');
-    console.log(elem6);
+    const elem6 = document.querySelector('#elem6');
+    const nearestParent = elem6.closest('div');
+    console.log(nearestParent);
 
     //7
 
-    const nearestParentWithClass = document.querySelector('#elem7');
-    const elem7 = nearestParentWithClass.closest('.www7');
-    console.log(elem7);
+    const elem7 = document.querySelector('#elem7');
+    const nearestParentWithClass = elem7.closest('.www7');
+    console.log(nearestParentWithClass);
 
     //8
 
-    const upstairsNeighbor = document.querySelector('#elem8');
-    const elem8 = upstairsNeighbor.previousElementSibling;
-    elem8.textContent += '!';
-    //все должно по идее работать, нашла верхнего соседа, добавила '!'
+    const elem8 = document.querySelector('#elem8');
+    const upstairsNeighbor = elem8.previousElementSibling;
+    upstairsNeighbor.textContent += '!';
+   
      
     //9
 

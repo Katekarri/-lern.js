@@ -197,15 +197,24 @@
      
     //9
 
-    const bottomNeighbor = document.querySelector('#elem9');
+    const elem9 = document.querySelector('#elem9');
+    const bottomNeighbor = elem9.nextElementSibling;
+    bottomNeighbor.textContent += '!';
 
     //10
 
-    const nextElementAfterNext = document.querySelector('#elem10');
+    const elem10 = document.querySelector('#elem10');
+    const nextElementAfterNext = elem10.nextElementSibling;
+    nextElementAfterNext.nextElementSibling.textContent += '!';
 
     //11
 
-    const swapText = document.querySelector('#elem11');
+    const elem11 = document.querySelector('#elem11');
+    const previousElemen = elem11.previousElementSibling;
+    const nextElement = elem11.nextElementSibling;
+    const change = previousElemen.textContent
+    previousElemen.textContent = nextElement.textContent;
+    nextElement.textContent = change ;
 
     </script>
   </body>

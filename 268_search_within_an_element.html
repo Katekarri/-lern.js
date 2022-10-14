@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/inside-element-searching/">268</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан элемент #parent: (код ниже)
+      let parent = document.querySelector('#parent');
+      Найдите внутри родителя элементы с классом www и запишите их в переменную elems1. Затем найдите внутри родителя элементы с классом ggg и запишите их в переменную elems2.</p>
+
+      <div id="parent">
+        <p class="www">text</p>
+        <p class="www">text</p>
+        <p class="www">text</p>
+        <p class="ggg">text</p>
+        <p class="ggg">text</p>
+        <p class="ggg">text</p>
+      </div>
+    <script>   
+
+    //1
+
+    const parent = document.querySelector('#parent');
+    const elems1_1 = parent.querySelectorAll('.www');
+    const elems1_2 = parent.querySelectorAll('.ggg');
+
+    console.log(elems1_1,  elems1_2);
+
+    
+    </script>
+  </body>
+</html>

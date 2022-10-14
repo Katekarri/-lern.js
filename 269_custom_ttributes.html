@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/data-attrubutes/">269</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Дан следующий код: (код ниже) 
+      Сделайте так, чтобы по клику на див в конец его текста добавилось содержимое его атрибута data-text.</p>
+
+      <div id="elem1" data-text="str">text</div>
+
+    <h2>Task 2</h2>
+    <p>Даны дивы, содержащие в атрибуте data-num свой порядковый номер: (код ниже) 
+      Сделайте так, чтобы по клику на любой из дивов ему в конец записывался его порядковый номер.</p>
+
+      <div data-num="1">text</div>
+      <div data-num="2">text</div>
+      <div data-num="3">text</div>
+      <div data-num="4">text</div>
+      <div data-num="5">text</div>
+
+    <h2>Task 3</h2>
+    <p>Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней, записывая их в какой-нибудь пользовательский атрибут. Пусть по двойному клику на эту кнопку на экран выводится, сколько кликов по этой кнопке было сделано.</p>
+
+    <button id="button">Click me</button>
+    <p id="num-click"></p>
+
+    <h2>Task 4</h2>
+    <p>Дан инпут: (код ниже) 
+    В этом инпуте в атрибуте data-length содержится количество символов, которое нужно ввести в инпут. Сделайте так, чтобы по потери фокуса, если количество введенных символов не совпадает с заданным, выводилось сообщение об этом.</p>
+
+      <input id="elem" data-length="5">
+
+    <h2>Task 5</h2>
+    <p>
+    В этом инпуте атрибуты data-min и data-max содержат диапазон (код ниже) . Сделайте так, чтобы по потери фокуса, если количество введенных символов не попадает в этот диапазон, выводилось сообщение об этом.</p>
+     
+      <input id="elem" data-min="5" data-max="10">
+      
+
+    <h2>Task 6</h2>
+    <p>Дан следующий код: (код ниже)
+      Сделайте так, чтобы по клику на див в конец его текста добавлялась стоимость покупки, равная цене, умноженной на количество.</p>
+
+      <div id="elem" data-product-price="1000" data-product-amount="5">товар яблоки</div>
+        
+    <h2>Task 7</h2>
+    <p>Даны абзацы. Переберите их циклом и каждому абзацу в атрибут data-num запишите порядковый номер этого абзаца. Используйте метод setAttribute</p>
+
+    <script>
+    
+    //1
+
+    const elem1 = document.querySelector('#elem1');
+    elem1.addEventListener('click', function() {
+      elem1.textContent = elem1.textContent + elem1.dataset.text;
+    });
+
+    //2
+
+    const elems2 = document.getElementsByTagName('div');
+      
+    for (const elem2 of elems2) {
+      elem2.addEventListener('click', function() {
+        elem2.textContent = elem2.textContent + elem2.dataset.num;
+      });
+    }
+
+    //3
+
+    </script>
+  </body>
+</html>

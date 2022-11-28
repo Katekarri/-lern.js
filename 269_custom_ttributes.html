@@ -26,30 +26,35 @@
     <h2>Task 3</h2>
     <p>Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней, записывая их в какой-нибудь пользовательский атрибут. Пусть по двойному клику на эту кнопку на экран выводится, сколько кликов по этой кнопке было сделано.</p>
 
-    <button id="button">Click me</button>
-    <p id="num-click"></p>
+    <button id="button3">Click me</button>
+    <p id="num-click3"></p>
 
     <h2>Task 4</h2>
     <p>Дан инпут: (код ниже) 
     В этом инпуте в атрибуте data-length содержится количество символов, которое нужно ввести в инпут. Сделайте так, чтобы по потери фокуса, если количество введенных символов не совпадает с заданным, выводилось сообщение об этом.</p>
 
-      <input id="elem" data-length="5">
+      <input id="elem4" data-length="5">
 
     <h2>Task 5</h2>
     <p>
     В этом инпуте атрибуты data-min и data-max содержат диапазон (код ниже) . Сделайте так, чтобы по потери фокуса, если количество введенных символов не попадает в этот диапазон, выводилось сообщение об этом.</p>
      
-      <input id="elem" data-min="5" data-max="10">
+      <input id="elem5" data-min="5" data-max="10">
       
 
     <h2>Task 6</h2>
     <p>Дан следующий код: (код ниже)
       Сделайте так, чтобы по клику на див в конец его текста добавлялась стоимость покупки, равная цене, умноженной на количество.</p>
 
-      <div id="elem" data-product-price="1000" data-product-amount="5">товар яблоки</div>
+      <div id="elem6" data-product-price="1000" data-product-amount="5">hello</div>
+      <button id="button6">add</button>
         
     <h2>Task 7</h2>
     <p>Даны абзацы. Переберите их циклом и каждому абзацу в атрибут data-num запишите порядковый номер этого абзаца. Используйте метод setAttribute</p>
+
+    <p class="paragraphs" data-num="1000">hello</p>
+    <p class="paragraphs" data-num="1000">hello</p>
+    <p class="paragraphs" data-num="1000">hello</p>
 
     <script>
     
@@ -71,6 +76,77 @@
     }
 
     //3
+
+    const button3 = document.querySelector('#button3');
+    const numClick3 = document.querySelector('#num-click3');
+    let clicks = 0;
+    button3.addEventListener('click', function() {
+      clicks += 1;
+      numClick3.textContent = clicks;
+    });
+   
+
+    let sum = 0;
+    button3.ondblclick = function() {
+      sum += clicks;
+      alert(sum);
+    }
+
+    //4
+
+    const elem4 = document.querySelector('#elem4');
+
+    elem4.addEventListener('blur', function() {
+      const valuelength = elem4.dataset.length;
+      const  num4 = elem4.value.length;
+      if (valuelength == num4) {
+        alert('true');
+      } else {
+        alert('false');
+      }
+      
+    });
+
+    //5
+
+    const elem5 = document.querySelector('#elem5');
+    const numMin = elem5.dataset.min;
+    const numMax = elem5.dataset.max;
+
+    elem5.addEventListener('blur', function() {
+      const inputLength = elem5.value.length;
+      if (inputLength <= numMin || inputLength >= numMax) {
+        const error = `значение меньше ${numMin} или больше ${numMax}`; 
+        alert(error);
+      } else {
+        alert('правильно');
+      }
+    });
+
+    //6
+
+    const elem6 = document.querySelector('#elem6');
+
+    elem6.addEventListener('click', function() {
+      const productPrice = elem6.dataset.productPrice;
+      const productAmount = elem6.dataset.productAmount;
+      const cost = productAmount * productPrice;
+      console.log(elem6.textContent, cost);
+      elem6.textContent = elem6.textContent + cost;
+    });
+
+    const button6 = document.querySelector('#button6');
+    button6.addEventListener('click', function() {
+      	elem6.dataset.productPrice = '1300';
+        elem6.dataset.productAmount = '2';
+    });
+
+    //7
+
+    // const paragraphs = document.querySelectorAll('.paragraphs');
+    // const paragraphNum = paragraphs.getAttribute('data-num');
+
+
 
     </script>
   </body>

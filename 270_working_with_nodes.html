@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/nodes/">270</a></h1>
+
+    <h2>Task 1</h2>
+    <p>Напишите код, который покажет разницу между lastChild и lastElementChild.</p>
+
+    <div id="elem1">
+      <p>1</p>
+      <p>2</p>
+    </div>
+
+    <h2>Task 2</h2>
+    <p>Напишите код, который покажет разницу между nextSibling и nextElementSibling.</p>
+
+    <p id="elem2">elem</p>
+    <p>text</p>
+
+    <h2>Task 3</h2>
+    <p>Напишите код, который покажет разницу между previousSibling и previousElementSibling.</p>
+
+    <p>sibling</p>
+    <p id="elem3">elem</p>
+
+    <h2>Task 4</h2>
+    <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите их в консоль.</p>
+
+    <div id="elem4">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+
+    <h2>Task 5</h2>
+    <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите в консоль их названия.</p>
+
+    <div id="elem5">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+    
+    <h2>Task 6</h2>
+    <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите в консоль только узлы-элементы и текстовые узлы.</p>
+
+    <div id="elem6">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+
+    <h2>Task 7</h2>
+    <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите в консоль тексты всех узлов.</p>
+
+    <div id="elem7">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+
+    <h2>Task 8</h2>
+    <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите в консоль тексты всех комментариев и текстовых узлов.</p>
+
+    <div id="elem8">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+
+    <h2>Task 9</h2>
+    <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите в консоль тексты текстовых узлов и элементов.</p>
+
+    <div id="elem9">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+
+    <h2>Task 10</h2>
+    <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и каждому узлу в конец запишите его тип.</p>
+
+    <div id="elem10">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+
+    <script>  
+
+    //1
+
+    const elem1 = document.querySelector('#elem1');
+
+    console.log(elem1.lastChild);       
+    console.log(elem1.lastElementChild);
+
+    //2
+
+    const elem2 = document.querySelector('#elem2');
+
+    console.log(elem2.nextSibling);       
+    console.log(elem2.nextElementSibling);
+
+    //3
+
+    const elem3 = document.querySelector('#elem3');
+
+    console.log(elem2.previousSibling);       
+    console.log(elem2.previousElementSibling);// очень интересно отработало , можно конечно заменить на div, но выглядит наглядно и так. Если что заменю на другой селектор 
+
+    //4
+
+    const elem4 = document.querySelector('#elem4');
+
+    for (let node4 of elem4.childNodes) {
+	    console.log(node4);
+    }
+
+    //5 
+
+    const elem5 = document.querySelector('#elem5');
+
+    for (let node5 of elem5.childNodes) {
+	    console.log(node5.tagName);
+    }
+
+    //6
+
+    const elem6 = document.querySelector('#elem6');
+
+    for (let nodes6 of elem6.childNodes) {
+      if (nodes6.nodeType == 3 || nodes6.nodeType == 1) {
+        console.log(nodes6);
+      } else {
+        console.log('узел неподходящего типа');
+      }
+
+    }
+
+    //7
+
+    const elem7 = document.querySelector('elem7');
+
+    for (let nodes7 of elem7.childNodes) {
+      console.log(nodes7.textContent);
+    }
+
+    </script>
+  </body>
+</html>

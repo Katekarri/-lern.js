@@ -32,12 +32,18 @@ function showGoodFilms(arr) {
 // showListOfFilms(films) => "Titanic, Die hard 5, Matrix, Some bad film"
 
 
-function showListOfFilms(arr) {
-  return arr.reduce((string, current) =>`${typeof(string) === 'object' ? string.name : string}, ${current.name}`);
+// function showListOfFilms(arr) {
+//   return arr.reduce((movie, current) =>`${typeof(movie) === 'object' ? movie.name : movie}, ${current.name}`);
+// }
+
+// showListOfFilms(films);
+
+
+
+function showListOfFilms(films) { 
+  let  movie = films.map(film2 => film2.name + ', ').join('');
+  return  movie;
 }
-
-showListOfFilms(films);
-
 
 // 3) Напишите функцию setFilmsIds, которая будет принимать этот же массив, а возвращать будет такой же массив с фильмами, но у каждого фильма будет новое поле id. Значение этого поля установите по нумерации фильма.
 
@@ -56,11 +62,21 @@ function setFilmsIds(arr) {
 const tranformedArray = setFilmsIds(films);
 
 
+
 // 4) Запишите результат предыдущей функции в переменную tranformedArray. Напишите функцию checkFilms, которая будет проверять, что в каждом из фильмов есть поле id. Если это так - функция возвращает true. Очевидно, что сейчас условие должно выполняться, если мы передаем checkFilms(tranformedArray); :)
 
 
+// function checkFilms(arr) {
+//   return arr.every(film => film.id || film.id === 0 ? true : false)
+// }
+
+// checkFilms(tranformedArray);
+
+
 function checkFilms(arr) {
-  return arr.every(film => film.id || film.id === 0 ? true : false)
+  return arr.every(id in films);
 }
 
 checkFilms(tranformedArray);
+
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/in

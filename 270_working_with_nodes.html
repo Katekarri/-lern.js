@@ -68,29 +68,29 @@
 
     const elem1 = document.querySelector('#elem1');
 
-    console.log(elem1.lastChild);       
-    console.log(elem1.lastElementChild);
+    console.log(`Task 1 lastChild :${elem1.lastChild}`);       
+    console.log(`Task 1 lastElementChild :${elem1.lastElementChild}`);
 
     //2
 
     const elem2 = document.querySelector('#elem2');
 
-    console.log(elem2.nextSibling);       
-    console.log(elem2.nextElementSibling);
+    console.log(`Task 2 nextSibling :${elem2.nextSibling}`);       
+    console.log(`Task 2 nextElementSibling :${elem2.nextElementSibling}`);
 
     //3
 
     const elem3 = document.querySelector('#elem3');
 
-    console.log(elem2.previousSibling);       
-    console.log(elem2.previousElementSibling);// очень интересно отработало , можно конечно заменить на div, но выглядит наглядно и так. Если что заменю на другой селектор 
+    console.log(`Task 3 nextSibling :${elem2.previousSibling}`);       
+    console.log(`Task 3 nextSibling :${elem2.previousElementSibling}`);// очень интересно отработало , можно конечно заменить на div, но выглядит наглядно и так. Если что заменю на другой селектор 
 
     //4
 
     const elem4 = document.querySelector('#elem4');
 
     for (let node4 of elem4.childNodes) {
-	    console.log(node4);
+	    console.log(`Task 4 :${node4}`);
     }
 
     //5 
@@ -98,7 +98,7 @@
     const elem5 = document.querySelector('#elem5');
 
     for (let node5 of elem5.childNodes) {
-	    console.log(node5.tagName);
+	    console.log(`Task 5 :${node5.tagName}`);
     }
 
     //6
@@ -107,9 +107,9 @@
 
     for (let nodes6 of elem6.childNodes) {
       if (nodes6.nodeType == 3 || nodes6.nodeType == 1) {
-        console.log(nodes6);
+        console.log(`Task 6 :${nodes6}`);
       } else {
-        console.log('узел неподходящего типа');
+        console.log(`Task 6 : узел неподходящего типа`);
       }
 
     }
@@ -119,7 +119,7 @@
     const elem7 = document.querySelector('elem7');
 
     for (let nodes7 of elem7.childNodes) {
-      console.log(nodes7.textContent);
+      console.log(`Task 7 :${nodes7.textContent}`);
     }
 
     </script>

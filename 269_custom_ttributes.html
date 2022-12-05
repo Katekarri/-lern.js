@@ -27,7 +27,8 @@
     <p>Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней, записывая их в какой-нибудь пользовательский атрибут. Пусть по двойному клику на эту кнопку на экран выводится, сколько кликов по этой кнопке было сделано.</p>
 
     <button id="button3">Click me</button>
-    <p id="num-click3"></p>
+    <!-- <p id="num-click3"></p> -->
+
 
     <h2>Task 4</h2>
     <p>Дан инпут: (код ниже) 
@@ -78,11 +79,11 @@
     //3
 
     const button3 = document.querySelector('#button3');
-    const numClick3 = document.querySelector('#num-click3');
+    // const numClick3 = document.querySelector('#num-click3');
     let clicks = 0;
     button3.addEventListener('click', function() {
       clicks += 1;
-      numClick3.textContent = clicks;
+      button3.textContent = clicks;
     });
    
 
@@ -99,10 +100,10 @@
     elem4.addEventListener('blur', function() {
       const valuelength = elem4.dataset.length;
       const  num4 = elem4.value.length;
-      if (valuelength == num4) {
-        alert('true');
+      if (valuelength === num4) {
+        alert('введено верное количесво символов');
       } else {
-        alert('false');
+        alert('вы ввели не верное количество символов');
       }
       
     });
@@ -116,10 +117,10 @@
     elem5.addEventListener('blur', function() {
       const inputLength = elem5.value.length;
       if (inputLength <= numMin || inputLength >= numMax) {
-        const error = `значение меньше ${numMin} или больше ${numMax}`; 
+        const error = `вы ввели неверное количество символов,введите значение от ${numMin} до ${numMax} символов`; 
         alert(error);
       } else {
-        alert('правильно');
+        alert('введено верное количесво символов');
       }
     });
 
@@ -143,10 +144,9 @@
 
     //7
 
-    // const paragraphs = document.querySelectorAll('.paragraphs');
-    // const paragraphNum = paragraphs.getAttribute('data-num');
-
-
+    const paragraphs = document.querySelectorAll('p'); 
+    
+    paragraphs.forEach((paragraph, i) => paragraph.setAttribute('data-num', i));
 
     </script>
   </body>

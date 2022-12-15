@@ -36,6 +36,7 @@
     <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите в консоль их названия.</p>
 
     <div id="elem5">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+  
     
     <h2>Task 6</h2>
     <p>Дан следующий код: (код ниже) Переберите циклом все узлы этого дива и выведите в консоль только узлы-элементы и текстовые узлы.</p>
@@ -98,7 +99,7 @@
     const elem5 = document.querySelector('#elem5');
 
     for (let node5 of elem5.childNodes) {
-	    console.log(`Task 5 :${node5.tagName}`);
+	    console.log(`Task 5 :${node5.nodeName}`);
     }
 
     //6
@@ -106,7 +107,7 @@
     const elem6 = document.querySelector('#elem6');
 
     for (let nodes6 of elem6.childNodes) {
-      if (nodes6.nodeType == 3 || nodes6.nodeType == 1) {
+      if (nodes6.nodeType === 3 || nodes6.nodeType === 1) {
         console.log(`Task 6 :${nodes6}`);
       } else {
         console.log(`Task 6 : узел неподходящего типа`);
@@ -116,10 +117,45 @@
 
     //7
 
-    const elem7 = document.querySelector('elem7');
+    const elem7 = document.querySelector('#elem7');
 
     for (let nodes7 of elem7.childNodes) {
       console.log(`Task 7 :${nodes7.textContent}`);
+    }
+
+    //8
+
+    const elem8 = document.querySelector('#elem8');
+    
+    for (let nodes8 of elem8.childNodes) {
+      if (nodes8.nodeType === 3 || nodes8.nodeType === 8) {
+        console.log(`Task 8 :${nodes8.textContent}`);
+      }
+      
+    }
+
+    //9
+
+    const elem9 = document.querySelector('#elem9');
+    
+    for (let nodes9 of elem9.childNodes) {
+      if (nodes9.nodeType === 3 || nodes9.nodeType === 1) {
+        console.log(`Task 9 :${nodes9.textContent}`);
+      }
+    }
+
+    //10
+
+    const elem10 = document.querySelector('#elem10');
+    
+    for (let nodes10 of elem10.childNodes) {
+      if (nodes10.nodeType === 3) {
+        console.log(`Task 10 :${nodes10} текстовый узел`);
+      } else if (nodes10.nodeType === 1) {
+        console.log(`Task 10 :${nodes10} элемент`);
+      } else if (nodes10.nodeType === 8) {
+        console.log(`Task 10 :${nodes10} комментарий`);
+      }
     }
 
     </script>

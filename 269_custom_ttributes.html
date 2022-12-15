@@ -78,21 +78,21 @@
 
     //3
 
-    const button3 = document.querySelector('#button3');
-    // const numClick3 = document.querySelector('#num-click3');
-    let clicks = 0;
-    button3.addEventListener('click', function() {
-      clicks += 1;
-      button3.textContent = clicks;
-    });
-   
+    const button = document.querySelector('#button3');
 
-    let sum = 0;
-    button3.ondblclick = function() {
-      sum += clicks;
-      alert(sum);
+    let clicks = 0;
+    function clickNumber() {
+      clicks++;
+      button.setAttribute('data-clicks', clicks);
     }
 
+
+
+    button.addEventListener('click', clickNumber);
+    button.addEventListener('dblclick', () => {
+      alert(clicks);
+    });
+   
     //4
 
     const elem4 = document.querySelector('#elem4');
@@ -119,9 +119,7 @@
       if (inputLength <= numMin || inputLength >= numMax) {
         const error = `вы ввели неверное количество символов,введите значение от ${numMin} до ${numMax} символов`; 
         alert(error);
-      } else {
-        alert('введено верное количесво символов');
-      }
+      } 
     });
 
     //6

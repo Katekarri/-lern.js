@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+    <h1>Section <a href="https://code.mu/ru/javascript/book/prime/dom/basis/mistakes/">272</a></h1>
+    <p>добавила классы что бы не было путанницы</p>
+
+    <h2>Task 1</h2>
+    <p>Код должен добавить текст в конец каждого абзаца:</p>
+
+    <p class="elem1">1</p>
+    <p class="elem1">2</p>
+    <p class="elem1">3</p>
+
+    <h2>Task 2</h2>
+    <p>По клику на абзац его значение должно увеличиться на единицу:</p>
+
+    <p class="elem2">1</p>
+    <p class="elem2">2</p>
+    <p class="elem2">3</p>
+
+    <h2>Task 3</h2>
+    <p>По клику на кнопку текст абзаца должен стать жирным:</p>
+
+    <p class="elem3">text</p>
+    <button id="button3">click</button>
+
+    <h2>Task 4</h2>
+    <p>По клику на кнопку должна вывестись сумма чисел из абзацев:</p>
+
+    <p class="elem4">1</p>
+    <p class="elem4">2</p>
+    <p class="elem4">3</p>
+
+    <button id="button4">click</button>
+
+    <h2>Task 5</h2>
+    <p>По клику на абзац ему в конец должен добавиться заданный текст:</p>
+
+    <p class="elem5">1</p>
+    <p class="elem5">2</p>
+    <p class="elem5">3</p>
+
+    <h2>Task 6</h2>
+    <p>По клику на кнопку текст каждого абзаца должен стать жирным:</p>
+
+    <p class="elem6">text1</p>
+    <p class="elem6">text2</p>
+    <p class="elem6">text3</p>
+
+    <button id="button6">click</button>
+
+    <h2>Task 7</h2>
+    <p>По клику на кнопку в консоль должна вывестись сумма чисел из абзацев:</p>
+
+    <p class="elem7">1</p>
+    <p class="elem7">2</p>
+    <p class="elem7">3</p>
+
+    <button id="button7">click</button>
+
+    <h2>Task 8</h2>
+    <p>В инпуты вводятся числа. По клику на кнопку в консоль должна вывестись сумма чисел из инпутов:</p>
+
+    <input class="elem8">
+    <input class="elem8">
+    <input class="elem8">
+
+    <button id="button8">click</button>
+
+    <h2>Task 9</h2>
+    <p>В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел:</p>
+
+    <input id="inp1_9">
+    <input id="inp2_9">
+    <input id="inp3_9">
+
+    <button id="btn9">click</button>
+
+
+    <h2>Task 10</h2>
+    <p>В первые два инпута вводятся числа. По клику на кнопку в абзац должна вывестись сумма этих чисел:</p>
+
+    <input id="inp1_10">
+    <input id="inp2_10">
+    <p id="res10"></p>
+    <!-- <input id="inp3_10"> -->
+
+    <button id="btn10">click</button>
+
+    <h2>Task 11</h2>
+    <p>По клику на кнопку нужно проверить, что текст в каждом инпуте совпадает с текстом его data атрибута:</p>
+
+    <input data-text="text1_11" class="elem11">
+    <input data-text="text2_11" class="elem11">
+    <input data-text="text3_11" class="elem11">
+
+    <button id="btn11">click</button>
+
+    <h2>Task 12</h2>
+    <p>По клику на кнопку нужно проверить, что текст в каждом инпуте совпадает с текстом соответствующего элемента массива:</p>
+
+    <input class="elem12">
+    <input class="elem12">
+    <input class="elem12">
+
+    <button id="btn12">click</button>
+
+    <h2>Task 13</h2>
+    <p></p>
+
+    <h2>Task 14</h2>
+    <p></p>
+
+    <h2>Task 15</h2>
+    <p></p>
+
+    <script>   
+
+    //1
+
+    let elems1 = document.querySelectorAll('.elem1');
+    for (let elem1 of  elems1) { 
+      elem1.textContent += '!';
+    } 
+    
+
+    //2
+
+    let elems2 = document.querySelectorAll('.elem2');
+
+    for (let elem2 of elems2) {
+      elem2.addEventListener('click', function() {
+         elem2.textContent ++;
+      });
+    }
+
+    //3
+
+    let button3 = document.querySelector('#button3');
+    let elem3   = document.querySelector('.elem3');
+
+    button3.addEventListener('click', function() {
+      elem3.style.cssText = 'font-weight:bold';
+    });
+
+    //4
+
+    let button4 = document.querySelector('#button4');
+    let elems4  = document.querySelectorAll('.elem4');
+
+    button4.addEventListener('click', function() {
+      let sum = 0;
+      
+      for (let elem4 of elems4) {
+        sum += Number(elem4.textContent);
+      }
+      
+      console.log(sum);
+    });
+
+    //5
+
+    let elems5 = document.querySelectorAll('.elem5');
+
+    for (let elem5 of elems5) {
+      elem5.addEventListener('click', () => {
+        elem5.textContent += '!';
+      });
+    }
+
+
+    //6
+
+    let button6 = document.querySelector('#button6');
+    let elems6  = document.querySelectorAll('.elem6');
+
+    button6.addEventListener('click', function() {
+      for (let elem6 of elems6) {
+        elem6.style.cssText = 'font-weight:bold';
+      }
+    });
+
+
+    //7
+
+    let button7 = document.querySelector('#button7');
+    let elems7  = document.querySelectorAll('.elem7');
+    
+    button7.addEventListener('click', function() { 
+      let sum = 0;
+
+      for (let elem7 of elems7) {
+      sum += +elem7.textContent;
+      }
+
+      console.log(sum);
+    });
+
+    //8
+
+    let button8 = document.querySelector('#button8');
+    let elems8  = document.querySelectorAll('.elem8');
+
+      button8.addEventListener('click', function() {
+      let sum = 0;
+
+      for (let elem8 of elems8) {
+      sum += +elem8.value;
+      }
+
+      console.log(sum);
+    });
+
+    //9
+
+    let btn9  = document.querySelector('#btn9');
+    let inp1Nine = document.querySelector('#inp1_9');
+    let inp2Nine  = document.querySelector('#inp2_9');
+    let inp3Nine  = document.querySelector('#inp3_9');
+
+    btn9.addEventListener('click', function() {
+      inp3Nine.value = +inp1Nine.value + +inp2Nine.value;
+    });
+
+    //10
+
+    let btn10  = document.querySelector('#btn10');
+    let res10  = document.querySelector('#res10');
+    let inp1Ten = document.querySelector('#inp1_10');
+    let inp2Ten = document.querySelector('#inp2_10');
+  
+    btn10.addEventListener('click', function() {
+      res10.textContent = +inp1Ten.value + +inp2Ten.value;
+    });
+
+    //11
+
+    let inputs11 = document.querySelectorAll('.elem11')
+    let button11 = document.querySelector('#btn11')
+
+    button11.addEventListener('click', function() {
+      for (let input11 of inputs11) {
+        if (input11.value === input11.dataset.text) {
+          input11.classList.add('right');
+        } else {
+          input11.classList.add('wrong');
+        }
+      }
+    });
+
+    //12
+
+    let inputs12 = document.querySelectorAll('.elem12')
+    let button12 = document.querySelector('#btn12')
+
+    let texts = [
+      'text1',
+      'text2',
+      'text3',
+    ];
+
+    button12.addEventListener('click',function() {
+      for (let input12 of inputs12) {
+        for (let text of texts) {
+          if (input12.value === text) {
+            input12.classList.add('right')
+          } else {
+            input12.classList.add('wrong')
+          }
+        }
+      }
+    });//застопорилась
+
+    </script>
+  </body>
+</html>

@@ -150,11 +150,14 @@
     
     for (let nodes10 of elem10.childNodes) {
       if (nodes10.nodeType === 3) {
-        console.log(`Task 10 :${nodes10} текстовый узел`);
+        nodes10.textContent += ':text ';
+        // console.log(`Task 10 :${nodes10} текстовый узел`);
       } else if (nodes10.nodeType === 1) {
-        console.log(`Task 10 :${nodes10} элемент`);
+        nodes10.textContent += ':elem ';
+        // console.log(`Task 10 :${nodes10} элемент`);
       } else if (nodes10.nodeType === 8) {
-        console.log(`Task 10 :${nodes10} комментарий`);
+        // console.log(`Task 10 :${nodes10} комментарий`);
+        nodes10.textContent += ':comment ';
       }
     }
 

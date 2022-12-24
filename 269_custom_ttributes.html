@@ -78,20 +78,31 @@
 
     //3
 
-    const button = document.querySelector('#button3');
+    // const button = document.querySelector('#button3');
 
+    // let clicks = 0;
+    // function clickNumber() {
+    //   clicks++;
+    //   button.setAttribute('data-clicks', clicks);
+    // }
+
+    // button.addEventListener('click', clickNumber);
+    // button.addEventListener('dblclick', () => {
+    //   alert(clicks);
+    // });
+
+    const button = document.querySelector('#button3');
     let clicks = 0;
-    function clickNumber() {
+
+    button.addEventListener('click',function() {
       clicks++;
       button.setAttribute('data-clicks', clicks);
-    }
+    });
 
-
-
-    button.addEventListener('click', clickNumber);
     button.addEventListener('dblclick', () => {
       alert(clicks);
     });
+
    
     //4
 

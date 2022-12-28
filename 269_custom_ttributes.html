@@ -91,17 +91,32 @@
     //   alert(clicks);
     // });
 
+    // const button = document.querySelector('#button3');
+    // let clicks = 0;
+
+    // button.addEventListener('click',function() {
+    //   clicks++;
+    //   button.setAttribute('data-clicks', clicks);
+    // });
+
+    // button.addEventListener('dblclick', () => {
+    //   alert(clicks);
+    // });
+
     const button = document.querySelector('#button3');
     let clicks = 0;
 
-    button.addEventListener('click',function() {
-      clicks++;
-      button.setAttribute('data-clicks', clicks);
+    function clickNumber() {
+        clicks++;
+        button3.setAttribute('data-clicks', clicks);
+    }
+
+    button3.addEventListener('dblclick', () => {
+      let allClicks = +button3.getAttribute('data-clicks');
+      alert(allClicks+1);
     });
 
-    button.addEventListener('dblclick', () => {
-      alert(clicks);
-    });
+    button3.addEventListener('click', clickNumber);
 
    
     //4

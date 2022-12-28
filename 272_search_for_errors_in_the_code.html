@@ -106,17 +106,33 @@
     <input class="elem12">
     <input class="elem12">
     <input class="elem12">
+    <button  id="btn12">click</button>
 
-    <button id="btn12">click</button>
+    <!-- <input  class="input12">
+    <button  id="button">Button</button> -->
 
     <h2>Task 13</h2>
-    <p></p>
+    <p>В инпуты вводятся числа. По клику на кнопку в консоль должна вывестись сумма введенных чисел:</p>
+
+    <input class="elem13">
+    <input class="elem13">
+    <input class="elem13">
+
+    <button id="btn13">click</button>
 
     <h2>Task 14</h2>
-    <p></p>
+    <p>В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел:</p>
+
+    <input id="inp1_14">
+    <input id="inp2_14">
+    <input id="inp3_14">
+
+    <button id="btn14">click</button>
 
     <h2>Task 15</h2>
-    <p></p>
+    <p>В инпут вводится число. По потери фокуса в консоль должна вывестись сумма цифр этого числа:</p>
+
+    <input id="inp15">
 
     <script>   
 
@@ -254,26 +270,109 @@
 
     //12
 
+    // let inputs12 = document.querySelectorAll('.elem12');
+    // let button12 = document.querySelector('#btn12')
+
+    // let texts = [
+    //   'text1',
+    //   'text2',
+    //   'text3',
+    // ];
+
+    // button12.addEventListener('click',function() {
+    //   for (let input12 of inputs12) {
+    //     for ( let i = 0; i <= texts.length; i++) {
+    //       if (input12.value === texts[i]) {
+    //         input12.classList.add('right')
+    //       } else {
+    //         input12.classList.add('wrong')
+    //       }
+    //     }
+    //   }
+    // });
+
+
     let inputs12 = document.querySelectorAll('.elem12')
     let button12 = document.querySelector('#btn12')
 
     let texts = [
-      'text1',
-      'text2',
-      'text3',
+        'text1',
+        'text2',
+        'text3',
     ];
 
-    button12.addEventListener('click',function() {
-      for (let input12 of inputs12) {
-        for (let text of texts) {
-          if (input12.value === text) {
-            input12.classList.add('right')
-          } else {
-            input12.classList.add('wrong')
-          }
-        }
+    button12.addEventListener('click',function() {    
+        inputs12.forEach((item, index) => {
+            item.classList.remove('wrong');
+            item.classList.remove('right');
+            if (item.value === texts[index]) {
+                item.classList.add('right')
+            } else {
+                item.classList.add('wrong')
+            }
+        });
+    });
+
+
+    //  let texts = [
+    //   'text1',
+    //   'text2',
+    //   'text3',
+    // ];
+
+    // let button = document.querySelector('#button');
+    // let input12 = document.querySelector('.input12');
+
+    // button.addEventListener("click", function() {
+    //     if (texts.includes(input12.value)) {
+    //   input12.classList.add('right');
+    // } else {
+    //   input12.classList.add('wrong');
+    // }     
+    // }); работает с одним инпутом 
+
+
+
+    //13
+
+    let inputs13 = document.querySelectorAll('.elem13');
+    let button13 = document.querySelector('#btn13');
+    
+    button13.addEventListener('click', function() {
+      let sum = 0;
+
+      for (let input13 of inputs13) {
+        sum += Number(input13.value);
       }
-    });//застопорилась
+      
+      console.log(sum);
+    });
+
+    //14
+
+    let button14  = document.querySelector('#btn14');
+    let inp1Fourteen = document.querySelector('#inp1_14');
+    let inp2Fourteen = document.querySelector('#inp2_14');
+    let inp3Fourteen = document.querySelector('#inp3_14');
+
+    button14.addEventListener('click', function() {
+      let sum  = 0;
+      sum = +inp1Fourteen.value + +inp2Fourteen.value;
+      inp3Fourteen.value = sum;
+    });
+
+    //15
+
+    let inp15 = document.querySelector('#inp15');
+
+    inp15.addEventListener('blur', function() {
+      let sum = 0;
+      let digits = inp15.value.split('');
+      for (let i = 0; i < digits.length; i++) {
+        sum += +digits[i];
+      }
+      console.log(sum);
+    });
 
     </script>
   </body>

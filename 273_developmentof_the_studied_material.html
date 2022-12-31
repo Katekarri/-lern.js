@@ -31,17 +31,31 @@
   <h2>Task 3</h2>
   <p>Дан инпут. В него вводится число. По потери фокуса найдите сумму цифр этого числа.</p>
 
+  <input id="input3">
+
   <h2>Task 4</h2>
   <p>Дан инпут. В него вводятся числа через запятую. По потери фокуса найдите среднее арифметическое этих чисел (сумма делить на количество).</p>
+
+  <input id="input4">
 
   <h2>Task 5</h2>
   <p>Даны 4 инпута. В первый инпут вводится ФИО через пробел. По потери фокуса запишите фамилию, имя и отчество в остальные 3 инпута.</p>
 
+  <input id="name5">
+
+  <input class="inputs5">
+  <input class="inputs5">
+  <input class="inputs5">
+
   <h2>Task 6</h2>
   <p>Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в этом же инпуте).</p>
 
+  <input id="name6">
+
   <h2>Task 7</h2>
   <p>Дан инпут. В него вводится текст. По потери фокуса узнайте количество слов в этом тексте</p>
+
+  <input id="name7">
 
   <h2>Task 8</h2>
   <p>Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса в этом же инпуте поставьте эту дату в формате 2016-12-31..</p>
@@ -119,6 +133,92 @@ button2.addEventListener('click', function() {
   paragraph2.textContent = sum;
 });
 
+//3
+
+// const input3 = document.querySelector('#input3');//рабочая 
+
+// input3.addEventListener('blur', function() {
+//   let sum = 0;
+//   let str = input3.value;
+//   let arr = str.split('');
+
+//   for (let i = 0; i < arr.length; i++) {
+// 		sum += +arr[i];
+// 	}
+//   alert(sum);
+// });
+
+const input3 = document.querySelector('#input3');
+
+input3.addEventListener('blur', function() {
+  let str = input3.value;
+  let arr = ("" + str).split("").map(Number).reduce(function(a, b) { //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  
+  return  a + b;
+   
+});
+  alert(arr);
+});
+
+//4
+
+const input4 = document.querySelector('#input4');
+
+input4.addEventListener('blur', function() { 
+  let str = input4.value;
+  let sum = 0;
+  let arr = str.split(',');
+    for (let i = 0; i < arr.length; i++) {
+		sum += +arr[i];
+	}
+  alert(sum/arr.length);
+});
+
+//5
+
+const name5 = document.querySelector('#name5');
+const inputs5 = document.querySelectorAll('.inputs5');
+
+name5.addEventListener('blur', function() {
+  let str = name5.value;
+  let arr = str.split(' ');
+  
+  for (let i = 0; i < arr.length; i++) {
+    inputs5.value = arr[i];
+  }
+}); //не пoнимаю почему не работает
+
+//6 
+
+const name6 = document.querySelector('#name6');
+
+name6.addEventListener('blur', function() {
+  let arr = name6.value.split(' ');
+  for(let i = 0; i < arr.length; i++){
+		arr[i] = arr[i].toUpperCase;
+	}
+  name6.value = arr.join(' ');
+});//запуталась
+
+
+//7
+
+// const name7 = document.querySelector('#name7');
+//  name7.addEventListener('blur', func);
+
+const name7 = document.querySelector('#name7');
+name7.addEventListener('blur', func);
+
+function func() {
+	let num = 0;
+	let str = name7.value;
+	let arr = str.split(' ');
+	for (let i = 0; i < arr.length; i++) {
+		num += 1;
+    alert(num);
+ 	}
+
+} // вот теперь точно надо созвониться 
  </script>
 </body>
 </html>

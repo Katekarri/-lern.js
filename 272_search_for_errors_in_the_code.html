@@ -356,24 +356,36 @@
     let inp3Fourteen = document.querySelector('#inp3_14');
 
     button14.addEventListener('click', function() {
-      let sum  = 0;
-      sum = +inp1Fourteen.value + +inp2Fourteen.value;
+      let sum = +inp1Fourteen.value + +inp2Fourteen.value;
       inp3Fourteen.value = sum;
     });
 
     //15
 
-    let inp15 = document.querySelector('#inp15');
+    // let inp15 = document.querySelector('#inp15');
 
-    inp15.addEventListener('blur', function() {
-      let sum = 0;
-      let digits = inp15.value.split('');
-      for (let i = 0; i < digits.length; i++) {
-        sum += +digits[i];
-      }
-      console.log(sum);
-    });
+    // inp15.addEventListener('blur', function() {
+    //   let sum = 0;
+    //   let digits = inp15.value.split('');
+    //   for (let i = 0; i < digits.length; i++) {
+    //     sum += +digits[i];
+    //   }
+    //   console.log(sum);
+    // });
 
+
+
+    // function showListOfFilms(arr) {
+//   return arr.reduce((movie, current) =>`${typeof(movie) === 'object' ? movie.name : movie}, ${current.name}`);
+// }
+
+// showListOfFilms(films);
+
+// Суммирование всех значений в массиве
+// var total = [0, 1, 2, 3].reduce(function(a, b) {
+//   return a + b;
+// });
+// total == 6
     </script>
   </body>
 </html>

@@ -372,20 +372,15 @@
     //   }
     //   console.log(sum);
     // });
+  
 
+    let inp15 = document.querySelector('#inp15');
 
+    inp15.addEventListener('blur', function() {
+      let sum = inp15.value.split('').reduce((a, current) => +a + +current);//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+      inp15.value = sum;
+    });
 
-    // function showListOfFilms(arr) {
-//   return arr.reduce((movie, current) =>`${typeof(movie) === 'object' ? movie.name : movie}, ${current.name}`);
-// }
-
-// showListOfFilms(films);
-
-// Суммирование всех значений в массиве
-// var total = [0, 1, 2, 3].reduce(function(a, b) {
-//   return a + b;
-// });
-// total == 6
     </script>
   </body>
 </html>

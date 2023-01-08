@@ -27,6 +27,8 @@
     <p>Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней, записывая их в какой-нибудь пользовательский атрибут. Пусть по двойному клику на эту кнопку на экран выводится, сколько кликов по этой кнопке было сделано.</p>
 
     <button id="button3">Click me</button>
+    <button id="button32">Click me 32</button>
+    <button id="button33">Click me 33</button>
     <!-- <p id="num-click3"></p> -->
 
 
@@ -103,22 +105,29 @@
     //   alert(clicks);
     // });
 
-    const button = document.querySelector('#button3');
-    let clicks = 0;
+    const addDataClicks = function() {
+      const clicks =  +(this.getAttribute('data-clicks') || 0) +1;
+      this.setAttribute('data-clicks', clicks);
+    };
 
-    function clickNumber() {
-        clicks++;
-        button3.setAttribute('data-clicks', clicks);
-    }
-
-    button3.addEventListener('dblclick', () => {
-      let allClicks = +button3.getAttribute('data-clicks');
+    const showDataClicks =  function() {
+      const allClicks = +this.getAttribute('data-clicks');
       alert(allClicks+1);
-    });
+    };
 
-    button3.addEventListener('click', clickNumber);
+    const button3 = document.querySelector('#button3');
+    button3.addEventListener('click', addDataClicks);
+    button3.addEventListener('dblclick', showDataClicks);
 
-   
+    const button32 = document.querySelector('#button32');
+    button32.addEventListener('click', addDataClicks);
+    button32.addEventListener('dblclick', showDataClicks);
+
+    const button33 = document.querySelector('#button33');
+    button33.addEventListener('click', addDataClicks);
+    button33.addEventListener('dblclick', showDataClicks);
+
+    
     //4
 
     const elem4 = document.querySelector('#elem4');

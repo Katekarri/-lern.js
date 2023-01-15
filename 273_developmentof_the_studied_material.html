@@ -66,6 +66,7 @@
   <p>Дан инпут. В него вводится слово. По нажатию на кнопку проверьте то, что это слово читается с начала и с конца одинаково (например, мадам).</p>
 
   <input id="input9">
+  <button id="button9">click</button>
 
   <h2>Task 10</h2>
   <p>Дан инпут. В него вводится число. Проверьте по потери фокуса, что это число содержит внутри себя цифру 3.</p>
@@ -111,8 +112,8 @@
   <p>Дан инпут. Реализуйте кнопочки +1, -1, которые будут увеличивать или уменьшать на 1 значение инпута. Сделайте так, чтобы это значение не могло стать меньше нуля.</p>
 
   <input id="input16"> 
-  <button id="button16IncreaseByOne"> +1 </button>
-  <button id="button16DecreaseByOne"> -1 </button>
+  <button class="buttonIncreaseByOne"> +1 </button>
+  <button class="buttonDecreaseByOne"> -1</button>
 
 
   <h2>Task 17</h2>
@@ -244,7 +245,7 @@ name6.addEventListener('blur', function() {
 	// }
   // name6.value = arr.join(' ');
 
-  let str = name6.value.split(' ').map(i => i[0].toUpperCase() + i.substring(1)).join(' ');//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring
+  const str = name6.value.split(' ').map(i => i[0].toUpperCase() + i.substring(1)).join(' ');//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring
   name6.value = str;
 });
 
@@ -274,7 +275,8 @@ input8.addEventListener('blur', changeDateFormat);
 
 function changeDateFormat() {
 	const str = input8.value; 
-	const arr = str.split('.');
+	let arr = str.split('.');
+  arr = arr.reverse();
 	const str1 = arr.join('-');
 	input8.value = str1;
 } 
@@ -282,38 +284,63 @@ function changeDateFormat() {
 //9
 
 const input9 = document.querySelector('#input9');
-input9.addEventListener('blur', checkPalindrome);
+const button9 = document.querySelector('#button9');
+button9.addEventListener('click', checkPalindrome);
 
 function checkPalindrome() {
   const str = input9.value;
-  const arr = str.split(''); 
-  const arr1 = str.split('').reverse();
+  const arr = str.split('');//почкму не нужен split, если надо разобрать слово на элементы и перебирать элементы массива?
+  const reversedArr = str.split('').reverse();
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== arr1[i]) {
+    if (arr[i] !== reversedArr[i]) {
       alert("it's a not palindrome");
+      return;
+    }
+    if (arr[i] === ' ') {//почему с пробелом в строке работает , а с пустой стокой нет 
+      alert("enter a word to check");
       return;
     }
   }
   alert("it's a  palindrome");
-	return;
 }
+
+
+// const elems2 = document.querySelectorAll('.elem2');
+
+// for (const elem2 of elems2) {
+//   elem2.addEventListener('click', function func2() {
+//     elem2.textContent ++;
+//     this.removeEventListener('click', func2)
+//   });
+// }
 
 //10
 
 const input10 = document.querySelector('#input10');
 input10.addEventListener('blur', checkNumber);
 
+// function checkNumber() {
+//   const str = input10.value;
+//   const arr = str.split(''); 
+//   for (let i = 0; i < arr.length; i++) {
+//     if (+arr[i] === 3) {
+//       alert("число содержит 3");
+//       return;
+//     }
+//   }
+//   alert("число не содержит 3");
+// }
+
 function checkNumber() {
   const str = input10.value;
   const arr = str.split(''); 
-  for (let i = 0; i < arr.length; i++) {
-    if (+(arr[i]) == 3) {
+  for (const elem of arr) {
+    if (+arr[elem] === 3) {
       alert("число содержит 3");
       return;
     }
   }
   alert("число не содержит 3");
-      return;
 }
 
 //11
@@ -321,11 +348,17 @@ function checkNumber() {
 const elems11 = document.querySelectorAll('.elems11');
 const button11 = document.querySelector('#button11');
 
-button11.addEventListener('click', function() {
-  for (let i = 0; i < elems11.length; i++) {
+// button11.addEventListener('click', function() {
+//   for (let i = 0; i < elems11.length; i++) {
+//     elems11[i].textContent = elems11[i].textContent + ' ' + (i + 1);
+//   }
+// });
+
+for (let i = 0; i < elems11.length; i++) {
+  this.addEventListener('click', function findSerialNumber() {
     elems11[i].textContent = elems11[i].textContent + ' ' + (i + 1);
-  }
-});
+  });
+}
 
 //12
 
@@ -340,7 +373,7 @@ button11.addEventListener('click', function() {
 // const links12 = document.querySelectorAll('.links12');
 
 // function addLIink() {
-//     links12.forEach(item => item.textContent = `${item.textContent}(${item.href})` );
+//  links12.forEach(item => item.textContent = `${item.textContent}(${item.href})` );
 // }
 
 // addLIink();
@@ -348,9 +381,9 @@ button11.addEventListener('click', function() {
 const links12 = document.querySelectorAll('.links12');
 
 function addLIink() {
-    links12.forEach(function(item) {
-      item.textContent = `${item.textContent}(${item.href})`
-    }); 
+  links12.forEach(function(item) {
+    item.textContent = `${item.textContent}(${item.href})`
+  }); 
 }
 
 addLIink();
@@ -358,38 +391,49 @@ addLIink();
 
 //13
 
-// const links13 = document.querySelectorAll('.links13');
-
-// function addArrow() {
-//   for (let i = 0; i < links13.length; i++) {
-//     const elem = links13[i];
-//     if (elem.href.indexOf('http://') == 0) {
-//       elem += '→';
-//     }
-//   }
-// }
-
 const links13 = document.querySelectorAll('.links13');
 
 function addArrow() {
-  links13.forEach(item => {
-    if (item.href.includes('http://')) {
-      return item.textContent = `${item.textContent} →`;
+  for (let i = 0; i < links13.length; i++ ) {
+    if (links13[i].href.indexOf('http://') === 0) { //indexOf Поиск начнется с указанной позиции или сначала массива, если начальная позиция не указана, как в данном случае 
+      links13[i].append('→');//append вставляет строки с текстом в конец (cтроки с текстом вставляются как текстовое содержимое).
     }
-  });
+  }
 }
 
-addArrow();
+addArrow()
+
+// const links13 = document.querySelectorAll('.links13');
+
+// function addArrow() {
+//   links13.forEach(item => {
+//     if (item.href.includes('http://')) {
+//       item.textContent = `${item.textContent} →`;
+//     }
+//   });
+// }
+
+// addArrow();
 
 //14
 
+//const elems14 = document.querySelectorAll('.elems14');
+
+//for (let i = 0; i < elems14.length; i++) {
+//  elems14[i].addEventListener('click', function() {
+//    elems14[i].textContent *= elems14[i].textContent;
+//  });
+//}
+
 const elems14 = document.querySelectorAll('.elems14');
 
-  for (let i = 0; i < elems14.length; i++) {
-    elems14[i].addEventListener('click', function() {
-      elems14[i].textContent *= elems14[i].textContent;
-    });
-  }
+for (let i = 0; i < elems14.length; i++) {//for ... of не работает 
+	elems14[i].addEventListener('click', makNumberSquare);
+}
+
+function makNumberSquare() {
+	this.textContent **= 2;
+}
 
 //15
 
@@ -399,28 +443,31 @@ const elems14 = document.querySelectorAll('.elems14');
 // input15.addEventListener('blur', function() { 
 //   const str = input8.value; 
 //   const arr = str.split('.').reverse().join(',');
-  
+//   const nawDate = new Date(arr);
+//   const dayName = nawDate.getDay();
+//   alert(dayWeak[dayName]);  
 // });
 
 // пока в ступоре 
 
+
 //16
 
+// const input16 = document.querySelector('#input16');
+// const buttonIncreaseByOne = document.querySelector('#button16IncreaseByOne');
+// const buttonDecreaseByOne = document.querySelector('#button16DecreaseByOne');
 
-const input16 = document.querySelector('#input16');
-const buttonIncreaseByOne = document.querySelector('#button16IncreaseByOne');
-const buttonDecreaseByOne = document.querySelector('#button16DecreaseByOne');
+// buttonIncreaseByOne.addEventListener('click', function() {
+//   input16.value = + input16.value + 1;
+// });
 
-buttonIncreaseByOne.addEventListener('click', function() {
-  input16.value = + input16.value + 1;
-});
-
-buttonDecreaseByOne.addEventListener('click', function() {
-  if (input16.value <= 0) {
-    input16.value = 1;
-  }
-  input16.value -= 1; 
-});
+// buttonDecreaseByOne.addEventListener('click', function() {
+//   if (input16.value <= 0) {
+//     input16.value = 1;
+//   }
+//     input16.value -= 1; 
+// });
+//перестало работать
 
 //17
 
@@ -428,14 +475,25 @@ const input17 = document.querySelector('#input17');
 const elems17 = document.querySelectorAll('.elems17');
 
 for (let i = 0; i < elems17.length; i++) {
+  // var sum = 0; можно переменную объявить таким образом тоже работает 
   elems17[i].addEventListener('click', sumClicks);
+
 }
+
+// function sumClicks() { 
+//   let result;  
+//   input17.getAttribute('dat', result ++);
+// }
+
+
 
 let sum = 0;
 function sumClicks() {  
   sum++;
   input17.value = sum;
 }
+
+
 
 
 // for (let i = 0; i < elems17.length; i++) {
@@ -461,17 +519,17 @@ function sumClicks() {
 
 //18
 
-// const elems18 = document.querySelector('.elems18');
+const elems18 = document.querySelectorAll('.elems18');
 
-// for (let i = 0; i < elems18.length; i++) {
-//   const str = '';
-//   str = elems18[i].textContent.slice(0, 10) + '...';
-//   elems18[i].textContent = str;
-// }
+for (let i = 0; i < elems18.length; i++) {
+  let str = '';
+  str = elems18[i].textContent.slice(0, 10) + '...';
+  elems18[i].textContent = str;
+}
 
-//пока не работает
+
+//поработала что то исправила что то не вышло 
 //исправила не все косяки, например как предотвпатить несколько введенных пробелов, но решила все же пр сделать 
-
 
  </script>
 </body>

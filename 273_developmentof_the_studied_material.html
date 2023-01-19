@@ -112,8 +112,8 @@
   <p>Дан инпут. Реализуйте кнопочки +1, -1, которые будут увеличивать или уменьшать на 1 значение инпута. Сделайте так, чтобы это значение не могло стать меньше нуля.</p>
 
   <input id="input16"> 
-  <button class="buttonIncreaseByOne"> +1 </button>
-  <button class="buttonDecreaseByOne"> -1</button>
+  <button id="buttonIncreaseByOne"> +1 </button>
+  <button id="buttonDecreaseByOne"> -1</button>
 
 
   <h2>Task 17</h2>
@@ -393,27 +393,26 @@ addLIink();
 
 const links13 = document.querySelectorAll('.links13');
 
-function addArrow() {
-  for (let i = 0; i < links13.length; i++ ) {
-    if (links13[i].href.indexOf('http://') === 0) { //indexOf Поиск начнется с указанной позиции или сначала массива, если начальная позиция не указана, как в данном случае 
-      links13[i].append('→');//append вставляет строки с текстом в конец (cтроки с текстом вставляются как текстовое содержимое).
-    }
-  }
-}
-
-addArrow()
-
-// const links13 = document.querySelectorAll('.links13');
-
 // function addArrow() {
-//   links13.forEach(item => {
-//     if (item.href.includes('http://')) {
-//       item.textContent = `${item.textContent} →`;
+//   for (let i = 0; i < links13.length; i++ ) {
+//     if (links13[i].href.indexOf('http://') === 0) { //indexOf Поиск начнется с указанной позиции или сначала массива, если начальная позиция не указана, как в данном случае 
+//       links13[i].append('→');//append вставляет строки с текстом в конец (cтроки с текстом вставляются как текстовое содержимое).
 //     }
-//   });
+//   }
 // }
 
-// addArrow();
+// addArrow()
+
+
+function addArrow() {
+  links13.forEach(item => {
+    if (item.href.startsWith('http://')) { //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith спасибо, не находила такого метода 
+      item.textContent = `${item.textContent} →`;
+    }
+  });
+}
+
+addArrow();
 
 //14
 
@@ -427,13 +426,19 @@ addArrow()
 
 const elems14 = document.querySelectorAll('.elems14');
 
-for (let i = 0; i < elems14.length; i++) {//for ... of не работает 
-	elems14[i].addEventListener('click', makNumberSquare);
-}
+// for (let i = 0; i < elems14.length; i++) {//for ... of не работает 
+// 	elems14[i].addEventListener('click', makNumberSquare);
+// }
 
-function makNumberSquare() {
-	this.textContent **= 2;
-}
+// function makNumberSquare() {
+// 	this.textContent **= 2;
+// }
+
+for (const elem of elems14) {
+  elem.addEventListener('click', function() {
+    this.textContent **= 2
+  })
+}//действительно, работает вопрос почему у меня не работало 
 
 //15
 
@@ -453,20 +458,20 @@ function makNumberSquare() {
 
 //16
 
-// const input16 = document.querySelector('#input16');
-// const buttonIncreaseByOne = document.querySelector('#button16IncreaseByOne');
-// const buttonDecreaseByOne = document.querySelector('#button16DecreaseByOne');
+const input16 = document.querySelector('#input16');
+const buttonIncreaseByOne = document.querySelector('#buttonIncreaseByOne');
+const buttonDecreaseByOne = document.querySelector('#buttonDecreaseByOne');
 
-// buttonIncreaseByOne.addEventListener('click', function() {
-//   input16.value = + input16.value + 1;
-// });
+buttonIncreaseByOne.addEventListener('click', function() {
+  input16.value = + input16.value + 1;
+});
 
-// buttonDecreaseByOne.addEventListener('click', function() {
-//   if (input16.value <= 0) {
-//     input16.value = 1;
-//   }
-//     input16.value -= 1; 
-// });
+buttonDecreaseByOne.addEventListener('click', function() {
+  if (input16.value <= 0) {
+    input16.value = 1;
+  }
+    input16.value -= 1; 
+});
 //перестало работать
 
 //17
@@ -521,10 +526,13 @@ function sumClicks() {
 
 const elems18 = document.querySelectorAll('.elems18');
 
-for (let i = 0; i < elems18.length; i++) {
+// for (const elem of arr)
+// for (let i = 0; i < elems18.length; i++)
+
+for (const elem of elems18) {
   let str = '';
-  str = elems18[i].textContent.slice(0, 10) + '...';
-  elems18[i].textContent = str;
+  str = elems18[elem].textContent.slice(0, 10) + '...';
+  elems18[elem].textContent = str;
 }
 
 

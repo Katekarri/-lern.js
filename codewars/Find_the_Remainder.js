@@ -12,4 +12,5 @@ function remainder(a, b) {
   } else {
     return NaN;
   }  
+  
 }

@@ -4,13 +4,6 @@
 //Напишите функцию, которая принимает два целых числа и возвращает остаток от деления большего значения на меньшее.
 //Деление на ноль должно возвращать NaN.
 
-function remainder(a, b) {
-  if (a > b){
-    return a % b;
-  } if (b > a) {
-    return b % a;
-  } else {
-    return NaN;
-  }  
-  
+function remainder(n, m){
+  return n <m ? m % n : n % m;
 }

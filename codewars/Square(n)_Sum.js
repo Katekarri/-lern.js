@@ -4,10 +4,10 @@
 
 function squareSum(numbers) {
   let sum = 0;
-  for (let i = 0; i < numbers.lenght; i++) {    
-    sum += i**2;
+  for ( let i = 0; i < numbers.length; i++) {
+      sum += numbers[i] **2;
   }
   return sum;
 }
 
-squareSum([1,2,3])
+squareSum([1,2,3]);

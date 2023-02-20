@@ -8,4 +8,5 @@ String.prototype.digit = function(num) {
   } else {
     return false;
   }
+  
 };

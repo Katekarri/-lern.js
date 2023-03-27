@@ -14,22 +14,24 @@
 
 function calculateTip(amount, rating) {
 
-  if (rating === "Terrible") { 
+  const standard = rating.toLowerCase();
+
+  if (standard === "Terrible") { 
     return Math.ceil(amount  * 0 / 100);
   }
-  else if (rating === "Poor") {
+  else if (standard === "Poor") {
     return Math.ceil(amount * 5 / 100);
   }
   
-  else if (rating === "Good") {
+  else if (standard === "Good") {
     return Math.ceil(amount * 10 / 100);
   }
   
-  else if (rating === "Great") {
+  else if (standard === "Great") {
     return Math.ceil(amount * 15 / 100);
   }
   
-  else if (rating === "Excellent") {
+  else if (standard === "Excellent") {
     return Math.ceil(amount * 20 / 100);
   }
     

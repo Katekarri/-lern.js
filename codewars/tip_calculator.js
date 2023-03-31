@@ -15,31 +15,28 @@
 function calculateTip(amount, rating) {
 
   const standard = rating.toLowerCase();
-
-  if (standard === "Terrible") { 
-    return Math.ceil(amount  * 0 / 100);
-  }
-  else if (standard === "Poor") {
-    return Math.ceil(amount * 5 / 100);
-  }
   
-  else if (standard === "Good") {
-    return Math.ceil(amount * 10 / 100);
+  if (standard === "excellent") {
+    return Math.ceil(amount * 20 / 100);
   }
-  
-  else if (standard === "Great") {
+  else if (standard === "great"){
     return Math.ceil(amount * 15 / 100);
   }
   
-  else if (standard === "Excellent") {
-    return Math.ceil(amount * 20 / 100);
+  else if(standard === "good") {
+    return Math.ceil(amount * 10 / 100);
+  }
+  
+  else if(standard === "poor") {
+    return Math.ceil(amount * 5 / 100);
+  }
+  
+  else if (standard === "terrible") {
+    return Math.ceil(amount * 0 / 100);
+  }
+  
+  else {
+   return ("Rating not recognised");
   }
     
-  else {
-    return ("Rating not recognised");
   }
-     
-  }
-
-
-

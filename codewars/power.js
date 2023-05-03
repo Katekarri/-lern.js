@@ -10,9 +10,9 @@
 // Цель состоит в том, чтобы создать функцию двух входных данных числа и мощности, которая "возводит" число в степень (т.е. умножает число на само себя в степени).
 
 
-function numberToPower(number, power) {
+function numberToPower(number, power){
   let sum = 1;
-  for (let i = 0; i <= power; i++) {
+  for (let i = 1; i <= power; i++) {
     sum *= number;
   }
   return sum;

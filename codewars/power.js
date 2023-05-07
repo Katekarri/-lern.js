@@ -11,9 +11,9 @@
 
 
 function numberToPower(number, power){
-  let sum = 1;
+  let result = 1;
   for (let i = 1; i <= power; i++) {
-    sum *= number;
+    result *= number;
   }
   return sum;
 }
